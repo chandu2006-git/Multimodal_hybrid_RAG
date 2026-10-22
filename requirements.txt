@@ -9,6 +9,7 @@ PyMuPDF
 # Embeddings and vector database
 sentence-transformers
 chromadb
+rank-bm25
 
 # Configuration and data validation
 pydantic
@@ -16,3 +17,4 @@ pydantic
 # Testing and code quality
 pytest
 ruff
+
