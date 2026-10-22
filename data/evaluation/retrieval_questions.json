@@ -1,0 +1,143 @@
+
+[
+  {
+    "id": "Q01",
+    "question": "Which model achieved the highest accuracy in face morph detection?",
+    "expected_answer": "InceptionV3 achieved the highest accuracy at 97.44%.",
+    "relevant_pages": [7],
+    "category": "model_comparison"
+  },
+  {
+    "id": "Q02",
+    "question": "What accuracy did MobileNetV2 achieve?",
+    "expected_answer": "MobileNetV2 achieved 96.93% accuracy.",
+    "relevant_pages": [7],
+    "category": "exact_value"
+  },
+  {
+    "id": "Q03",
+    "question": "What accuracy did ResNet50 achieve?",
+    "expected_answer": "ResNet50 achieved 93.04% accuracy.",
+    "relevant_pages": [7],
+    "category": "exact_value"
+  },
+  {
+    "id": "Q04",
+    "question": "What accuracy did the baseline CNN achieve?",
+    "expected_answer": "The baseline CNN achieved 91.34% accuracy.",
+    "relevant_pages": [7],
+    "category": "exact_value"
+  },
+  {
+    "id": "Q05",
+    "question": "How many total images were included in the dataset?",
+    "expected_answer": "The dataset contained 2379 images.",
+    "relevant_pages": [3],
+    "category": "dataset"
+  },
+  {
+    "id": "Q06",
+    "question": "How many genuine images were in the dataset?",
+    "expected_answer": "The dataset contained 204 genuine images.",
+    "relevant_pages": [3],
+    "category": "dataset"
+  },
+  {
+    "id": "Q07",
+    "question": "How many morph images were in the dataset?",
+    "expected_answer": "The dataset contained 2175 morph images.",
+    "relevant_pages": [3],
+    "category": "dataset"
+  },
+  {
+    "id": "Q08",
+    "question": "Which evaluation metrics were used to assess the models?",
+    "expected_answer": "Accuracy, Precision, Recall, F1-Score, and ROC-AUC were used.",
+    "relevant_pages": [6, 7],
+    "category": "evaluation_metrics"
+  },
+  {
+    "id": "Q09",
+    "question": "What was the ROC-AUC score of MobileNetV2?",
+    "expected_answer": "MobileNetV2 achieved a ROC-AUC score of 0.9992.",
+    "relevant_pages": [7],
+    "category": "exact_value"
+  },
+  {
+    "id": "Q10",
+    "question": "What was the F1-score of InceptionV3?",
+    "expected_answer": "InceptionV3 achieved an F1-score of 0.8283.",
+    "relevant_pages": [7],
+    "category": "exact_value"
+  },
+  {
+    "id": "Q11",
+    "question": "What precision did InceptionV3 achieve?",
+    "expected_answer": "InceptionV3 achieved a precision of 1.0000.",
+    "relevant_pages": [7],
+    "category": "exact_value"
+  },
+  {
+    "id": "Q12",
+    "question": "What recall did InceptionV3 achieve?",
+    "expected_answer": "InceptionV3 achieved a recall of 0.7069.",
+    "relevant_pages": [7],
+    "category": "exact_value"
+  },
+  {
+    "id": "Q13",
+    "question": "What was the ROC-AUC score of ResNet50?",
+    "expected_answer": "ResNet50 achieved a ROC-AUC score of 0.8234.",
+    "relevant_pages": [7],
+    "category": "exact_value"
+  },
+  {
+    "id": "Q14",
+    "question": "What was the F1-score of ResNet50?",
+    "expected_answer": "ResNet50 achieved an F1-score of 0.3200.",
+    "relevant_pages": [7],
+    "category": "exact_value"
+  },
+  {
+    "id": "Q15",
+    "question": "Which transfer-learning models were evaluated?",
+    "expected_answer": "MobileNetV2, ResNet50, and InceptionV3 were the evaluated transfer-learning models.",
+    "relevant_pages": [4, 5, 7],
+    "category": "model_comparison"
+  },
+  {
+    "id": "Q16",
+    "question": "Why is accuracy alone insufficient for evaluating face morph attack detection?",
+    "expected_answer": "Accuracy alone can hide poor morph-attack detection performance, especially with an imbalanced dataset. Recall and F1-score provide additional insight.",
+    "relevant_pages": [8],
+    "category": "reasoning"
+  },
+  {
+    "id": "Q17",
+    "question": "What do true positives and false negatives represent in morph attack detection?",
+    "expected_answer": "True positives are morph attacks correctly identified as attacks; false negatives are morph attacks incorrectly classified as non-attacks.",
+    "relevant_pages": [8],
+    "category": "conceptual"
+  },
+  {
+    "id": "Q18",
+    "question": "What training configuration details are documented in Table II?",
+    "expected_answer": "Table II documents the paper's training configuration parameters.",
+    "relevant_pages": [5],
+    "category": "table_retrieval"
+  },
+  {
+    "id": "Q19",
+    "question": "What hyperparameters are compared across the evaluated CNN architectures?",
+    "expected_answer": "Table III compares hyperparameters including trainable layers, learning rates, dropout configurations, activation functions, and optimization settings.",
+    "relevant_pages": [6, 7],
+    "category": "table_retrieval"
+  },
+  {
+    "id": "Q20",
+    "question": "Which model had the highest recall among the reported transfer-learning models?",
+    "expected_answer": "InceptionV3 had the highest reported recall at 0.7069.",
+    "relevant_pages": [7],
+    "category": "model_comparison"
+  }
+]

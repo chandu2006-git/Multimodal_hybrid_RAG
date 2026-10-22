@@ -1,0 +1,18 @@
+
+# LLM API and environment configuration
+google-genai
+python-dotenv
+
+# PDF processing
+PyMuPDF
+
+# Embeddings and vector database
+sentence-transformers
+chromadb
+
+# Configuration and data validation
+pydantic
+
+# Testing and code quality
+pytest
+ruff

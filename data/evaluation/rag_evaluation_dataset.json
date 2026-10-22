@@ -1,0 +1,575 @@
+{
+  "dataset_name": "Multimodal RAG Scientific Paper Evaluation Dataset",
+  "version": "0.1.0",
+  "source_document": "AMSL_IEEE_Research_paper.pdf",
+  "scope_note": "Initial single-document development benchmark. Verify all reference answers and page references against the exact local PDF before reporting results. Relevant chunk IDs and uncertain visual asset IDs are intentionally left empty until mapped to the local ingestion outputs.",
+  "question_count": 30,
+  "category_counts": {
+    "factual_text": 6,
+    "numerical_table": 6,
+    "figure_image": 6,
+    "cross_page_reasoning": 6,
+    "unanswerable": 6
+  },
+  "questions": [
+    {
+      "id": "Q001",
+      "category": "factual_text",
+      "question": "What dataset did the study use for face morph attack detection?",
+      "reference_answer": "The study used the AMSL Face Morph Image Dataset.",
+      "relevant_pages": [
+        3
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_3_table_1"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "AMSL Face Morph Image Dataset"
+      ]
+    },
+    {
+      "id": "Q002",
+      "category": "factual_text",
+      "question": "What is the main objective of the paper?",
+      "reference_answer": "The paper compares a custom CNN, MobileNetV2, ResNet50, and InceptionV3 for face morph attack detection.",
+      "relevant_pages": [
+        1,
+        2
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "comparative study",
+        "four architectures",
+        "face morph attack detection"
+      ]
+    },
+    {
+      "id": "Q003",
+      "category": "factual_text",
+      "question": "Why are face morphing attacks a concern for biometric authentication?",
+      "reference_answer": "A morphed face combines facial characteristics of multiple people and may be accepted as matching more than one identity, creating risks for systems such as electronic passports and border control.",
+      "relevant_pages": [
+        1,
+        2
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "combines facial characteristics",
+        "may match multiple identities",
+        "biometric security risk"
+      ]
+    },
+    {
+      "id": "Q004",
+      "category": "factual_text",
+      "question": "Which four model architectures were compared?",
+      "reference_answer": "The study compared a custom CNN, MobileNetV2, ResNet50, and InceptionV3.",
+      "relevant_pages": [
+        1,
+        7
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "CNN",
+        "MobileNetV2",
+        "ResNet50",
+        "InceptionV3"
+      ]
+    },
+    {
+      "id": "Q005",
+      "category": "factual_text",
+      "question": "What future research directions do the authors mention?",
+      "reference_answer": "The authors suggest cross-dataset validation, exploring transformer-based or CNN-transformer architectures, ensemble methods, lightweight real-time models, and explainable AI techniques.",
+      "relevant_pages": [
+        9,
+        10
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "cross-dataset validation",
+        "transformer or hybrid models",
+        "lightweight real-time models",
+        "explainable AI"
+      ]
+    },
+    {
+      "id": "Q006",
+      "category": "factual_text",
+      "question": "What broad conclusion do the authors draw about transfer-learning models compared with the custom CNN?",
+      "reference_answer": "In the reported experiments, the transfer-learning approaches performed better than the custom CNN.",
+      "relevant_pages": [
+        8,
+        10
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "transfer-learning approaches",
+        "outperformed custom CNN in reported experiments"
+      ]
+    },
+    {
+      "id": "Q007",
+      "category": "numerical_table",
+      "question": "Which model achieved the highest accuracy, and what was that accuracy?",
+      "reference_answer": "InceptionV3 achieved the highest reported accuracy, 97.44%.",
+      "relevant_pages": [
+        7,
+        10
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "InceptionV3",
+        "97.44% accuracy"
+      ]
+    },
+    {
+      "id": "Q008",
+      "category": "numerical_table",
+      "question": "What F1-score did InceptionV3 achieve?",
+      "reference_answer": "InceptionV3 achieved an F1-score of 0.8283 (82.83%).",
+      "relevant_pages": [
+        7,
+        10
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "InceptionV3",
+        "F1-score 0.8283 or 82.83%"
+      ]
+    },
+    {
+      "id": "Q009",
+      "category": "numerical_table",
+      "question": "What accuracy did MobileNetV2 achieve?",
+      "reference_answer": "MobileNetV2 achieved 96.93% accuracy.",
+      "relevant_pages": [
+        7
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "MobileNetV2",
+        "96.93% accuracy"
+      ]
+    },
+    {
+      "id": "Q010",
+      "category": "numerical_table",
+      "question": "What were the reported accuracy and F1-score for ResNet50?",
+      "reference_answer": "ResNet50 achieved 93.04% accuracy and an F1-score of 0.3200.",
+      "relevant_pages": [
+        7
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "ResNet50",
+        "93.04% accuracy",
+        "F1-score 0.3200"
+      ]
+    },
+    {
+      "id": "Q011",
+      "category": "numerical_table",
+      "question": "What precision and recall did InceptionV3 report?",
+      "reference_answer": "InceptionV3 reported precision of 1.0000 and recall of 0.7069.",
+      "relevant_pages": [
+        7
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "precision 1.0000",
+        "recall 0.7069"
+      ]
+    },
+    {
+      "id": "Q012",
+      "category": "numerical_table",
+      "question": "What ROC-AUC score did InceptionV3 achieve?",
+      "reference_answer": "InceptionV3 achieved a ROC-AUC score of 0.9916 (99.16%).",
+      "relevant_pages": [
+        7,
+        10
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "InceptionV3",
+        "ROC-AUC 0.9916 or 99.16%"
+      ]
+    },
+    {
+      "id": "Q013",
+      "category": "figure_image",
+      "question": "Which figure is described as comparing the performance of CNN, MobileNetV2, ResNet50, and InceptionV3?",
+      "reference_answer": "Figure 4 is described as comparing the models using accuracy, recall, F1-score, and ROC-AUC.",
+      "relevant_pages": [
+        7
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "Figure 4",
+        "four models",
+        "accuracy, recall, F1-score, ROC-AUC"
+      ]
+    },
+    {
+      "id": "Q014",
+      "category": "figure_image",
+      "question": "What does Figure 6 show according to the paper?",
+      "reference_answer": "Figure 6 shows the confusion matrix for InceptionV3.",
+      "relevant_pages": [
+        8
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [
+        "page_8_image_1.png"
+      ],
+      "answerable": true,
+      "required_facts": [
+        "Figure 6",
+        "confusion matrix",
+        "InceptionV3"
+      ]
+    },
+    {
+      "id": "Q015",
+      "category": "figure_image",
+      "question": "Which evaluation measures are named in the caption for the comparative model-performance figure?",
+      "reference_answer": "The caption names accuracy, recall, F1-score, and ROC-AUC.",
+      "relevant_pages": [
+        7
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "accuracy",
+        "recall",
+        "F1-score",
+        "ROC-AUC"
+      ]
+    },
+    {
+      "id": "Q016",
+      "category": "figure_image",
+      "question": "On which page is the InceptionV3 confusion matrix shown?",
+      "reference_answer": "The InceptionV3 confusion matrix is shown on page 8.",
+      "relevant_pages": [
+        8
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [
+        "page_8_image_1.png"
+      ],
+      "answerable": true,
+      "required_facts": [
+        "page 8",
+        "InceptionV3 confusion matrix"
+      ]
+    },
+    {
+      "id": "Q017",
+      "category": "figure_image",
+      "question": "Does the paper identify a figure that compares the four models' performance?",
+      "reference_answer": "Yes. The text identifies Figure 4 as comparing the four models using accuracy, recall, F1-score, and ROC-AUC.",
+      "relevant_pages": [
+        7
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "Figure 4",
+        "four-model comparison",
+        "comparison metrics"
+      ]
+    },
+    {
+      "id": "Q018",
+      "category": "figure_image",
+      "question": "What visual evidence should be retrieved to answer a question asking to compare the models' accuracy, recall, F1-score, and ROC-AUC?",
+      "reference_answer": "The relevant evidence is the comparative-performance figure identified as Figure 4, together with the model-results table on page 7.",
+      "relevant_pages": [
+        7
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "Figure 4 comparative-performance figure",
+        "page 7 results table"
+      ]
+    },
+    {
+      "id": "Q019",
+      "category": "cross_page_reasoning",
+      "question": "Which model is the strongest overall performer according to the paper's reported accuracy, F1-score, and ROC-AUC?",
+      "reference_answer": "InceptionV3 is strongest on these reported metrics among the tested models, with 97.44% accuracy, an F1-score of 0.8283, and ROC-AUC of 0.9916.",
+      "relevant_pages": [
+        7,
+        10
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "InceptionV3",
+        "97.44% accuracy",
+        "0.8283 F1-score",
+        "0.9916 ROC-AUC"
+      ]
+    },
+    {
+      "id": "Q020",
+      "category": "cross_page_reasoning",
+      "question": "How does the conclusion summarize the benefit of transfer learning in these experiments?",
+      "reference_answer": "The conclusion says transfer-learning models performed better than the custom CNN and highlights InceptionV3's reported results.",
+      "relevant_pages": [
+        7,
+        10
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [
+        "page_7_table_2"
+      ],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "transfer learning outperformed custom CNN",
+        "InceptionV3 highlighted"
+      ]
+    },
+    {
+      "id": "Q021",
+      "category": "cross_page_reasoning",
+      "question": "What limitation do the authors acknowledge about the scope of their model comparison?",
+      "reference_answer": "The authors acknowledge comparing only four deep-learning architectures, so the findings should be interpreted within the scope of the models and experiments studied.",
+      "relevant_pages": [
+        9
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "only four architectures",
+        "results limited to studied models and experiments"
+      ]
+    },
+    {
+      "id": "Q022",
+      "category": "cross_page_reasoning",
+      "question": "What validation do the authors propose to test generalizability in future work?",
+      "reference_answer": "They propose testing on additional benchmark morph datasets and using cross-dataset validation across different acquisition conditions and morphing algorithms.",
+      "relevant_pages": [
+        9,
+        10
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "additional benchmark datasets",
+        "cross-dataset validation",
+        "generalizability"
+      ]
+    },
+    {
+      "id": "Q023",
+      "category": "cross_page_reasoning",
+      "question": "Why might a lightweight detection framework be useful for the applications discussed in the paper?",
+      "reference_answer": "An efficient lightweight framework could support real-time use in passport verification, border control, and mobile authentication.",
+      "relevant_pages": [
+        9
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "lightweight or efficient",
+        "real-time use",
+        "passport/border/mobile authentication"
+      ]
+    },
+    {
+      "id": "Q024",
+      "category": "cross_page_reasoning",
+      "question": "What interpretability direction do the authors suggest for future research?",
+      "reference_answer": "They suggest explainable AI techniques to identify which image features or facial regions influence model decisions.",
+      "relevant_pages": [
+        9,
+        10
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "explainable AI",
+        "features or facial regions influencing decisions"
+      ]
+    },
+    {
+      "id": "Q025",
+      "category": "cross_page_reasoning",
+      "question": "What deployment concern do the authors mention about some advanced approaches?",
+      "reference_answer": "The paper notes that some Vision Transformer and optimization-based approaches may be too complex for real biometric systems, and it suggests lightweight real-time models as a future direction.",
+      "relevant_pages": [
+        2,
+        9
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "advanced approaches may be too complex",
+        "lightweight real-time models"
+      ]
+    },
+    {
+      "id": "Q026",
+      "category": "unanswerable",
+      "question": "What accuracy did the proposed system achieve on a cancer-detection dataset?",
+      "reference_answer": "The paper does not report cancer-detection experiments or accuracy on a cancer dataset.",
+      "relevant_pages": [],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": false,
+      "required_facts": [
+        "state information is not reported",
+        "do not invent a score"
+      ]
+    },
+    {
+      "id": "Q027",
+      "category": "unanswerable",
+      "question": "What was the system's p95 inference latency in milliseconds in a production deployment?",
+      "reference_answer": "The paper does not report p95 production inference latency.",
+      "relevant_pages": [],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": false,
+      "required_facts": [
+        "state p95 production latency is not reported",
+        "do not invent latency"
+      ]
+    },
+    {
+      "id": "Q028",
+      "category": "unanswerable",
+      "question": "What exact accuracy did InceptionV3 achieve on an external dataset in a cross-dataset evaluation?",
+      "reference_answer": "The paper proposes cross-dataset validation as future work but does not report an external-dataset accuracy result.",
+      "relevant_pages": [
+        9,
+        10
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": false,
+      "required_facts": [
+        "cross-dataset validation is future work",
+        "no external-dataset accuracy is reported"
+      ]
+    },
+    {
+      "id": "Q029",
+      "category": "unanswerable",
+      "question": "What was the monetary cost per 1,000 predictions for a deployed system?",
+      "reference_answer": "The paper does not report deployment cost per 1,000 predictions.",
+      "relevant_pages": [],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": false,
+      "required_facts": [
+        "state cost is not reported",
+        "do not invent monetary value"
+      ]
+    },
+    {
+      "id": "Q030",
+      "category": "unanswerable",
+      "question": "What percentage reduction in false accepts was measured after deployment at an airport?",
+      "reference_answer": "The paper does not report an airport deployment or a measured percentage reduction in false accepts.",
+      "relevant_pages": [],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": false,
+      "required_facts": [
+        "no airport deployment result reported",
+        "no false-accept reduction percentage reported"
+      ]
+    }
+  ]
+}

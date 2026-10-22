@@ -1,0 +1,61 @@
+@'
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# ==============================
+# Virtual environments
+# ==============================
+.venv/
+venv/
+env/
+
+# ==============================
+# Secrets and environment files
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# IDE and OS files
+# ==============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Logs and temporary files
+# ==============================
+*.log
+*.tmp
+*.bak
+
+# ==============================
+# Generated RAG data
+# Keep folder structure, ignore generated contents
+# ==============================
+data/uploads/*
+!data/uploads/.gitkeep
+
+data/images/*
+!data/images/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+# ==============================
+# Evaluation outputs
+# ==============================
+evaluation/results/*
+!evaluation/results/.gitkeep
+'@ | Set-Content -Encoding utf8 .gitignore
