@@ -10,6 +10,9 @@ PyMuPDF
 sentence-transformers
 chromadb
 rank-bm25
+torch
+torchvision
+transformers
 
 # Configuration and data validation
 pydantic
