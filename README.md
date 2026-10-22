@@ -12,7 +12,7 @@
 
 ## Architecture
 
-![Multimodal Hybrid Retrieval RAG Architecture](Rag_architecture.png)
+![Multimodal Hybrid Retrieval RAG Architecture](RAG_architecture.png)
 
 ## Overview
 
