@@ -3,8 +3,8 @@ from pathlib import Path
 from typing import Any
 
 from ingestion.document_ingestor import ingest_document
-from ingestion.text_chunker import chunk_pages
-from rag.answer_generator import AnswerGenerator
+from chunking.text_chunker import chunk_pages
+from generation.answer_generator import AnswerGenerator
 from rag.evidence_builder import build_evidence
 from retriever.hybrid_retriever import HybridRetriever
 from retriever.image_retriever import ImageRetriever

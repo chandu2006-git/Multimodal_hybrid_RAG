@@ -57,201 +57,405 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    /* Global backgrounds */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+        --bg: #17191F;
+        --sidebar: #111318;
+        --surface: #20242D;
+        --surface-hover: #282D38;
+        --border: #343A47;
+        --text: #F1F5F9;
+        --muted: #9AA5B5;
+        --accent: #19C6A0;
+        --accent-hover: #12A989;
+        --accent-soft: rgba(25, 198, 160, 0.12);
+    }
+
+    /* ---------- App foundation ---------- */
+
+    html, body, [class*="css"] {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont,
+                     'Segoe UI', sans-serif;
+    }
+
     .stApp,
     [data-testid="stAppViewContainer"],
     [data-testid="stMain"],
-    [data-testid="stMainBlockContainer"],
-    [data-testid="stHeader"],
-    [data-testid="stBottom"],
-    [data-testid="stBottom"] > div {
-        background-color: #212121 !important;
-        color: #ececec !important;
+    [data-testid="stMainBlockContainer"] {
+        background: var(--bg) !important;
+        color: var(--text) !important;
     }
 
-    [data-testid="stToolbar"] {
-        background-color: transparent !important;
+    [data-testid="stHeader"] {
+        background: rgba(23, 25, 31, 0.92) !important;
     }
 
     .block-container {
-        max-width: 900px;
-        padding-top: 2rem;
-        padding-bottom: 8rem;
+        max-width: 1120px;
+        padding-top: 2.4rem;
+        padding-bottom: 7rem;
     }
 
-    /* Sidebar */
+    /* ---------- Typography ---------- */
+
+    h1, h2, h3, h4 {
+        color: var(--text) !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.035em;
+    }
+
+    p, li, label, [data-testid="stMarkdownContainer"] {
+        color: #D7DDE7;
+    }
+
+    .muted {
+        color: var(--muted);
+        font-size: 0.84rem;
+        line-height: 1.65;
+    }
+
+    .brand {
+        font-size: 1.18rem;
+        font-weight: 800;
+        letter-spacing: -0.045em;
+        color: var(--text);
+        margin-bottom: 0.4rem;
+    }
+
+    .brand-mark {
+        color: var(--accent);
+    }
+
+    /* ---------- Sidebar ---------- */
+
     [data-testid="stSidebar"],
     [data-testid="stSidebar"] > div:first-child {
-        background-color: #171717 !important;
+        background: var(--sidebar) !important;
     }
 
     [data-testid="stSidebar"] {
-        border-right: 1px solid #303030;
+        border-right: 1px solid #282D37;
     }
 
-    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
     [data-testid="stSidebar"] label,
     [data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,
     [data-testid="stSidebar"] h3 {
-        color: #ececec !important;
+        color: #E5EAF2 !important;
     }
 
-    /* Typography */
-    h1, h2, h3, h4, p, label {
-        color: #ececec;
+    [data-testid="stSidebar"] hr {
+        border-color: #292E38 !important;
+        margin: 1.25rem 0;
     }
 
-    .brand {
-        font-size: 1.25rem;
-        font-weight: 700;
-        letter-spacing: -0.4px;
-        margin-bottom: 0.35rem;
-    }
-
-    .muted {
-        color: #a0a0a0;
-        font-size: 0.85rem;
-        line-height: 1.6;
-    }
+    /* ---------- Welcome screen ---------- */
 
     .welcome {
         text-align: center;
-        padding-top: 13vh;
-        padding-bottom: 2rem;
+        padding: 11vh 1rem 2.2rem;
     }
 
     .welcome .symbol {
-        font-size: 2.6rem;
-        margin-bottom: 1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 68px;
+        height: 68px;
+        border-radius: 22px;
+        color: var(--accent);
+        background: var(--accent-soft);
+        border: 1px solid rgba(25, 198, 160, 0.24);
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
     }
 
     .welcome h1 {
-        font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: -0.7px;
+        font-size: clamp(1.8rem, 4vw, 2.65rem);
+        line-height: 1.2;
+        margin-bottom: 0.85rem;
     }
 
     .welcome p {
-        color: #a0a0a0;
+        color: var(--muted) !important;
+        font-size: 1rem;
+        line-height: 1.8;
     }
 
-    /* Conversation */
+    /* ---------- Chat messages ---------- */
+
     [data-testid="stChatMessage"] {
         background: transparent !important;
         border: none !important;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
+        padding: 1.1rem 0;
     }
 
     [data-testid="stChatMessageContent"] {
-        color: #ececec !important;
-        line-height: 1.75;
+        color: var(--text) !important;
+        line-height: 1.85;
+        font-size: 0.96rem;
     }
 
     [data-testid="stChatMessageContent"] p,
     [data-testid="stChatMessageContent"] li {
-        color: #ececec !important;
+        color: #DCE2EB !important;
+        line-height: 1.85;
     }
 
-    /* Chat composer */
+    [data-testid="stChatMessageContent"] strong {
+        color: #FFFFFF !important;
+    }
+
+    [data-testid="stChatMessageContent"] a {
+        color: var(--accent) !important;
+    }
+
+    [data-testid="stChatMessageContent"] code {
+        color: #8DEBD3;
+        background: #252A34;
+        border-radius: 5px;
+        padding: 0.15rem 0.35rem;
+    }
+
+
+    /* ---------- Chat composer ---------- */
+
+    [data-testid="stBottom"],
+    [data-testid="stBottom"] > div {
+        background: #17191F !important;
+    }
+
+    [data-testid="stChatInput"],
+    [data-testid="stChatInput"] > div,
+    [data-testid="stChatInput"] textarea {
+        background: #242832 !important;
+        color: #F1F5F9 !important;
+        -webkit-text-fill-color: #F1F5F9 !important;
+        caret-color: #19C6A0 !important;
+    }
+
     [data-testid="stChatInput"] {
-        background: #2f2f2f !important;
-        border: 1px solid #505050 !important;
-        border-radius: 24px !important;
-        box-shadow: none !important;
+        border: 1px solid #3A414E !important;
+        border-radius: 18px !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18) !important;
     }
 
     [data-testid="stChatInput"]:focus-within {
-        border-color: #777777 !important;
-        box-shadow: none !important;
-    }
-
-    [data-testid="stChatInput"] textarea {
-        background: transparent !important;
-        color: #ececec !important;
-        -webkit-text-fill-color: #ececec !important;
-        caret-color: #ececec !important;
+        border-color: #19C6A0 !important;
+        box-shadow: 0 0 0 3px rgba(25, 198, 160, 0.10) !important;
     }
 
     [data-testid="stChatInput"] textarea::placeholder {
-        color: #a0a0a0 !important;
-        -webkit-text-fill-color: #a0a0a0 !important;
-        opacity: 1 !important;
+        color: #9AA5B5 !important;
+        -webkit-text-fill-color: #9AA5B5 !important;
     }
 
     [data-testid="stChatInput"] button {
-        background: #ececec !important;
-        color: #171717 !important;
-        border-radius: 12px !important;
+        background: #19C6A0 !important;
+        color: #09251F !important;
+        border: none !important;
+        border-radius: 11px !important;
     }
 
-    /* Inputs and uploader */
-    [data-testid="stTextInput"] input,
-    [data-testid="stTextArea"] textarea {
-        background: #2f2f2f !important;
-        color: #ececec !important;
-        border-color: #505050 !important;
-    }
+    /* ---------- Buttons ---------- */
 
-    [data-testid="stFileUploader"],
-    [data-testid="stFileUploader"] section {
-        background: #202020 !important;
-        border-color: #505050 !important;
-        border-radius: 12px !important;
-    }
-
-    [data-testid="stFileUploader"] button {
-        color: #ececec !important;
-        border-color: #505050 !important;
-    }
-
-    /* Buttons */
-    .stButton > button {
-        background: #2f2f2f !important;
-        color: #ececec !important;
-        border: 1px solid #454545 !important;
-        border-radius: 10px !important;
-        min-height: 2.5rem;
+    .stButton > button,
+    [data-testid="stSidebar"] .stButton > button {
+        background: #252A34 !important;
+        color: #E9EEF5 !important;
+        border: 1px solid #3B424F !important;
+        border-radius: 11px !important;
+        min-height: 2.65rem;
+        font-family: inherit !important;
+        font-weight: 500 !important;
+        transition: all 0.18s ease;
     }
 
     .stButton > button:hover {
-        background: #3b3b3b !important;
-        border-color: #666666 !important;
+        background: #303744 !important;
+        border-color: #596474 !important;
+        transform: translateY(-1px);
+    }
+
+    .stButton > button:focus {
+        box-shadow: 0 0 0 3px rgba(25, 198, 160, 0.15) !important;
     }
 
     .stButton > button[kind="primary"] {
-        background: #10a37f !important;
-        color: white !important;
-        border-color: #10a37f !important;
+        background: var(--accent) !important;
+        color: #08251E !important;
+        border-color: var(--accent) !important;
+        font-weight: 700 !important;
     }
 
-    /* Evidence panels */
+    .stButton > button[kind="primary"]:hover {
+        background: var(--accent-hover) !important;
+        border-color: var(--accent-hover) !important;
+    }
+
+    /* ---------- File uploader ---------- */
+
+    [data-testid="stFileUploader"] {
+        background: #1B1F27 !important;
+        border: 1px solid #343B48 !important;
+        border-radius: 15px !important;
+        padding: 0.4rem !important;
+    }
+
+    [data-testid="stFileUploader"] section {
+        background: #20252E !important;
+        border: 1px dashed #4B5665 !important;
+        border-radius: 11px !important;
+    }
+
+    [data-testid="stFileUploader"] section:hover {
+        border-color: var(--accent) !important;
+    }
+
+    [data-testid="stFileUploader"] button {
+        background: #303744 !important;
+        color: #F1F5F9 !important;
+        border: 1px solid #46505E !important;
+        border-radius: 8px !important;
+    }
+
+    [data-testid="stFileUploader"] small,
+    [data-testid="stFileUploader"] span {
+        color: #AAB4C3;
+    }
+
+    /* ---------- Evidence and source panels ---------- */
+
     [data-testid="stExpander"] {
-        background: #262626 !important;
-        border: 1px solid #414141 !important;
-        border-radius: 12px !important;
+        background: var(--surface) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 13px !important;
+        overflow: hidden;
+    }
+
+    [data-testid="stExpander"] summary {
+        background: transparent !important;
+        padding: 0.8rem 1rem !important;
+    }
+
+    [data-testid="stExpander"] summary:hover {
+        background: var(--surface-hover) !important;
     }
 
     [data-testid="stExpander"] summary,
     [data-testid="stExpander"] summary p,
     [data-testid="stExpander"] summary span {
-        color: #ececec !important;
+        color: #E7EDF5 !important;
+        font-weight: 500;
     }
 
-    /* Dividers and captions */
+    [data-testid="stExpander"] [data-testid="stMarkdownContainer"] p {
+        line-height: 1.75;
+    }
+
+    /* ---------- Alerts and status messages ---------- */
+
+    [data-testid="stAlert"] {
+        border-radius: 12px !important;
+        border: 1px solid #354353 !important;
+    }
+
+    [data-testid="stAlert"] p {
+        line-height: 1.65;
+    }
+
+    [data-testid="stStatusWidget"] {
+        background: var(--surface) !important;
+    }
+
+    /* ---------- Inputs and selection controls ---------- */
+
+    [data-testid="stTextInput"] input,
+    [data-testid="stTextArea"] textarea,
+    [data-testid="stNumberInput"] input {
+        background: #222731 !important;
+        color: var(--text) !important;
+        border: 1px solid #3A414E !important;
+        border-radius: 10px !important;
+    }
+
+    [data-testid="stTextInput"] input:focus,
+    [data-testid="stTextArea"] textarea:focus {
+        border-color: var(--accent) !important;
+        box-shadow: 0 0 0 2px rgba(25, 198, 160, 0.10) !important;
+    }
+
+    /* ---------- Dividers, captions, and code ---------- */
+
     hr {
-        border-color: #383838 !important;
+        border-color: #303641 !important;
     }
 
     [data-testid="stCaptionContainer"] {
-        color: #a0a0a0 !important;
+        color: var(--muted) !important;
     }
 
-    #MainMenu,
+    [data-testid="stCode"],
+    pre {
+        border-radius: 10px !important;
+    }
+
+    /* ---------- Scrollbars ---------- */
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #414957;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #596475;
+    }
+
+    /* ---------- Keep Streamlit chrome subtle ---------- */
+
+    [data-testid="stToolbar"] {
+        background: transparent !important;
+    }
+
+    #MainMenu {
+        visibility: hidden;
+    }
+
     footer {
         visibility: hidden;
     }
+
+    /* ---------- Responsive adjustments ---------- */
+
+    @media (max-width: 768px) {
+        .block-container {
+            padding: 1.3rem 1rem 6rem;
+        }
+
+        .welcome {
+            padding-top: 7vh;
+        }
+
+        .welcome h1 {
+            font-size: 1.8rem;
+        }
+
+        [data-testid="stChatInput"] {
+            border-radius: 14px !important;
+        }
+    }
+
     </style>
     """,
     unsafe_allow_html=True,
@@ -414,7 +618,8 @@ def render_message(message):
 
 with st.sidebar:
     st.markdown(
-        '<div class="brand">📚 Multimodal RAG</div>',
+        '<div class="brand"><span class="brand-mark">✳</span> '
+        'Multimodal RAG</div>',
         unsafe_allow_html=True,
     )
     st.markdown(
