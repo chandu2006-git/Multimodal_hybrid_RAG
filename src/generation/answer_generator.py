@@ -5,10 +5,8 @@ import random
 import logging
 
 from typing import Any
-from google import genai
-from google.genai import errors
+from openai import OpenAI, APIError, APIConnectionError, APITimeoutError
 from dotenv import load_dotenv
-
 
 load_dotenv()
 
@@ -18,40 +16,47 @@ logger = logging.getLogger(__name__)
 class AnswerGenerator:
     """
     Generate grounded answers using retrieved multimodal evidence
-    and the Google Gemini API.
+    through OpenRouter with automatic model fallback.
     """
 
-    DEFAULT_MODEL = "gemini-3.8-flash"
+    FALLBACK_MODELS = [
+        "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "google/gemini-2.5-flash"
+        "anthropic/claude-3.5-sonnet",
+        "meta-llama/llama-3.3-70b-instruct",
+    ]
 
-    MAX_RETRIES = 4
+    MAX_RETRIES = 2
     INITIAL_RETRY_DELAY = 2
-    MAX_RETRY_DELAY = 20
+    MAX_RETRY_DELAY = 10
 
     def __init__(
         self,
-        model_name: str = DEFAULT_MODEL,
+        model_name: str | None = None,
         api_key: str | None = None,
         timeout: int = 60,
     ) -> None:
 
-        self.api_key = (
-            api_key
-            or os.getenv("GEMINI_API_KEY")
-            or os.getenv("GOOGLE_API_KEY")
-        )
+        self.api_key = api_key or os.getenv("OPENROUTER_API_KEY")
 
         if not self.api_key:
             raise ValueError(
-                "Gemini API key is missing. "
-                "Set GEMINI_API_KEY in your environment."
+                "OpenRouter API key is missing. "
+                "Set OPENROUTER_API_KEY in your environment."
             )
 
-        self.model_name = model_name
-        self.client = genai.Client(
+        self.models = (
+            [model_name] + [
+                model for model in self.FALLBACK_MODELS
+                if model != model_name
+            ]
+            if model_name else self.FALLBACK_MODELS.copy()
+        )
+
+        self.client = OpenAI(
+            base_url="https://openrouter.ai/api/v1",
             api_key=self.api_key,
-            http_options={
-                "timeout": timeout * 1000
-            },
+            timeout=timeout,
         )
 
     # --------------------------------------------------
@@ -88,9 +93,7 @@ class AnswerGenerator:
             )
 
             if item.get("image_path"):
-                section += (
-                    f"\nImage path: {item['image_path']}"
-                )
+                section += f"\nImage path: {item['image_path']}"
 
             sections.append(section)
 
@@ -135,58 +138,133 @@ Provide a grounded answer:
 """.strip()
 
     # --------------------------------------------------
-    # GEMINI GENERATION WITH RETRIES
+    # OPENROUTER GENERATION WITH FALLBACK
     # --------------------------------------------------
 
-    def _generate_with_retry(
+    def _generate_with_fallback(
         self,
         prompt: str,
-    ) -> Any:
+    ) -> tuple[str, str]:
 
-        for attempt in range(self.MAX_RETRIES):
+        for model_name in self.models:
 
-            try:
+            logger.info("Attempting OpenRouter model: %s", model_name)
 
-                return self.client.models.generate_content(
-                    model=self.model_name,
-                    contents=prompt,
-                )
+            for attempt in range(self.MAX_RETRIES):
 
-            except errors.APIError as error:
+                try:
 
-                status_code = getattr(
-                    error,
-                    "code",
-                    None,
-                )
+                    response = self.client.chat.completions.create(
+                        model=model_name,
+                        messages=[
+                            {
+                                "role": "system",
+                                "content": (
+                                    "You are a helpful, accurate "
+                                    "research-paper assistant. "
+                                    "Follow the user's grounding instructions."
+                                ),
+                            },
+                            {
+                                "role": "user",
+                                "content": prompt,
+                            },
+                        ],
+                    )
 
-                retryable = status_code in {
-                    408, 429, 500, 502, 503, 504
-                }
+                    answer = response.choices[0].message.content
 
-                if not retryable or attempt == self.MAX_RETRIES - 1:
-                    raise
+                    if isinstance(answer, list):
+                        answer = "\n".join(
+                            item.text
+                            for item in answer
+                            if getattr(item, "text", None)
+                        )
 
-                delay = min(
-                    self.INITIAL_RETRY_DELAY * (2 ** attempt),
-                    self.MAX_RETRY_DELAY,
-                )
+                    if not answer or not answer.strip():
+                        raise RuntimeError(
+                            f"{model_name} returned an empty answer."
+                        )
 
-                delay += random.uniform(0, 1)
+                    actual_model = response.model or model_name
 
-                logger.warning(
-                    "Gemini API returned %s. "
-                    "Retrying attempt %s/%s in %.2f seconds.",
-                    status_code,
-                    attempt + 1,
-                    self.MAX_RETRIES - 1,
-                    delay,
-                )
+                    logger.info(
+                        "Successfully generated answer using %s",
+                        actual_model,
+                    )
 
-                time.sleep(delay)
+                    return answer.strip(), actual_model
+
+                except (APIConnectionError, APITimeoutError) as error:
+
+                    logger.warning(
+                        "%s connection failed: %s",
+                        model_name,
+                        error,
+                    )
+
+                except APIError as error:
+
+                    status_code = getattr(error, "status_code", None)
+
+                    if status_code in {401, 403}:
+                        raise RuntimeError(
+                            "OpenRouter authentication failed. "
+                            "Check OPENROUTER_API_KEY."
+                        ) from error
+
+                    retryable = status_code in {
+                        408, 429, 500, 502, 503, 504
+                    }
+
+                    if not retryable:
+                        logger.warning(
+                            "%s failed with status %s: %s",
+                            model_name,
+                            status_code,
+                            error,
+                        )
+                        break
+
+                    logger.warning(
+                        "%s returned status %s.",
+                        model_name,
+                        status_code,
+                    )
+
+                except Exception as error:
+
+                    logger.warning(
+                        "%s failed: %s",
+                        model_name,
+                        error,
+                    )
+                    break
+
+                if attempt < self.MAX_RETRIES - 1:
+
+                    delay = min(
+                        self.INITIAL_RETRY_DELAY * (2 ** attempt),
+                        self.MAX_RETRY_DELAY,
+                    )
+
+                    delay += random.uniform(0, 1)
+
+                    logger.info(
+                        "Retrying %s in %.2f seconds.",
+                        model_name,
+                        delay,
+                    )
+
+                    time.sleep(delay)
+
+            logger.warning(
+                "Switching to next fallback model."
+            )
 
         raise RuntimeError(
-            "Gemini generation failed after all retry attempts."
+            "All OpenRouter models failed. "
+            "Check your API key, model availability and network."
         )
 
     # --------------------------------------------------
@@ -240,7 +318,7 @@ Provide a grounded answer:
                     "the supplied document to answer this question."
                 ),
                 "sources": [],
-                "model": self.model_name,
+                "model": None,
             }
 
         formatted_evidence = self._format_evidence(evidence)
@@ -250,17 +328,10 @@ Provide a grounded answer:
             formatted_evidence,
         )
 
-        response = self._generate_with_retry(prompt)
-
-        answer = getattr(response, "text", None)
-
-        if not answer or not answer.strip():
-            raise RuntimeError(
-                "Gemini returned an empty answer."
-            )
+        answer, model_used = self._generate_with_fallback(prompt)
 
         return {
-            "answer": answer.strip(),
+            "answer": answer,
             "sources": self._extract_sources(evidence),
-            "model": self.model_name,
+            "model": model_used,
         }
