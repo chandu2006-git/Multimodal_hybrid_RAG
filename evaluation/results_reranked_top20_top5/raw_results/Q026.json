@@ -1,0 +1,329 @@
+{
+  "id": "Q026",
+  "category": "factual_text",
+  "question": "What is the purpose of the paper's comparative study of forecasting architectures?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:34:37.343939+00:00",
+  "retrieved_pages": [
+    "1",
+    "2",
+    "9",
+    "8"
+  ],
+  "relevant_pages": [
+    1,
+    2
+  ],
+  "retrieval_metrics": {
+    "recall@5": 1.0,
+    "precision@5": 0.4,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 2,
+    "retrieved_page_count": 4,
+    "relevant_pages_found": 2
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Transformer-based models, and temporal convolutional net-]\nworks (TCNs), and we perform a comparative study of the state-of-the-art approaches. Additionally, a lightweight late fusion linear architecture is proposed, incorporating patching, moving average (MA) decomposition, and Fourier Transform decomposition (PDFLinear), and an exponentially weighted averaging (EWA) module responsible for late fusion. Representative state-of-the-art models of each taxonomy class are benchmarked using a real-world antenna assembly line use case and compared against our proposed method. The experimental results show that our proposed model consistently matches or outperforms the state-of-the-art models in terms of forecasting efficacy for all forecast horizons, while requiring a fraction of the computational resources. Index Terms— Deep learning (DL), hybrid models, predictive maintenance, sensor data, time-series forecasting.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Transformer-based models, and temporal convolutional net-",
+        "section_category": "custom_section",
+        "chunk_index": 5,
+        "start_word": 0,
+        "end_word": 111
+      },
+      "dense_score": 0.38612693548202515,
+      "bm25_score": 10.546276180183632,
+      "rrf_score": 0.0078125,
+      "reranker_score": 0.26362863183021545
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 1) We identify and present a taxonomy of the state-]\nof-the-art of DL forecasting methods, and perform a comparative analysis across various forecast horizons and evaluation metrics.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "1) We identify and present a taxonomy of the state-",
+        "section_category": "custom_section",
+        "chunk_index": 19,
+        "start_word": 0,
+        "end_word": 17
+      },
+      "dense_score": 0.5245126485824585,
+      "bm25_score": 10.89217106879947,
+      "rrf_score": 0.015749007936507936,
+      "reranker_score": 0.04052704572677612
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: D. Comparative Results]\nIn this section, we evaluate the baseline models on the benchmark dataset and compare them against our proposed method in terms of predictive performance and required com- putational resources. This section is further split into three subsections, including the quantitative results, the qualitative results, and the computational requirements results. Representative state-of-the-art models of each architecture class were selected as baseline models. 1) RNNs: LSTM [35], GRU [36], bi-LSTM, biGRU [37], FiLM [43], and Mamba [48]. 2) MLPs: Linear, NLinear and DLinear [16], LightTS [33], TimeMixer [17], TiDE [86], FreTS [31], Koopa [32], and FreTS [31].",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          9
+        ],
+        "page": 9,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "D. Comparative Results",
+        "section_category": "custom_section",
+        "chunk_index": 103,
+        "start_word": 0,
+        "end_word": 95
+      },
+      "dense_score": 0.5405377149581909,
+      "bm25_score": 10.194898128369498,
+      "rrf_score": 0.015640273704789834,
+      "reranker_score": 0.03681940585374832
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 1) Multilayer Perceptrons: MLPs comprise the most funda-]\nmental and widely used neural network architecture, consisting of a single or multiple layers of neurons, where the output of each layer serves as the input for the subsequent layer. A characteristic example of such an architecture is N-BEATS [29], a neural architecture that does not rely on temporal fea- ture engineering and consists solely of MLP-based blocks that are organized hierarchically into stacks with doubly residual connections. OIKONOMOU et al.: TIME-SERIES FORECASTING IN INDUSTRIAL ENVIRONMENTS 7683 Whereas N-BEATS provides a generic sequence prediction solution with no reliance on specialized time-series mod- ules, in recent years, time-series-specific neural architectures have made great advances. By incorporating temporal fea- ture extraction mechanisms into their base architecture, they enhance the model’s ability to capture temporal patterns, while also reducing random noise present in the data that may lead to overfitting and reduction of performance. Such architectures include N-HiTS [30], which extends N-BEATS with the inclusion of downsampling and max pooling layers within the base block architecture to reduce model complexity and data noise, and DLinear [16], which leverages an MA decomposition scheme combined with a simple MLP model. Additionally, FreTS [31], which leverages Fourier transform (FT) decomposition to process the input time series",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "1) Multilayer Perceptrons: MLPs comprise the most funda-",
+        "section_category": "custom_section",
+        "chunk_index": 23,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.39794713258743286,
+      "bm25_score": 10.25739894257826,
+      "rrf_score": 0.007692307692307693,
+      "reranker_score": 0.020746460184454918
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: IV. EXPERIMENTS AND RESULTS]\nIn this section, we present the evaluation dataset of the antenna assembly line and the applied preprocessing, the selected evaluation metrics, and the experimental setup. Addi- tionally, the comparative performance results for all models are analyzed, and an ablation study for the proposed method is performed.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "IV. EXPERIMENTS AND RESULTS",
+        "section_category": "custom_section",
+        "chunk_index": 82,
+        "start_word": 0,
+        "end_word": 46
+      },
+      "dense_score": 0.4007507562637329,
+      "bm25_score": 12.938424968099843,
+      "rrf_score": 0.00819672131147541,
+      "reranker_score": 0.0034913336858153343
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "filename": "page_8_render.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.28851190209388733
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_1_render.png",
+      "filename": "page_1_render.png",
+      "page": 1,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2846335768699646
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_5_render.png",
+      "filename": "page_5_render.png",
+      "page": 5,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2738649249076843
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Transformer-based models, and temporal convolutional net-]\nworks (TCNs), and we perform a comparative study of the state-of-the-art approaches. Additionally, a lightweight late fusion linear architecture is proposed, incorporating patching, moving average (MA) decomposition, and Fourier Transform decomposition (PDFLinear), and an exponentially weighted averaging (EWA) module responsible for late fusion. Representative state-of-the-art models of each taxonomy class are benchmarked using a real-world antenna assembly line use case and compared against our proposed method. The experimental results show that our proposed model consistently matches or outperforms the state-of-the-art models in terms of forecasting efficacy for all forecast horizons, while requiring a fraction of the computational resources. Index Terms— Deep learning (DL), hybrid models, predictive maintenance, sensor data, time-series forecasting.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Transformer-based models, and temporal convolutional net-",
+        "section_category": "custom_section",
+        "chunk_index": 5,
+        "start_word": 0,
+        "end_word": 111
+      },
+      "scores": {
+        "dense": 0.38612693548202515,
+        "bm25": 10.546276180183632,
+        "rrf": 0.0078125
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 1) We identify and present a taxonomy of the state-]\nof-the-art of DL forecasting methods, and perform a comparative analysis across various forecast horizons and evaluation metrics.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "1) We identify and present a taxonomy of the state-",
+        "section_category": "custom_section",
+        "chunk_index": 19,
+        "start_word": 0,
+        "end_word": 17
+      },
+      "scores": {
+        "dense": 0.5245126485824585,
+        "bm25": 10.89217106879947,
+        "rrf": 0.015749007936507936
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: D. Comparative Results]\nIn this section, we evaluate the baseline models on the benchmark dataset and compare them against our proposed method in terms of predictive performance and required com- putational resources. This section is further split into three subsections, including the quantitative results, the qualitative results, and the computational requirements results. Representative state-of-the-art models of each architecture class were selected as baseline models. 1) RNNs: LSTM [35], GRU [36], bi-LSTM, biGRU [37], FiLM [43], and Mamba [48]. 2) MLPs: Linear, NLinear and DLinear [16], LightTS [33], TimeMixer [17], TiDE [86], FreTS [31], Koopa [32], and FreTS [31].",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 9,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          9
+        ],
+        "page": 9,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "D. Comparative Results",
+        "section_category": "custom_section",
+        "chunk_index": 103,
+        "start_word": 0,
+        "end_word": 95
+      },
+      "scores": {
+        "dense": 0.5405377149581909,
+        "bm25": 10.194898128369498,
+        "rrf": 0.015640273704789834
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 1) Multilayer Perceptrons: MLPs comprise the most funda-]\nmental and widely used neural network architecture, consisting of a single or multiple layers of neurons, where the output of each layer serves as the input for the subsequent layer. A characteristic example of such an architecture is N-BEATS [29], a neural architecture that does not rely on temporal fea- ture engineering and consists solely of MLP-based blocks that are organized hierarchically into stacks with doubly residual connections. OIKONOMOU et al.: TIME-SERIES FORECASTING IN INDUSTRIAL ENVIRONMENTS 7683 Whereas N-BEATS provides a generic sequence prediction solution with no reliance on specialized time-series mod- ules, in recent years, time-series-specific neural architectures have made great advances. By incorporating temporal fea- ture extraction mechanisms into their base architecture, they enhance the model’s ability to capture temporal patterns, while also reducing random noise present in the data that may lead to overfitting and reduction of performance. Such architectures include N-HiTS [30], which extends N-BEATS with the inclusion of downsampling and max pooling layers within the base block architecture to reduce model complexity and data noise, and DLinear [16], which leverages an MA decomposition scheme combined with a simple MLP model. Additionally, FreTS [31], which leverages Fourier transform (FT) decomposition to process the input time series",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "1) Multilayer Perceptrons: MLPs comprise the most funda-",
+        "section_category": "custom_section",
+        "chunk_index": 23,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.39794713258743286,
+        "bm25": 10.25739894257826,
+        "rrf": 0.007692307692307693
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: IV. EXPERIMENTS AND RESULTS]\nIn this section, we present the evaluation dataset of the antenna assembly line and the applied preprocessing, the selected evaluation metrics, and the experimental setup. Addi- tionally, the comparative performance results for all models are analyzed, and an ablation study for the proposed method is performed.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "IV. EXPERIMENTS AND RESULTS",
+        "section_category": "custom_section",
+        "chunk_index": 82,
+        "start_word": 0,
+        "end_word": 46
+      },
+      "scores": {
+        "dense": 0.4007507562637329,
+        "bm25": 12.938424968099843,
+        "rrf": 0.00819672131147541
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_8_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.28851190209388733
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_1_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_1_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2846335768699646
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_5_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_5_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2738649249076843
+      }
+    }
+  ],
+  "status": "success"
+}

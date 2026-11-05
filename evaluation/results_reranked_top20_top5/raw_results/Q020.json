@@ -1,0 +1,332 @@
+{
+  "id": "Q020",
+  "category": "factual_text",
+  "question": "What is the main purpose of forecasting OEE in the manufacturing use case?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:33:59.425856+00:00",
+  "retrieved_pages": [
+    "1",
+    "8",
+    "14"
+  ],
+  "relevant_pages": [
+    1,
+    2
+  ],
+  "retrieval_metrics": {
+    "recall@5": 0.5,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 2,
+    "retrieved_page_count": 3,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\nlarge amount of data. These data encompass a wide range of metrics, including production volumes, defect rates, manufacturing cycle times, and equipment downtimes. These metrics are integral to the calculation of OEE, a critical performance indicator that reflects the efficiency and effec- tiveness of manufacturing operations. The ability to forecast OEE and its constituent factors with high accuracy is essential for ensuring seamless production, minimizing defects through timely equipment maintenance, and ultimately driving produc- tivity gains [13]. Traditional statistical forecasting methods, such as autore- gressive integrated moving average (ARIMA) [14] and exponential smoothing (ES) [15], have been widely used in time-series forecasting, in various applications including finance and healthcare, for their simplicity and interpretabil- ity. However, these methods often struggle with capturing nonlinear patterns, long-range dependencies, and the intricate dynamics of modern manufacturing environments. In response to these challenges, this study explores advanced deep learning (DL) techniques, which have shown promise in capturing complex, nonlinear relationships in time-series data, and applies them to OEE forecasting in an antenna assembly line use-case. Although the primary focus of our study is on mod- eling multistage processes with complex cross-dependencies, as exemplified by the antenna assembly line dataset, we also examine a single-stage",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 13,
+        "start_word": 300,
+        "end_word": 500
+      },
+      "dense_score": 0.48299938440322876,
+      "bm25_score": 13.80765270651792,
+      "rrf_score": 0.007936507936507936,
+      "reranker_score": 0.9951567053794861
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\nAt the core of predictive analytics lies time-series forecasting, a statistical tool that enables the forecasting of future states of manufacturing equipment based on historical data. Accurate forecasting facilitates informed © 2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/ 7682 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 and proactive decision-making, leading to reduced down- time, optimized maintenance schedules, and improved OEE. Furthermore, predictive maintenance enables sustainable man- ufacturing practices by improving system reliability, reducing waste, and minimizing resource consumption, aligning main- tenance strategies with both operational and environmental objectives [12]. In this study, we focus on a highly specialized manufac- turing process, an antenna assembly line, which serves as a test case for applying advanced DL forecasting methods. The antenna assembly line is a highly complex process with temporal and spatial interdependencies, which continuously generates a large amount of data. These data encompass a wide range of metrics, including production volumes, defect rates, manufacturing cycle times, and equipment downtimes. These metrics are integral to the calculation of OEE, a critical performance indicator that reflects the efficiency and effec- tiveness of manufacturing operations. The ability to forecast",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 12,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "dense_score": 0.5160436630249023,
+      "bm25_score": 15.987855143068291,
+      "rrf_score": 0.00819672131147541,
+      "reranker_score": 0.9734150767326355
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\npromise in capturing complex, nonlinear relationships in time-series data, and applies them to OEE forecasting in an antenna assembly line use-case. Although the primary focus of our study is on mod- eling multistage processes with complex cross-dependencies, as exemplified by the antenna assembly line dataset, we also examine a single-stage process from the sink manufacturing industry. This addition enables us to assess the generalizabil- ity and adaptability of our proposed method across diverse manufacturing scenarios. We categorize DL approaches to time-series forecasting into four model architecture classes: 1) multilayer-perceptrons (MLPs); 2) recurrent neural networks (RNNs); 3) transformer or attention-based; and 4) temporal convolutional networks (TCNs). Each category presents unique advantages and challenges.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 14,
+        "start_word": 450,
+        "end_word": 562
+      },
+      "dense_score": 0.4523146152496338,
+      "bm25_score": 12.596503675575006,
+      "rrf_score": 0.007575757575757576,
+      "reranker_score": 0.9606596827507019
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: A. Datasets]\nTo assess the effectiveness of our proposed forecasting method, we utilized two time-series datasets from the man- ufacturing sector. The primary dataset focuses on forecasting overall equipment effectiveness (OEE) metrics within a multi- stage antenna assembly line, aligning with the central objective of our study. To evaluate the generalizability of the proposed method in different manufacturing contexts, we additionally used a complementary dataset that contains time series data from a single-stage sink manufacturing process. Detailed descriptions of both datasets are provided in the following.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "A. Datasets",
+        "section_category": "custom_section",
+        "chunk_index": 83,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "dense_score": 0.5811112523078918,
+      "bm25_score": 13.00615266367759,
+      "rrf_score": 0.015504807692307693,
+      "reranker_score": 0.8536563515663147
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: V. DISCUSSION]\nThe findings of this study highlight the efficacy of the proposed method in addressing the challenges of predic- tive maintenance and process optimization in manufacturing, which are pivotal procedures for ZDM. Concretely, we used historical data from OEE to forecast future production efficiency values, both short- and long-term, which provides valuable insights into the production, enabling more efficient equipment maintenance scheduling. Experiments on the antenna assembly line dataset demon- strated our proposed method’s robust performance across various forecast horizons, with specialized decomposition techniques (MA, DFT) and the EWA fusion mechanism being critical in enhancing forecasting accuracy. Our model achieved the highest performance for forecast horizons H ∈{8, 24, 48}, with RMSE values of {0.169, 0.173, 0.173}, respectively. Although MICN slightly outperformed our model for H = 72, with an RMSE reduction of 0.01, our method demonstrated top overall performance across the other forecast horizons, where MICN struggled, or completely failed in the cases of",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          14
+        ],
+        "page": 14,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "V. DISCUSSION",
+        "section_category": "discussion",
+        "chunk_index": 130,
+        "start_word": 0,
+        "end_word": 154
+      },
+      "dense_score": 0.539926290512085,
+      "bm25_score": 10.54921645972614,
+      "rrf_score": 0.007246376811594203,
+      "reranker_score": 0.8430224657058716
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "filename": "page_6_image_1.png",
+      "page": 6,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2662366032600403
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "filename": "page_7_image_2.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2652595639228821
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_4_render.png",
+      "filename": "page_4_render.png",
+      "page": 4,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2513015568256378
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\nlarge amount of data. These data encompass a wide range of metrics, including production volumes, defect rates, manufacturing cycle times, and equipment downtimes. These metrics are integral to the calculation of OEE, a critical performance indicator that reflects the efficiency and effec- tiveness of manufacturing operations. The ability to forecast OEE and its constituent factors with high accuracy is essential for ensuring seamless production, minimizing defects through timely equipment maintenance, and ultimately driving produc- tivity gains [13]. Traditional statistical forecasting methods, such as autore- gressive integrated moving average (ARIMA) [14] and exponential smoothing (ES) [15], have been widely used in time-series forecasting, in various applications including finance and healthcare, for their simplicity and interpretabil- ity. However, these methods often struggle with capturing nonlinear patterns, long-range dependencies, and the intricate dynamics of modern manufacturing environments. In response to these challenges, this study explores advanced deep learning (DL) techniques, which have shown promise in capturing complex, nonlinear relationships in time-series data, and applies them to OEE forecasting in an antenna assembly line use-case. Although the primary focus of our study is on mod- eling multistage processes with complex cross-dependencies, as exemplified by the antenna assembly line dataset, we also examine a single-stage",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 13,
+        "start_word": 300,
+        "end_word": 500
+      },
+      "scores": {
+        "dense": 0.48299938440322876,
+        "bm25": 13.80765270651792,
+        "rrf": 0.007936507936507936
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\nAt the core of predictive analytics lies time-series forecasting, a statistical tool that enables the forecasting of future states of manufacturing equipment based on historical data. Accurate forecasting facilitates informed © 2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/ 7682 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 and proactive decision-making, leading to reduced down- time, optimized maintenance schedules, and improved OEE. Furthermore, predictive maintenance enables sustainable man- ufacturing practices by improving system reliability, reducing waste, and minimizing resource consumption, aligning main- tenance strategies with both operational and environmental objectives [12]. In this study, we focus on a highly specialized manufac- turing process, an antenna assembly line, which serves as a test case for applying advanced DL forecasting methods. The antenna assembly line is a highly complex process with temporal and spatial interdependencies, which continuously generates a large amount of data. These data encompass a wide range of metrics, including production volumes, defect rates, manufacturing cycle times, and equipment downtimes. These metrics are integral to the calculation of OEE, a critical performance indicator that reflects the efficiency and effec- tiveness of manufacturing operations. The ability to forecast",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 12,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "scores": {
+        "dense": 0.5160436630249023,
+        "bm25": 15.987855143068291,
+        "rrf": 0.00819672131147541
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\npromise in capturing complex, nonlinear relationships in time-series data, and applies them to OEE forecasting in an antenna assembly line use-case. Although the primary focus of our study is on mod- eling multistage processes with complex cross-dependencies, as exemplified by the antenna assembly line dataset, we also examine a single-stage process from the sink manufacturing industry. This addition enables us to assess the generalizabil- ity and adaptability of our proposed method across diverse manufacturing scenarios. We categorize DL approaches to time-series forecasting into four model architecture classes: 1) multilayer-perceptrons (MLPs); 2) recurrent neural networks (RNNs); 3) transformer or attention-based; and 4) temporal convolutional networks (TCNs). Each category presents unique advantages and challenges.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 14,
+        "start_word": 450,
+        "end_word": 562
+      },
+      "scores": {
+        "dense": 0.4523146152496338,
+        "bm25": 12.596503675575006,
+        "rrf": 0.007575757575757576
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: A. Datasets]\nTo assess the effectiveness of our proposed forecasting method, we utilized two time-series datasets from the man- ufacturing sector. The primary dataset focuses on forecasting overall equipment effectiveness (OEE) metrics within a multi- stage antenna assembly line, aligning with the central objective of our study. To evaluate the generalizability of the proposed method in different manufacturing contexts, we additionally used a complementary dataset that contains time series data from a single-stage sink manufacturing process. Detailed descriptions of both datasets are provided in the following.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "A. Datasets",
+        "section_category": "custom_section",
+        "chunk_index": 83,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "scores": {
+        "dense": 0.5811112523078918,
+        "bm25": 13.00615266367759,
+        "rrf": 0.015504807692307693
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: V. DISCUSSION]\nThe findings of this study highlight the efficacy of the proposed method in addressing the challenges of predic- tive maintenance and process optimization in manufacturing, which are pivotal procedures for ZDM. Concretely, we used historical data from OEE to forecast future production efficiency values, both short- and long-term, which provides valuable insights into the production, enabling more efficient equipment maintenance scheduling. Experiments on the antenna assembly line dataset demon- strated our proposed method’s robust performance across various forecast horizons, with specialized decomposition techniques (MA, DFT) and the EWA fusion mechanism being critical in enhancing forecasting accuracy. Our model achieved the highest performance for forecast horizons H ∈{8, 24, 48}, with RMSE values of {0.169, 0.173, 0.173}, respectively. Although MICN slightly outperformed our model for H = 72, with an RMSE reduction of 0.01, our method demonstrated top overall performance across the other forecast horizons, where MICN struggled, or completely failed in the cases of",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 14,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          14
+        ],
+        "page": 14,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "V. DISCUSSION",
+        "section_category": "discussion",
+        "chunk_index": 130,
+        "start_word": 0,
+        "end_word": 154
+      },
+      "scores": {
+        "dense": 0.539926290512085,
+        "bm25": 10.54921645972614,
+        "rrf": 0.007246376811594203
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_6_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2662366032600403
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_7_image_2.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2652595639228821
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_4_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 4,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_4_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2513015568256378
+      }
+    }
+  ],
+  "status": "success"
+}

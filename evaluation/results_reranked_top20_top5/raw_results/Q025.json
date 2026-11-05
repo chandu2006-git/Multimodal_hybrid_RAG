@@ -1,0 +1,324 @@
+{
+  "id": "Q025",
+  "category": "cross_page_reasoning",
+  "question": "How does the paper distinguish single-variate from multivariate time-series forecasting?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:34:30.807096+00:00",
+  "retrieved_pages": [
+    "5",
+    "3"
+  ],
+  "relevant_pages": [
+    5
+  ],
+  "retrieval_metrics": {
+    "recall@5": 1.0,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 1,
+    "retrieved_page_count": 2,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Given]\na sequence of historical observations {xt−n+1, xt−n+2, . . . , xt}, where xi ∈R represents the value at time step i, the goal of single-variate time-series forecasting is to forecast the future value xt+h at a horizon h steps ahead. This can be formalized as finding a function f such that ˆxt+h = f (xt, xt−1, . . . , xt−n+1) (1) where ˆxt+h is the predicted value at time t + h, and n is the number of past observations used for prediction.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Given",
+        "section_category": "custom_section",
+        "chunk_index": 39,
+        "start_word": 0,
+        "end_word": 85
+      },
+      "dense_score": 0.4849073886871338,
+      "bm25_score": 8.34874800308759,
+      "rrf_score": 0.015625,
+      "reranker_score": 0.9792851209640503
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Multivariate Time-Series Forecasting: In the multivariate]\ncase, we consider multiple-related time series. Let xt = [x(1) t , x(2) t , . . . , x(m) t ]⊤represent the vector of observations at time t across m variables. The goal is to forecast the future vector xt+h based on the past n observations across all variables. The problem can be defined as ˆxt+h = f (xt, xt−1, . . . , xt−n+1) (2) where ˆxt+h = [ˆx(1) t+h, ˆx(2) t+h, . . . , ˆx(m) t+h]⊤is the predicted vector of values at time t + h.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Multivariate Time-Series Forecasting: In the multivariate",
+        "section_category": "custom_section",
+        "chunk_index": 40,
+        "start_word": 0,
+        "end_word": 90
+      },
+      "dense_score": 0.5534867644309998,
+      "bm25_score": 8.449802415615004,
+      "rrf_score": 0.016001024065540194,
+      "reranker_score": 0.9510385394096375
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: A. Problem Formulation]\nTime-series forecasting involves predicting future values based on previously observed data points. In this context, we define the problem for both single-variate and multivariate time-series forecasting.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "A. Problem Formulation",
+        "section_category": "custom_section",
+        "chunk_index": 38,
+        "start_word": 0,
+        "end_word": 26
+      },
+      "dense_score": 0.6143949031829834,
+      "bm25_score": 14.540744481458239,
+      "rrf_score": 0.01639344262295082,
+      "reranker_score": 0.914267361164093
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Multivariate Time-Series Forecasting With Multistep Hori-]\nzon: In multivariate time-series forecasting with a multistep horizon, the goal is to forecast a sequence of future vec- tors over a horizon H steps ahead. The prediction can be represented as a 2-D matrix, where rows correspond to different variables and columns correspond to different future time steps. Given the historical multivariate time series {xt, xt−1, . . . , xt−n+1}, the objective is to forecast the matrix ˆXt+1:t+H ˆXt+1:t+H =   ˆx(1) t+1 ˆx(1) t+2 · · · ˆx(1) t+H ˆx(2) t+1 ˆx(2) t+2 · · · ˆx(2) t+H ... ... ... ... ˆx(m) t+1 ˆx(m) t+2 · · · ˆx(m) t+H   (3) where ˆx(i) t+h represents the predicted value for the ith variable at time step t + h, and the matrix ˆXt+1:t+H has dimensions m × H, with m being the number of variables and H being the number of future time steps to forecast. This formulation allows the model to capture both temporal dependencies across time steps and correlations among multi- ple variables.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Multivariate Time-Series Forecasting With Multistep Hori-",
+        "section_category": "custom_section",
+        "chunk_index": 41,
+        "start_word": 0,
+        "end_word": 171
+      },
+      "dense_score": 0.5050632953643799,
+      "bm25_score": 8.295438248957304,
+      "rrf_score": 0.01562881562881563,
+      "reranker_score": 0.871990442276001
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Recurrent Neural Networks: RNNs represent a class of]\nto reduce random noise in the data, yielding improved performance over other state- of-the-art models in multivariate and univariate forecasting by 20.3% and 22.6%, respectively [43]. Finally, state space models (SSMs) comprise a mathematical framework used to model dynamic systems by representing the system’s internal states and their evolution over time through state transition and observation equations [44]. In recent years, the ideas behind SSMs have been successfully applied to build deep recursive time-series forecasting models, includ- ing the linear spate-space layer (LSSL) [45], which combines the strengths of RNNs, CNNs, and continuous-time models. The structured state-space sequence model (S4) [46] and the simplified state-space sequence model (S5) [47] tackle cer- tain computational challenges of the LSSL. Mamba [48], an advanced neural network architecture designed to efficiently handle long sequences by combining memory augmentation with model-based attention mechanisms, enhances the model’s ability to capture and utilize long-term dependencies in data.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Recurrent Neural Networks: RNNs represent a class of",
+        "section_category": "custom_section",
+        "chunk_index": 28,
+        "start_word": 450,
+        "end_word": 600
+      },
+      "dense_score": 0.33500510454177856,
+      "bm25_score": 6.2305850127391995,
+      "rrf_score": 0.007352941176470588,
+      "reranker_score": 0.03791951388120651
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "filename": "page_8_render.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.29013150930404663
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "filename": "page_7_image_2.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2753024399280548
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_5_render.png",
+      "filename": "page_5_render.png",
+      "page": 5,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2715715765953064
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Given]\na sequence of historical observations {xt−n+1, xt−n+2, . . . , xt}, where xi ∈R represents the value at time step i, the goal of single-variate time-series forecasting is to forecast the future value xt+h at a horizon h steps ahead. This can be formalized as finding a function f such that ˆxt+h = f (xt, xt−1, . . . , xt−n+1) (1) where ˆxt+h is the predicted value at time t + h, and n is the number of past observations used for prediction.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Given",
+        "section_category": "custom_section",
+        "chunk_index": 39,
+        "start_word": 0,
+        "end_word": 85
+      },
+      "scores": {
+        "dense": 0.4849073886871338,
+        "bm25": 8.34874800308759,
+        "rrf": 0.015625
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Multivariate Time-Series Forecasting: In the multivariate]\ncase, we consider multiple-related time series. Let xt = [x(1) t , x(2) t , . . . , x(m) t ]⊤represent the vector of observations at time t across m variables. The goal is to forecast the future vector xt+h based on the past n observations across all variables. The problem can be defined as ˆxt+h = f (xt, xt−1, . . . , xt−n+1) (2) where ˆxt+h = [ˆx(1) t+h, ˆx(2) t+h, . . . , ˆx(m) t+h]⊤is the predicted vector of values at time t + h.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Multivariate Time-Series Forecasting: In the multivariate",
+        "section_category": "custom_section",
+        "chunk_index": 40,
+        "start_word": 0,
+        "end_word": 90
+      },
+      "scores": {
+        "dense": 0.5534867644309998,
+        "bm25": 8.449802415615004,
+        "rrf": 0.016001024065540194
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: A. Problem Formulation]\nTime-series forecasting involves predicting future values based on previously observed data points. In this context, we define the problem for both single-variate and multivariate time-series forecasting.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "A. Problem Formulation",
+        "section_category": "custom_section",
+        "chunk_index": 38,
+        "start_word": 0,
+        "end_word": 26
+      },
+      "scores": {
+        "dense": 0.6143949031829834,
+        "bm25": 14.540744481458239,
+        "rrf": 0.01639344262295082
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Multivariate Time-Series Forecasting With Multistep Hori-]\nzon: In multivariate time-series forecasting with a multistep horizon, the goal is to forecast a sequence of future vec- tors over a horizon H steps ahead. The prediction can be represented as a 2-D matrix, where rows correspond to different variables and columns correspond to different future time steps. Given the historical multivariate time series {xt, xt−1, . . . , xt−n+1}, the objective is to forecast the matrix ˆXt+1:t+H ˆXt+1:t+H =   ˆx(1) t+1 ˆx(1) t+2 · · · ˆx(1) t+H ˆx(2) t+1 ˆx(2) t+2 · · · ˆx(2) t+H ... ... ... ... ˆx(m) t+1 ˆx(m) t+2 · · · ˆx(m) t+H   (3) where ˆx(i) t+h represents the predicted value for the ith variable at time step t + h, and the matrix ˆXt+1:t+H has dimensions m × H, with m being the number of variables and H being the number of future time steps to forecast. This formulation allows the model to capture both temporal dependencies across time steps and correlations among multi- ple variables.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Multivariate Time-Series Forecasting With Multistep Hori-",
+        "section_category": "custom_section",
+        "chunk_index": 41,
+        "start_word": 0,
+        "end_word": 171
+      },
+      "scores": {
+        "dense": 0.5050632953643799,
+        "bm25": 8.295438248957304,
+        "rrf": 0.01562881562881563
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Recurrent Neural Networks: RNNs represent a class of]\nto reduce random noise in the data, yielding improved performance over other state- of-the-art models in multivariate and univariate forecasting by 20.3% and 22.6%, respectively [43]. Finally, state space models (SSMs) comprise a mathematical framework used to model dynamic systems by representing the system’s internal states and their evolution over time through state transition and observation equations [44]. In recent years, the ideas behind SSMs have been successfully applied to build deep recursive time-series forecasting models, includ- ing the linear spate-space layer (LSSL) [45], which combines the strengths of RNNs, CNNs, and continuous-time models. The structured state-space sequence model (S4) [46] and the simplified state-space sequence model (S5) [47] tackle cer- tain computational challenges of the LSSL. Mamba [48], an advanced neural network architecture designed to efficiently handle long sequences by combining memory augmentation with model-based attention mechanisms, enhances the model’s ability to capture and utilize long-term dependencies in data.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 3,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Recurrent Neural Networks: RNNs represent a class of",
+        "section_category": "custom_section",
+        "chunk_index": 28,
+        "start_word": 450,
+        "end_word": 600
+      },
+      "scores": {
+        "dense": 0.33500510454177856,
+        "bm25": 6.2305850127391995,
+        "rrf": 0.007352941176470588
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_8_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.29013150930404663
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_7_image_2.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2753024399280548
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_5_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_5_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2715715765953064
+      }
+    }
+  ],
+  "status": "success"
+}

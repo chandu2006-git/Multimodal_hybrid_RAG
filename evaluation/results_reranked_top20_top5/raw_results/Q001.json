@@ -1,0 +1,325 @@
+{
+  "id": "Q001",
+  "category": "factual_text",
+  "question": "What is the full title of the paper?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:32:04.586162+00:00",
+  "retrieved_pages": [
+    "17",
+    "16",
+    "9"
+  ],
+  "relevant_pages": [
+    1
+  ],
+  "retrieval_metrics": {
+    "recall@5": 0.0,
+    "precision@5": 0.0,
+    "hit_rate@5": 0.0,
+    "mrr@5": 0.0,
+    "relevant_page_count": 1,
+    "retrieved_page_count": 3,
+    "relevant_pages_found": 0
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Nikolaos Dimitriou (Member, IEEE) received]\nthe Diploma and Ph.D. degrees in electrical and computer engineering from the Aristotle Univer- sity of Thessaloniki, Greece, in 2007 and 2014, respectively. He is currently a Senior Researcher (Grade C’) with the",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          17
+        ],
+        "page": 17,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Nikolaos Dimitriou (Member, IEEE) received",
+        "section_category": "custom_section",
+        "chunk_index": 199,
+        "start_word": 0,
+        "end_word": 33
+      },
+      "dense_score": 0.14593809843063354,
+      "bm25_score": 5.501944739014714,
+      "rrf_score": 0.00819672131147541,
+      "reranker_score": 0.00037027502548880875
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Signal]\nProcess., vol. 45, no. 11, pp. 2673–2681, Nov. 1997. [Online]. Available: https://ieeexplore.ieee. org/document/650093 [38] H. Jaeger, “The ‘echo state’ approach to analysing and training recurrent neural networks,” German Nat. Res. Center Inf. Technol. GMD, Sankt",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          16
+        ],
+        "page": 16,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Signal",
+        "section_category": "custom_section",
+        "chunk_index": 161,
+        "start_word": 0,
+        "end_word": 35
+      },
+      "dense_score": 0.12007569521665573,
+      "bm25_score": 2.5087412856948204,
+      "rrf_score": 0.007246376811594203,
+      "reranker_score": 0.0003079074085690081
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Transformers: canonical Transformer [49], Informer]\n[52], Reformer [51], Autoformer [53], FEDformer [28], PatchTST [27], and iTransformer [25].",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          9
+        ],
+        "page": 9,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Transformers: canonical Transformer [49], Informer",
+        "section_category": "custom_section",
+        "chunk_index": 104,
+        "start_word": 0,
+        "end_word": 12
+      },
+      "dense_score": 0.1250891089439392,
+      "bm25_score": 0.0,
+      "rrf_score": 0.007575757575757576,
+      "reranker_score": 0.00019586976850405335
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: “Long]\nshort-term memory,”",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          16
+        ],
+        "page": 16,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "“Long",
+        "section_category": "custom_section",
+        "chunk_index": 156,
+        "start_word": 0,
+        "end_word": 2
+      },
+      "dense_score": 0.12969274818897247,
+      "bm25_score": 0.0,
+      "rrf_score": 0.007692307692307693,
+      "reranker_score": 0.0001718189159873873
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: [70] H.]\nGao,",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          17
+        ],
+        "page": 17,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "[70] H.",
+        "section_category": "custom_section",
+        "chunk_index": 173,
+        "start_word": 0,
+        "end_word": 1
+      },
+      "dense_score": 0.12412792444229126,
+      "bm25_score": 0.0,
+      "rrf_score": 0.007462686567164179,
+      "reranker_score": 0.00012850092025473714
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_9_render.png",
+      "filename": "page_9_render.png",
+      "page": 9,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.25975650548934937
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_5_render.png",
+      "filename": "page_5_render.png",
+      "page": 5,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2543673515319824
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_1_render.png",
+      "filename": "page_1_render.png",
+      "page": 1,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2534909248352051
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Nikolaos Dimitriou (Member, IEEE) received]\nthe Diploma and Ph.D. degrees in electrical and computer engineering from the Aristotle Univer- sity of Thessaloniki, Greece, in 2007 and 2014, respectively. He is currently a Senior Researcher (Grade C’) with the",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 17,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          17
+        ],
+        "page": 17,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Nikolaos Dimitriou (Member, IEEE) received",
+        "section_category": "custom_section",
+        "chunk_index": 199,
+        "start_word": 0,
+        "end_word": 33
+      },
+      "scores": {
+        "dense": 0.14593809843063354,
+        "bm25": 5.501944739014714,
+        "rrf": 0.00819672131147541
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Signal]\nProcess., vol. 45, no. 11, pp. 2673–2681, Nov. 1997. [Online]. Available: https://ieeexplore.ieee. org/document/650093 [38] H. Jaeger, “The ‘echo state’ approach to analysing and training recurrent neural networks,” German Nat. Res. Center Inf. Technol. GMD, Sankt",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 16,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          16
+        ],
+        "page": 16,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Signal",
+        "section_category": "custom_section",
+        "chunk_index": 161,
+        "start_word": 0,
+        "end_word": 35
+      },
+      "scores": {
+        "dense": 0.12007569521665573,
+        "bm25": 2.5087412856948204,
+        "rrf": 0.007246376811594203
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Transformers: canonical Transformer [49], Informer]\n[52], Reformer [51], Autoformer [53], FEDformer [28], PatchTST [27], and iTransformer [25].",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 9,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          9
+        ],
+        "page": 9,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Transformers: canonical Transformer [49], Informer",
+        "section_category": "custom_section",
+        "chunk_index": 104,
+        "start_word": 0,
+        "end_word": 12
+      },
+      "scores": {
+        "dense": 0.1250891089439392,
+        "bm25": 0.0,
+        "rrf": 0.007575757575757576
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: “Long]\nshort-term memory,”",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 16,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          16
+        ],
+        "page": 16,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "“Long",
+        "section_category": "custom_section",
+        "chunk_index": 156,
+        "start_word": 0,
+        "end_word": 2
+      },
+      "scores": {
+        "dense": 0.12969274818897247,
+        "bm25": 0.0,
+        "rrf": 0.007692307692307693
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: [70] H.]\nGao,",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 17,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          17
+        ],
+        "page": 17,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "[70] H.",
+        "section_category": "custom_section",
+        "chunk_index": 173,
+        "start_word": 0,
+        "end_word": 1
+      },
+      "scores": {
+        "dense": 0.12412792444229126,
+        "bm25": 0.0,
+        "rrf": 0.007462686567164179
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_9_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 9,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_9_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.25975650548934937
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_5_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_5_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2543673515319824
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_1_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_1_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2534909248352051
+      }
+    }
+  ],
+  "status": "success"
+}

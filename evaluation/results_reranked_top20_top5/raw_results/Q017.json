@@ -1,0 +1,331 @@
+{
+  "id": "Q017",
+  "category": "factual_text",
+  "question": "Which two heterogeneous real-world application settings are used to assess the proposed method?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:33:39.331998+00:00",
+  "retrieved_pages": [
+    "11",
+    "8",
+    "4",
+    "10"
+  ],
+  "relevant_pages": [
+    2,
+    5
+  ],
+  "retrieval_metrics": {
+    "recall@5": 0.0,
+    "precision@5": 0.0,
+    "hit_rate@5": 0.0,
+    "mrr@5": 0.0,
+    "relevant_page_count": 2,
+    "retrieved_page_count": 4,
+    "relevant_pages_found": 0
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET]\nthese observa- tions reinforce the hypothesis that specialized time-series feature extraction and decomposition techniques are crucial for enhancing model robustness and accuracy, especially in complex, nonlinear time series. Overall, the results underscore the importance of aligning the choice of model architecture and feature extraction strategy with the specific characteristics of the forecasting task at hand, as this alignment signifi- cantly impacts the overall effectiveness and reliability of the predictions. In Table III, the performance of six forecasting models is evaluated for the sink manufacturing dataset across four forecast horizons (8 H, 24 H, 48 H, 72 H), using the same metrics (RMSE, SMAPE, R2, and DA). The results high- light the competitive performance of PDFLinearEWA, which consistently approaches or outperforms the other models, particularly at longer forecast horizons (72 H). FiLM demon- strates better results at shorter horizons, leveraging its FT block, but exhibits reduced effectiveness at longer horizons. TimeMixer and PatchTST deliver balanced performance, while TimesNet shows reliable, albeit average, results. These find- ings align with those observed in the antenna assembly line dataset, demonstrating the generalization capability of the proposed method across heterogeneous sectors and forecasting applications.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          11
+        ],
+        "page": 11,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET",
+        "section_category": "custom_section",
+        "chunk_index": 111,
+        "start_word": 150,
+        "end_word": 339
+      },
+      "dense_score": 0.17730915546417236,
+      "bm25_score": 9.222080906544258,
+      "rrf_score": 0.007352941176470588,
+      "reranker_score": 0.6478583216667175
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Sink Manufacturing: The secondary dataset used for the]\nevaluation of the proposed method originates from a sink manufacturing process and includes vibration sensor readings of manufacturing equipment from a single-stage process. The data span a two-month period and include five monitored variables.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Sink Manufacturing: The secondary dataset used for the",
+        "section_category": "custom_section",
+        "chunk_index": 90,
+        "start_word": 0,
+        "end_word": 34
+      },
+      "dense_score": 0.18323324620723724,
+      "bm25_score": 9.512722652743493,
+      "rrf_score": 0.007462686567164179,
+      "reranker_score": 0.5433482527732849
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\naccount for correlations between variables and across production stages, leading to suboptimal perfor- mance [80]. Moreover, the process of selecting and tuning the most suitable deep neural network remains a challenging and expertise-intensive task [81]. Furthermore, these methods frequently lack robust domain generalization, making them prone to performance degradation when faced with unseen, noisy, or heterogeneous data distributions typical in real-world industrial environments [82]. To address these challenges, this study introduces a sim- ple, yet efficient, forecasting method. This method integrates information across multiple production stages and variables to enhance forecasting accuracy in complex industrial applica- tions with temporal and spatial correlations. Additionally, the simplicity of the method reduces the need for laborious man- ual parameter tuning, speeding up the development process. Finally, unlike methods tested only on benchmark datasets, our approach is validated using two heterogeneous real-world use cases, highlighting its ability to deliver consistent performance across industrial domains.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 37,
+        "start_word": 900,
+        "end_word": 1050
+      },
+      "dense_score": 0.19076555967330933,
+      "bm25_score": 16.758785321496887,
+      "rrf_score": 0.008064516129032258,
+      "reranker_score": 0.4539828598499298
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: A. Datasets]\nTo assess the effectiveness of our proposed forecasting method, we utilized two time-series datasets from the man- ufacturing sector. The primary dataset focuses on forecasting overall equipment effectiveness (OEE) metrics within a multi- stage antenna assembly line, aligning with the central objective of our study. To evaluate the generalizability of the proposed method in different manufacturing contexts, we additionally used a complementary dataset that contains time series data from a single-stage sink manufacturing process. Detailed descriptions of both datasets are provided in the following.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "A. Datasets",
+        "section_category": "custom_section",
+        "chunk_index": 83,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "dense_score": 0.2403368353843689,
+      "bm25_score": 18.362173178555196,
+      "rrf_score": 0.00819672131147541,
+      "reranker_score": 0.4020591080188751
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) they extract valuable features that might be challenging for]\nby PatchTST across all forecast horizons due to its patching layer, which is also utilized in our proposed method. The canonical Transformer appears to overfit the training data, compared to PatchTST and iTransformer, whose dimensionality reduction schemes allow them not only to reduce model complexity but also to provide a regularizing effect. This indicates that attention-based models overfit considerably in the absence of noise reduction or regularization mechanisms. FEDformer and Autoformer, leveraging their respective DFT and MA decomposition schemes, exhibit comparable results, falling below the two models mentioned above. It is important to highlight that multiple encoder–decoder configurations were evaluated for each model, and in all cases, the configurations with fewer encoder–decoder blocks consistently achieved the highest performance. Consequently, the results presented in Table II correspond to configurations with a single encoder and a single decoder block, if applicable. In the case of TCNs, TimesNet exhibits mediocre results comparable to the median Transformer or MLP. Interest- ingly, the results shown in Table II correspond to the simpler OIKONOMOU et al.: TIME-SERIES FORECASTING IN INDUSTRIAL ENVIRONMENTS 7691",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          10,
+          11
+        ],
+        "page": 10,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) they extract valuable features that might be challenging for",
+        "section_category": "custom_section",
+        "chunk_index": 109,
+        "start_word": 150,
+        "end_word": 326
+      },
+      "dense_score": 0.13448767364025116,
+      "bm25_score": 8.749864919152923,
+      "rrf_score": 0.007246376811594203,
+      "reranker_score": 0.2128351926803589
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "filename": "page_6_image_1.png",
+      "page": 6,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.28757011890411377
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "filename": "page_7_image_2.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.28523796796798706
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_render.png",
+      "filename": "page_6_render.png",
+      "page": 6,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.27657341957092285
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET]\nthese observa- tions reinforce the hypothesis that specialized time-series feature extraction and decomposition techniques are crucial for enhancing model robustness and accuracy, especially in complex, nonlinear time series. Overall, the results underscore the importance of aligning the choice of model architecture and feature extraction strategy with the specific characteristics of the forecasting task at hand, as this alignment signifi- cantly impacts the overall effectiveness and reliability of the predictions. In Table III, the performance of six forecasting models is evaluated for the sink manufacturing dataset across four forecast horizons (8 H, 24 H, 48 H, 72 H), using the same metrics (RMSE, SMAPE, R2, and DA). The results high- light the competitive performance of PDFLinearEWA, which consistently approaches or outperforms the other models, particularly at longer forecast horizons (72 H). FiLM demon- strates better results at shorter horizons, leveraging its FT block, but exhibits reduced effectiveness at longer horizons. TimeMixer and PatchTST deliver balanced performance, while TimesNet shows reliable, albeit average, results. These find- ings align with those observed in the antenna assembly line dataset, demonstrating the generalization capability of the proposed method across heterogeneous sectors and forecasting applications.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 11,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          11
+        ],
+        "page": 11,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET",
+        "section_category": "custom_section",
+        "chunk_index": 111,
+        "start_word": 150,
+        "end_word": 339
+      },
+      "scores": {
+        "dense": 0.17730915546417236,
+        "bm25": 9.222080906544258,
+        "rrf": 0.007352941176470588
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Sink Manufacturing: The secondary dataset used for the]\nevaluation of the proposed method originates from a sink manufacturing process and includes vibration sensor readings of manufacturing equipment from a single-stage process. The data span a two-month period and include five monitored variables.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Sink Manufacturing: The secondary dataset used for the",
+        "section_category": "custom_section",
+        "chunk_index": 90,
+        "start_word": 0,
+        "end_word": 34
+      },
+      "scores": {
+        "dense": 0.18323324620723724,
+        "bm25": 9.512722652743493,
+        "rrf": 0.007462686567164179
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\naccount for correlations between variables and across production stages, leading to suboptimal perfor- mance [80]. Moreover, the process of selecting and tuning the most suitable deep neural network remains a challenging and expertise-intensive task [81]. Furthermore, these methods frequently lack robust domain generalization, making them prone to performance degradation when faced with unseen, noisy, or heterogeneous data distributions typical in real-world industrial environments [82]. To address these challenges, this study introduces a sim- ple, yet efficient, forecasting method. This method integrates information across multiple production stages and variables to enhance forecasting accuracy in complex industrial applica- tions with temporal and spatial correlations. Additionally, the simplicity of the method reduces the need for laborious man- ual parameter tuning, speeding up the development process. Finally, unlike methods tested only on benchmark datasets, our approach is validated using two heterogeneous real-world use cases, highlighting its ability to deliver consistent performance across industrial domains.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 4,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 37,
+        "start_word": 900,
+        "end_word": 1050
+      },
+      "scores": {
+        "dense": 0.19076555967330933,
+        "bm25": 16.758785321496887,
+        "rrf": 0.008064516129032258
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: A. Datasets]\nTo assess the effectiveness of our proposed forecasting method, we utilized two time-series datasets from the man- ufacturing sector. The primary dataset focuses on forecasting overall equipment effectiveness (OEE) metrics within a multi- stage antenna assembly line, aligning with the central objective of our study. To evaluate the generalizability of the proposed method in different manufacturing contexts, we additionally used a complementary dataset that contains time series data from a single-stage sink manufacturing process. Detailed descriptions of both datasets are provided in the following.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "A. Datasets",
+        "section_category": "custom_section",
+        "chunk_index": 83,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "scores": {
+        "dense": 0.2403368353843689,
+        "bm25": 18.362173178555196,
+        "rrf": 0.00819672131147541
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) they extract valuable features that might be challenging for]\nby PatchTST across all forecast horizons due to its patching layer, which is also utilized in our proposed method. The canonical Transformer appears to overfit the training data, compared to PatchTST and iTransformer, whose dimensionality reduction schemes allow them not only to reduce model complexity but also to provide a regularizing effect. This indicates that attention-based models overfit considerably in the absence of noise reduction or regularization mechanisms. FEDformer and Autoformer, leveraging their respective DFT and MA decomposition schemes, exhibit comparable results, falling below the two models mentioned above. It is important to highlight that multiple encoder–decoder configurations were evaluated for each model, and in all cases, the configurations with fewer encoder–decoder blocks consistently achieved the highest performance. Consequently, the results presented in Table II correspond to configurations with a single encoder and a single decoder block, if applicable. In the case of TCNs, TimesNet exhibits mediocre results comparable to the median Transformer or MLP. Interest- ingly, the results shown in Table II correspond to the simpler OIKONOMOU et al.: TIME-SERIES FORECASTING IN INDUSTRIAL ENVIRONMENTS 7691",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 10,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          10,
+          11
+        ],
+        "page": 10,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) they extract valuable features that might be challenging for",
+        "section_category": "custom_section",
+        "chunk_index": 109,
+        "start_word": 150,
+        "end_word": 326
+      },
+      "scores": {
+        "dense": 0.13448767364025116,
+        "bm25": 8.749864919152923,
+        "rrf": 0.007246376811594203
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_6_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.28757011890411377
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_7_image_2.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.28523796796798706
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_6_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.27657341957092285
+      }
+    }
+  ],
+  "status": "success"
+}

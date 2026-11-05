@@ -24,6 +24,8 @@ class MultimodalRAGPipeline:
         image_top_k: int = 3,
         table_top_k: int = 3,
         answer_generator: Any | None = None,
+        text_candidate_k: int | None = None,
+        reranker: Any | None = None,
     ) -> None:
         self.pdf_path = Path(pdf_path)
 
@@ -32,7 +34,23 @@ class MultimodalRAGPipeline:
                 f"PDF not found: {self.pdf_path}"
             )
 
+        if text_top_k < 1:
+            raise ValueError("text_top_k must be positive.")
+
+        if image_top_k < 1 or table_top_k < 1:
+            raise ValueError(
+                "image_top_k and table_top_k must be positive."
+            )
+
+        if text_candidate_k is not None and text_candidate_k < 1:
+            raise ValueError("text_candidate_k must be positive.")
+
         self.text_top_k = text_top_k
+        self.text_candidate_k = max(
+            text_top_k,
+            text_candidate_k or text_top_k,
+        )
+        self.reranker = reranker
         self.image_top_k = image_top_k
         self.table_top_k = table_top_k
 
@@ -54,7 +72,8 @@ class MultimodalRAGPipeline:
         # Ensure the source filename is available for citations.
         for chunk in chunks:
             chunk["metadata"].setdefault(
-                "source", self.document["source"]
+                "source",
+                self.document["source"],
             )
 
         # 3. Initialize text retrieval.
@@ -84,20 +103,40 @@ class MultimodalRAGPipeline:
         self,
         query: str,
     ) -> dict[str, Any]:
-        """Retrieve evidence from all available modalities."""
+        """Retrieve multimodal evidence and optionally rerank text."""
+
         if not query or not query.strip():
             raise ValueError("Query must not be empty.")
 
-        text_results = self.text_retriever.retrieve(
-            query,
-            top_k=self.text_top_k,
+        # 1. Retrieve text candidates.
+        candidate_k = (
+            self.text_candidate_k
+            if self.reranker is not None
+            else self.text_top_k
         )
 
+        text_candidates = self.text_retriever.retrieve(
+            query,
+            top_k=candidate_k,
+        )
+
+        # 2. Optionally rerank candidates and select final Top-K.
+        if self.reranker is not None:
+            text_results = self.reranker.rerank(
+                query=query,
+                chunks=text_candidates,
+                top_k=self.text_top_k,
+            )
+        else:
+            text_results = text_candidates
+
+        # 3. Retrieve images.
         image_results = self.image_retriever.retrieve(
             query,
             top_k=self.image_top_k,
         )
 
+        # 4. Retrieve tables.
         table_results = (
             self.table_retriever.retrieve(
                 query,
@@ -107,6 +146,7 @@ class MultimodalRAGPipeline:
             else []
         )
 
+        # 5. Build evidence using the final selected text results.
         evidence = build_evidence(
             text_results=text_results,
             image_results=image_results,
@@ -118,6 +158,7 @@ class MultimodalRAGPipeline:
             "query": query,
             "evidence": evidence,
             "text_results": text_results,
+            "text_candidates": text_candidates,
             "image_results": image_results,
             "table_results": table_results,
         }
@@ -127,6 +168,7 @@ class MultimodalRAGPipeline:
         query: str,
     ) -> dict[str, Any]:
         """Retrieve evidence and generate a grounded answer."""
+
         retrieval = self.retrieve(query)
 
         answer = self.answer_generator.generate(

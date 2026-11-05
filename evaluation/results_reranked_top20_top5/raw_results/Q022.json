@@ -1,0 +1,330 @@
+{
+  "id": "Q022",
+  "category": "factual_text",
+  "question": "What does the patching mechanism do to the input sequence?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:34:11.339597+00:00",
+  "retrieved_pages": [
+    "6",
+    "5",
+    "2",
+    "3"
+  ],
+  "relevant_pages": [
+    6
+  ],
+  "retrieval_metrics": {
+    "recall@5": 1.0,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 1,
+    "retrieved_page_count": 4,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Xn−1]\nj=0(x(i) t−j −¯x(i) t )2 (4) where x(i) j refers to the value of the ith variable at time step j. Afterward, the input sliding window is normalized by subtracting its mean and dividing by its variance zi t = φ(xi t ) = xi t −¯x(i) t σ (i) t . (5) To ensure that the model focuses on isolated sub-sequences of the input time series, the patching mechanism of PatchTST is applied to the normalized sequence, splitting it into sub-sequences of length l. Consequently, each variable i is divided into (n/l) non-overlapping sub-sequences p(i) t−n+1:t =   p(i) q = {z(i) t , z(i) t−1, . . . , z(i) t−l+1} p(i) q−1 = {z(i) t−l, z(i) t−l−1, . . . , z(i) t−2l+1} ... p(i) 1 = {z(i) t−(q−1)l, . . . , z(i) t−ql+1}   (6) where p(i) t−n+1:t represents the patched input window for variable i, and p(i) q represents its qth patch, with q ∈ {1, 2, . . . , (n/l)}. After applying normalization and patching transformations, an MLP layer is employed to extract features from each sub-sequence and map each patch into a d-dimensional latent space representation. The activation function",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Xn−1",
+        "section_category": "custom_section",
+        "chunk_index": 47,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.4905644655227661,
+      "bm25_score": 12.406038966780535,
+      "rrf_score": 0.01626123744050767,
+      "reranker_score": 0.9757322072982788
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 1) Patching Block: This block builds upon the work of]\nNie et al. [27] and their PatchTST model, which was orig- inally developed for long-term time-series forecasting. In the original PatchTST architecture, a patching layer was intro- duced to segment the input sequence into shorter tokens, effectively reducing the token length and thereby decreasing the computational complexity associated with the Transformer- based backbone. Our proposed model leverages this patching mechanism to extract short-term features from the time series 7686 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5,
+          6
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "1) Patching Block: This block builds upon the work of",
+        "section_category": "custom_section",
+        "chunk_index": 44,
+        "start_word": 0,
+        "end_word": 79
+      },
+      "dense_score": 0.39671799540519714,
+      "bm25_score": 15.585941974534318,
+      "rrf_score": 0.01626123744050767,
+      "reranker_score": 0.8409666419029236
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 1.]\nModel architecture of PDFLinearEWA consisting of three predictor blocks. The patching block partitions the input time series into non-overlapping patches and processes them individually. The MA series decomposition block analyzes the input time series into its trend and seasonal components using an MA kernel, whereas the DFT series decomposition block works similarly, leveraging a DFT decomposition scheme. The EWA module fuses the outputs of the three predictor blocks using an exponentially weighting mechanism. by focusing on individual patches. This approach allows the model to capture localized patterns efficiently, making it well-suited for applications where short-term dynamics play a crucial role. The initial layer of this block employs the instance normal- ization technique introduced by Kim et al. [83] to address temporal distribution shifts commonly observed in time- series data. This mechanism operates on a sliding-window basis, where for each input window Xt−n+1:t and each vari- able i, the mean ¯x(i) t and variance σ (i) t are computed as follows: ¯x(i) t = 1 n n−1",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 1.",
+        "section_category": "custom_section",
+        "chunk_index": 45,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "dense_score": 0.2890881299972534,
+      "bm25_score": 11.94230070162488,
+      "rrf_score": 0.015399194503672116,
+      "reranker_score": 0.5231574773788452
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) TCNs efficiently model complex temporal patterns using]\nconvolutional layers, but their success is highly depen- dent on hyperparameter tuning and deep networks to handle long input lengths and forecast horizons [26]. This article introduces a lightweight MLP-based model that integrates multiple feature extraction techniques, including: 1) PatchTST’s [27] patching mechanism for efficient short-range feature extraction, a moving average (MA) [16], [17] seasonal decomposition scheme; and 2) a discrete Fourier transform (DFT) [28] decomposition scheme for mid-to-long- range forecast performance. Additionally, a simple late-fusion module is developed that adaptively combines the forecasts of the three predictor blocks using an exponentially weighted averaging (EWA) mechanism. This approach leverages the strengths of each individual predictor feature extraction tech- nique, resulting in a more robust and accurate forecast across varying forecast horizons. The objective of this study is to address the challenges in time-series forecasting in a real-world manufacturing setting, provide valuable insights into the applicability and effec- tiveness of different forecasting techniques in a real-world manufacturing setting. The main contributions of this study are as follows.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) TCNs efficiently model complex temporal patterns using",
+        "section_category": "custom_section",
+        "chunk_index": 18,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "dense_score": 0.09154847264289856,
+      "bm25_score": 10.051611470337948,
+      "rrf_score": 0.007462686567164179,
+      "reranker_score": 0.16209258139133453
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Transformers: The recent groundbreaking work on Trans-]\ninto the attention mechanism, including the MA decomposition of autoformer [53], the DFT decomposition of FEDformer [28], and the ES decomposition of ETSformer [54]. Other recent attention-based models include PatchTST [27], which divides the input time-series into discrete patches and processes them individually, achieving an overall reduction of 21.0% on MSE compared to other Transformer-based models, and iTrans- former [55], which inverts the dimensions of the input time series, reducing complexity, achieving a decrease of 38.9% on MSE over the canonical Transformer and outperforming PatchTST on six out of seven benchmark datasets.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3,
+          4
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Transformers: The recent groundbreaking work on Trans-",
+        "section_category": "custom_section",
+        "chunk_index": 30,
+        "start_word": 150,
+        "end_word": 242
+      },
+      "dense_score": 0.2543090581893921,
+      "bm25_score": 9.97551797812113,
+      "rrf_score": 0.01459931798806479,
+      "reranker_score": 0.031220508739352226
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "filename": "page_6_image_1.png",
+      "page": 6,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2519627809524536
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_render.png",
+      "filename": "page_6_render.png",
+      "page": 6,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.251360148191452
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "filename": "page_8_image_1.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.250874400138855
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Xn−1]\nj=0(x(i) t−j −¯x(i) t )2 (4) where x(i) j refers to the value of the ith variable at time step j. Afterward, the input sliding window is normalized by subtracting its mean and dividing by its variance zi t = φ(xi t ) = xi t −¯x(i) t σ (i) t . (5) To ensure that the model focuses on isolated sub-sequences of the input time series, the patching mechanism of PatchTST is applied to the normalized sequence, splitting it into sub-sequences of length l. Consequently, each variable i is divided into (n/l) non-overlapping sub-sequences p(i) t−n+1:t =   p(i) q = {z(i) t , z(i) t−1, . . . , z(i) t−l+1} p(i) q−1 = {z(i) t−l, z(i) t−l−1, . . . , z(i) t−2l+1} ... p(i) 1 = {z(i) t−(q−1)l, . . . , z(i) t−ql+1}   (6) where p(i) t−n+1:t represents the patched input window for variable i, and p(i) q represents its qth patch, with q ∈ {1, 2, . . . , (n/l)}. After applying normalization and patching transformations, an MLP layer is employed to extract features from each sub-sequence and map each patch into a d-dimensional latent space representation. The activation function",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Xn−1",
+        "section_category": "custom_section",
+        "chunk_index": 47,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.4905644655227661,
+        "bm25": 12.406038966780535,
+        "rrf": 0.01626123744050767
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 1) Patching Block: This block builds upon the work of]\nNie et al. [27] and their PatchTST model, which was orig- inally developed for long-term time-series forecasting. In the original PatchTST architecture, a patching layer was intro- duced to segment the input sequence into shorter tokens, effectively reducing the token length and thereby decreasing the computational complexity associated with the Transformer- based backbone. Our proposed model leverages this patching mechanism to extract short-term features from the time series 7686 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5,
+          6
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "1) Patching Block: This block builds upon the work of",
+        "section_category": "custom_section",
+        "chunk_index": 44,
+        "start_word": 0,
+        "end_word": 79
+      },
+      "scores": {
+        "dense": 0.39671799540519714,
+        "bm25": 15.585941974534318,
+        "rrf": 0.01626123744050767
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 1.]\nModel architecture of PDFLinearEWA consisting of three predictor blocks. The patching block partitions the input time series into non-overlapping patches and processes them individually. The MA series decomposition block analyzes the input time series into its trend and seasonal components using an MA kernel, whereas the DFT series decomposition block works similarly, leveraging a DFT decomposition scheme. The EWA module fuses the outputs of the three predictor blocks using an exponentially weighting mechanism. by focusing on individual patches. This approach allows the model to capture localized patterns efficiently, making it well-suited for applications where short-term dynamics play a crucial role. The initial layer of this block employs the instance normal- ization technique introduced by Kim et al. [83] to address temporal distribution shifts commonly observed in time- series data. This mechanism operates on a sliding-window basis, where for each input window Xt−n+1:t and each vari- able i, the mean ¯x(i) t and variance σ (i) t are computed as follows: ¯x(i) t = 1 n n−1",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 1.",
+        "section_category": "custom_section",
+        "chunk_index": 45,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "scores": {
+        "dense": 0.2890881299972534,
+        "bm25": 11.94230070162488,
+        "rrf": 0.015399194503672116
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) TCNs efficiently model complex temporal patterns using]\nconvolutional layers, but their success is highly depen- dent on hyperparameter tuning and deep networks to handle long input lengths and forecast horizons [26]. This article introduces a lightweight MLP-based model that integrates multiple feature extraction techniques, including: 1) PatchTST’s [27] patching mechanism for efficient short-range feature extraction, a moving average (MA) [16], [17] seasonal decomposition scheme; and 2) a discrete Fourier transform (DFT) [28] decomposition scheme for mid-to-long- range forecast performance. Additionally, a simple late-fusion module is developed that adaptively combines the forecasts of the three predictor blocks using an exponentially weighted averaging (EWA) mechanism. This approach leverages the strengths of each individual predictor feature extraction tech- nique, resulting in a more robust and accurate forecast across varying forecast horizons. The objective of this study is to address the challenges in time-series forecasting in a real-world manufacturing setting, provide valuable insights into the applicability and effec- tiveness of different forecasting techniques in a real-world manufacturing setting. The main contributions of this study are as follows.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) TCNs efficiently model complex temporal patterns using",
+        "section_category": "custom_section",
+        "chunk_index": 18,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "scores": {
+        "dense": 0.09154847264289856,
+        "bm25": 10.051611470337948,
+        "rrf": 0.007462686567164179
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Transformers: The recent groundbreaking work on Trans-]\ninto the attention mechanism, including the MA decomposition of autoformer [53], the DFT decomposition of FEDformer [28], and the ES decomposition of ETSformer [54]. Other recent attention-based models include PatchTST [27], which divides the input time-series into discrete patches and processes them individually, achieving an overall reduction of 21.0% on MSE compared to other Transformer-based models, and iTrans- former [55], which inverts the dimensions of the input time series, reducing complexity, achieving a decrease of 38.9% on MSE over the canonical Transformer and outperforming PatchTST on six out of seven benchmark datasets.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 3,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3,
+          4
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Transformers: The recent groundbreaking work on Trans-",
+        "section_category": "custom_section",
+        "chunk_index": 30,
+        "start_word": 150,
+        "end_word": 242
+      },
+      "scores": {
+        "dense": 0.2543090581893921,
+        "bm25": 9.97551797812113,
+        "rrf": 0.01459931798806479
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_6_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2519627809524536
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_6_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.251360148191452
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_8_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.250874400138855
+      }
+    }
+  ],
+  "status": "success"
+}

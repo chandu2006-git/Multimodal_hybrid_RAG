@@ -1,0 +1,330 @@
+{
+  "id": "Q014",
+  "category": "factual_text",
+  "question": "What activation function is used in the patching block's MLP feature extractor?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:33:18.863391+00:00",
+  "retrieved_pages": [
+    "6",
+    "2",
+    "13",
+    "10"
+  ],
+  "relevant_pages": [
+    6
+  ],
+  "retrieval_metrics": {
+    "recall@5": 1.0,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 1,
+    "retrieved_page_count": 4,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Xn−1]\nfor variable i, and p(i) q represents its qth patch, with q ∈ {1, 2, . . . , (n/l)}. After applying normalization and patching transformations, an MLP layer is employed to extract features from each sub-sequence and map each patch into a d-dimensional latent space representation. The activation function used is tanh, which confines the extracted features within the [−1, 1] range, ensuring bounded and nonlinear outputs. To enhance the model’s robustness and prevent overfitting, a dropout layer is incorporated, which regularizes the MLP’s output by randomly deactivating a portion of the neurons during training L(i) q = Dropout \u0010",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Xn−1",
+        "section_category": "custom_section",
+        "chunk_index": 48,
+        "start_word": 150,
+        "end_word": 251
+      },
+      "dense_score": 0.41335049271583557,
+      "bm25_score": 21.038711442293142,
+      "rrf_score": 0.01626123744050767,
+      "reranker_score": 0.9995298385620117
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Xn−1]\nj=0(x(i) t−j −¯x(i) t )2 (4) where x(i) j refers to the value of the ith variable at time step j. Afterward, the input sliding window is normalized by subtracting its mean and dividing by its variance zi t = φ(xi t ) = xi t −¯x(i) t σ (i) t . (5) To ensure that the model focuses on isolated sub-sequences of the input time series, the patching mechanism of PatchTST is applied to the normalized sequence, splitting it into sub-sequences of length l. Consequently, each variable i is divided into (n/l) non-overlapping sub-sequences p(i) t−n+1:t =   p(i) q = {z(i) t , z(i) t−1, . . . , z(i) t−l+1} p(i) q−1 = {z(i) t−l, z(i) t−l−1, . . . , z(i) t−2l+1} ... p(i) 1 = {z(i) t−(q−1)l, . . . , z(i) t−ql+1}   (6) where p(i) t−n+1:t represents the patched input window for variable i, and p(i) q represents its qth patch, with q ∈ {1, 2, . . . , (n/l)}. After applying normalization and patching transformations, an MLP layer is employed to extract features from each sub-sequence and map each patch into a d-dimensional latent space representation. The activation function",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Xn−1",
+        "section_category": "custom_section",
+        "chunk_index": 47,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.2899545431137085,
+      "bm25_score": 12.559252412085693,
+      "rrf_score": 0.01527518656716418,
+      "reranker_score": 0.9985062479972839
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) TCNs efficiently model complex temporal patterns using]\nconvolutional layers, but their success is highly depen- dent on hyperparameter tuning and deep networks to handle long input lengths and forecast horizons [26]. This article introduces a lightweight MLP-based model that integrates multiple feature extraction techniques, including: 1) PatchTST’s [27] patching mechanism for efficient short-range feature extraction, a moving average (MA) [16], [17] seasonal decomposition scheme; and 2) a discrete Fourier transform (DFT) [28] decomposition scheme for mid-to-long- range forecast performance. Additionally, a simple late-fusion module is developed that adaptively combines the forecasts of the three predictor blocks using an exponentially weighted averaging (EWA) mechanism. This approach leverages the strengths of each individual predictor feature extraction tech- nique, resulting in a more robust and accurate forecast across varying forecast horizons. The objective of this study is to address the challenges in time-series forecasting in a real-world manufacturing setting, provide valuable insights into the applicability and effec- tiveness of different forecasting techniques in a real-world manufacturing setting. The main contributions of this study are as follows.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) TCNs efficiently model complex temporal patterns using",
+        "section_category": "custom_section",
+        "chunk_index": 18,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "dense_score": 0.2614809572696686,
+      "bm25_score": 10.91213167634572,
+      "rrf_score": 0.014492753623188406,
+      "reranker_score": 0.3499280512332916
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 7) Early fusion: In our early fusion approach, a three-]\nlayer MLP is used to integrate intermediate features generated by each constituent model (e.g., patches from the patching block, and the trend and seasonal compo- nents from the decomposition blocks). These features are concatenated across all predictor blocks for each variable and time step before being fed into the MLP [Fig. 5(h)]. 7694 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          13,
+          14
+        ],
+        "page": 13,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "7) Early fusion: In our early fusion approach, a three-",
+        "section_category": "custom_section",
+        "chunk_index": 127,
+        "start_word": 0,
+        "end_word": 63
+      },
+      "dense_score": 0.4002108573913574,
+      "bm25_score": 15.02191388347065,
+      "rrf_score": 0.016001024065540194,
+      "reranker_score": 0.2439950406551361
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) they extract valuable features that might be challenging for]\nthe models to capture otherwise. These factors suggest that very complex DL methods with a high parameter count suffer from high variance, leading to underperformance, particularly in cases of low-dimensional and/or noisy data. Within the recurrent class, it is observed that FiLM outper- forms all other models for short-term forecast horizons (8 H, 24 H), confirming the efficacy of its FT block. Mamba, on the other hand, excels at long-term forecast horizons (48 H, 72 H), while maintaining good performance in short-term predictions. In the MLP class, TimeMixer and Koopa outperform all other models across all forecast horizons, underlying the importance of their respective time-series decomposition schemes. In the case of DLinear, the inclusion of the MA decomposition mech- anism, without any other parameter addition, greatly enhances performance over the simple linear model, illustrating the significance of effective feature extraction mechanisms. The top performance in the Transformer class is achieved by PatchTST across all forecast horizons due to its patching layer, which is also utilized in our proposed method. The canonical Transformer appears to overfit the training data, compared to PatchTST and iTransformer, whose dimensionality reduction schemes allow them not only to reduce model complexity but also to provide a",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          10,
+          11
+        ],
+        "page": 10,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) they extract valuable features that might be challenging for",
+        "section_category": "custom_section",
+        "chunk_index": 108,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.25270727276802063,
+      "bm25_score": 11.131923442841556,
+      "rrf_score": 0.007352941176470588,
+      "reranker_score": 0.23366518318653107
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "filename": "page_8_image_1.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2696959674358368
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "filename": "page_7_image_2.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2592392563819885
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_10_render.png",
+      "filename": "page_10_render.png",
+      "page": 10,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.23954761028289795
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Xn−1]\nfor variable i, and p(i) q represents its qth patch, with q ∈ {1, 2, . . . , (n/l)}. After applying normalization and patching transformations, an MLP layer is employed to extract features from each sub-sequence and map each patch into a d-dimensional latent space representation. The activation function used is tanh, which confines the extracted features within the [−1, 1] range, ensuring bounded and nonlinear outputs. To enhance the model’s robustness and prevent overfitting, a dropout layer is incorporated, which regularizes the MLP’s output by randomly deactivating a portion of the neurons during training L(i) q = Dropout \u0010",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Xn−1",
+        "section_category": "custom_section",
+        "chunk_index": 48,
+        "start_word": 150,
+        "end_word": 251
+      },
+      "scores": {
+        "dense": 0.41335049271583557,
+        "bm25": 21.038711442293142,
+        "rrf": 0.01626123744050767
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Xn−1]\nj=0(x(i) t−j −¯x(i) t )2 (4) where x(i) j refers to the value of the ith variable at time step j. Afterward, the input sliding window is normalized by subtracting its mean and dividing by its variance zi t = φ(xi t ) = xi t −¯x(i) t σ (i) t . (5) To ensure that the model focuses on isolated sub-sequences of the input time series, the patching mechanism of PatchTST is applied to the normalized sequence, splitting it into sub-sequences of length l. Consequently, each variable i is divided into (n/l) non-overlapping sub-sequences p(i) t−n+1:t =   p(i) q = {z(i) t , z(i) t−1, . . . , z(i) t−l+1} p(i) q−1 = {z(i) t−l, z(i) t−l−1, . . . , z(i) t−2l+1} ... p(i) 1 = {z(i) t−(q−1)l, . . . , z(i) t−ql+1}   (6) where p(i) t−n+1:t represents the patched input window for variable i, and p(i) q represents its qth patch, with q ∈ {1, 2, . . . , (n/l)}. After applying normalization and patching transformations, an MLP layer is employed to extract features from each sub-sequence and map each patch into a d-dimensional latent space representation. The activation function",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Xn−1",
+        "section_category": "custom_section",
+        "chunk_index": 47,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.2899545431137085,
+        "bm25": 12.559252412085693,
+        "rrf": 0.01527518656716418
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) TCNs efficiently model complex temporal patterns using]\nconvolutional layers, but their success is highly depen- dent on hyperparameter tuning and deep networks to handle long input lengths and forecast horizons [26]. This article introduces a lightweight MLP-based model that integrates multiple feature extraction techniques, including: 1) PatchTST’s [27] patching mechanism for efficient short-range feature extraction, a moving average (MA) [16], [17] seasonal decomposition scheme; and 2) a discrete Fourier transform (DFT) [28] decomposition scheme for mid-to-long- range forecast performance. Additionally, a simple late-fusion module is developed that adaptively combines the forecasts of the three predictor blocks using an exponentially weighted averaging (EWA) mechanism. This approach leverages the strengths of each individual predictor feature extraction tech- nique, resulting in a more robust and accurate forecast across varying forecast horizons. The objective of this study is to address the challenges in time-series forecasting in a real-world manufacturing setting, provide valuable insights into the applicability and effec- tiveness of different forecasting techniques in a real-world manufacturing setting. The main contributions of this study are as follows.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) TCNs efficiently model complex temporal patterns using",
+        "section_category": "custom_section",
+        "chunk_index": 18,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "scores": {
+        "dense": 0.2614809572696686,
+        "bm25": 10.91213167634572,
+        "rrf": 0.014492753623188406
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 7) Early fusion: In our early fusion approach, a three-]\nlayer MLP is used to integrate intermediate features generated by each constituent model (e.g., patches from the patching block, and the trend and seasonal compo- nents from the decomposition blocks). These features are concatenated across all predictor blocks for each variable and time step before being fed into the MLP [Fig. 5(h)]. 7694 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 13,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          13,
+          14
+        ],
+        "page": 13,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "7) Early fusion: In our early fusion approach, a three-",
+        "section_category": "custom_section",
+        "chunk_index": 127,
+        "start_word": 0,
+        "end_word": 63
+      },
+      "scores": {
+        "dense": 0.4002108573913574,
+        "bm25": 15.02191388347065,
+        "rrf": 0.016001024065540194
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) they extract valuable features that might be challenging for]\nthe models to capture otherwise. These factors suggest that very complex DL methods with a high parameter count suffer from high variance, leading to underperformance, particularly in cases of low-dimensional and/or noisy data. Within the recurrent class, it is observed that FiLM outper- forms all other models for short-term forecast horizons (8 H, 24 H), confirming the efficacy of its FT block. Mamba, on the other hand, excels at long-term forecast horizons (48 H, 72 H), while maintaining good performance in short-term predictions. In the MLP class, TimeMixer and Koopa outperform all other models across all forecast horizons, underlying the importance of their respective time-series decomposition schemes. In the case of DLinear, the inclusion of the MA decomposition mech- anism, without any other parameter addition, greatly enhances performance over the simple linear model, illustrating the significance of effective feature extraction mechanisms. The top performance in the Transformer class is achieved by PatchTST across all forecast horizons due to its patching layer, which is also utilized in our proposed method. The canonical Transformer appears to overfit the training data, compared to PatchTST and iTransformer, whose dimensionality reduction schemes allow them not only to reduce model complexity but also to provide a",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 10,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          10,
+          11
+        ],
+        "page": 10,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) they extract valuable features that might be challenging for",
+        "section_category": "custom_section",
+        "chunk_index": 108,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.25270727276802063,
+        "bm25": 11.131923442841556,
+        "rrf": 0.007352941176470588
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_8_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2696959674358368
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_7_image_2.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2592392563819885
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_10_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 10,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_10_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.23954761028289795
+      }
+    }
+  ],
+  "status": "success"
+}

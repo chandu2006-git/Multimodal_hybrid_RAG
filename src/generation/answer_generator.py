@@ -3,14 +3,28 @@ import os
 from typing import Any
 
 from google import genai
+from dotenv import load_dotenv
 
+load_dotenv()
+
+class AnswerGenerator:
+    def __init__(self, model=None):
+        self.api_key = (
+            os.getenv("GEMINI_API_KEY")
+            or os.getenv("GOOGLE_API_KEY")
+        )
+
+        if not self.api_key:
+            raise ValueError(
+                "GEMINI_API_KEY is missing. Set it in your .env file."
+            )
 
 class AnswerGenerator:
     """Generate answers grounded in retrieved multimodal evidence."""
 
     def __init__(
         self,
-        model_name: str = "gemini-2.5-flash",
+        model_name: str = "gemini-3.8-flash",
         api_key: str | None = None,
     ) -> None:
         self.api_key = api_key or os.getenv("GEMINI_API_KEY")

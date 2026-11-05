@@ -1,0 +1,330 @@
+{
+  "id": "Q029",
+  "category": "factual_text",
+  "question": "Which journal and publication issue identify this paper?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:34:58.238098+00:00",
+  "retrieved_pages": [
+    "3",
+    "15",
+    "10",
+    "1"
+  ],
+  "relevant_pages": [
+    1
+  ],
+  "retrieval_metrics": {
+    "recall@5": 1.0,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 0.25,
+    "relevant_page_count": 1,
+    "retrieved_page_count": 4,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Transformers: The recent groundbreaking work on Trans-]\nformers and attention-based models has revolutionized natural language processing by using a self-attention mechanism [49]. This enables parallelization and improves the model’s ability to capture long-range dependencies in sequences, outperforming previous models like RNNs and LSTMs in various time-series forecasting tasks [50]. Nevertheless, the canonical Transformer architecture faces various challenges regarding time-series forecasting, which include: 1) requiring large amounts of data for training; 2) high computational costs due to quadratic complexity at O(L2); 3) difficulty in capturing temporal dependencies; and 4) overfitting, especially on highly noisy data. 7684 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 In order to tackle the complexity problem and reduce the computational costs of the canonical Transformer architecture, Reformer leverages locality-sensitive hashing (LSH) for effi- cient attention computation and reversible residual layers [51], whereas Informer uses a probabilistic sparse self-attention mechanism and distilling operations [52]. Additionally, several time-series decomposition schemes have been integrated into the attention mechanism, including the MA decomposition of autoformer [53], the DFT decomposition of FEDformer [28], and the ES decomposition of ETSformer [54]. Other recent attention-based models include PatchTST [27], which divides the input time-series into discrete patches and processes them individually, achieving an overall reduction of 21.0% on",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3,
+          4
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Transformers: The recent groundbreaking work on Trans-",
+        "section_category": "custom_section",
+        "chunk_index": 29,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": -0.025586256757378578,
+      "bm25_score": 6.163179436140835,
+      "rrf_score": 0.007575757575757576,
+      "reranker_score": 0.014437136240303516
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: C. Stephanidis, “Aligning emerging technologies onto I4.0 principles:]\nTowards a novel architecture for zero-defect manufacturing,” in Proc. IEEE 27th Int. Conf. Emerg. Technol. Factory Autom. (ETFA), Sep. 2022, pp. 1–8. [6] P. Krishnamurthy, R. Karri, and F. Khorrami, “Anomaly detection in real-time multi-threaded processes using hardware performance counters,” IEEE Trans. Inf. Forensics Security, vol. 15, pp. 666–680, 2020. [7] P. Qiu, W. Li, and J. Li, “A new process control chart for monitoring short-range serially correlated data,” Technometrics, vol. 62, no. 1, pp. 71–83, Jan. 2020. [8] F. Psarommatis, G. May, and D. Kiritsis, “Predictive maintenance key control parameters for achieving efficient zero defect manufactur- ing,” Proc. CIRP, vol. 104, pp. 80–84, Jan. 2021. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S2212827121009124 [9] F. Psarommatis, G. May, P.-A. Dreyfus, and D. Kiritsis, “Zero defect manufacturing: State-of-the-art review, shortcomings and future direc- tions in research,” Int. J. Prod. Res., vol. 58, no. 1, pp. 1–17, Jan. 2020, doi: 10.1080/00207543.2019.1605228. [10] F. Psarommatis, G. May, and V. Azamfirei, “Zero defect manufacturing in 2024: A holistic literature review for bridging the gaps and for- ward outlook,” Int. J. Prod. Res., vol. 62, pp. 1–37, Aug. 2024, doi: 10.1080/00207543.2024.2388217. [11] F. Psarommatis and V. Azamfirei, “Zero defect manufacturing: A complete guide for advanced and sustainable quality management,”",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          15
+        ],
+        "page": 15,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "C. Stephanidis, “Aligning emerging technologies onto I4.0 principles:",
+        "section_category": "custom_section",
+        "chunk_index": 139,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.10612283647060394,
+      "bm25_score": 1.9726089494276813,
+      "rrf_score": 0.007462686567164179,
+      "reranker_score": 0.006958811543881893
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 5https://github.com/kwuking/TimeMixer]\n7690 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          10
+        ],
+        "page": 10,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "5https://github.com/kwuking/TimeMixer",
+        "section_category": "custom_section",
+        "chunk_index": 107,
+        "start_word": 0,
+        "end_word": 11
+      },
+      "dense_score": 0.11137580871582031,
+      "bm25_score": 5.69677335935195,
+      "rrf_score": 0.015045248868778281,
+      "reranker_score": 0.004683980718255043
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Body]\nIEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 7681",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Body",
+        "section_category": "body",
+        "chunk_index": 0,
+        "start_word": 0,
+        "end_word": 11
+      },
+      "dense_score": 0.11900874972343445,
+      "bm25_score": 5.824412672636269,
+      "rrf_score": 0.015399194503672116,
+      "reranker_score": 0.003918888512998819
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\nAt the core of predictive analytics lies time-series forecasting, a statistical tool that enables the forecasting of future states of manufacturing equipment based on historical data. Accurate forecasting facilitates informed © 2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/ 7682 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 and proactive decision-making, leading to reduced down- time, optimized maintenance schedules, and improved OEE. Furthermore, predictive maintenance enables sustainable man- ufacturing practices by improving system reliability, reducing waste, and minimizing resource consumption, aligning main- tenance strategies with both operational and environmental objectives [12]. In this study, we focus on a highly specialized manufac- turing process, an antenna assembly line, which serves as a test case for applying advanced DL forecasting methods. The antenna assembly line is a highly complex process with temporal and spatial interdependencies, which continuously generates a large amount of data. These data encompass a wide range of metrics, including production volumes, defect rates, manufacturing cycle times, and equipment downtimes. These metrics are integral to the calculation of OEE, a critical performance indicator that reflects the efficiency and effec- tiveness of manufacturing operations. The ability to forecast",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 12,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "dense_score": -0.008369874209165573,
+      "bm25_score": 6.564598325377008,
+      "rrf_score": 0.007692307692307693,
+      "reranker_score": 0.003323035780340433
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_9_render.png",
+      "filename": "page_9_render.png",
+      "page": 9,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2902202904224396
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_5_render.png",
+      "filename": "page_5_render.png",
+      "page": 5,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2848782539367676
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_3_render.png",
+      "filename": "page_3_render.png",
+      "page": 3,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2764394283294678
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Transformers: The recent groundbreaking work on Trans-]\nformers and attention-based models has revolutionized natural language processing by using a self-attention mechanism [49]. This enables parallelization and improves the model’s ability to capture long-range dependencies in sequences, outperforming previous models like RNNs and LSTMs in various time-series forecasting tasks [50]. Nevertheless, the canonical Transformer architecture faces various challenges regarding time-series forecasting, which include: 1) requiring large amounts of data for training; 2) high computational costs due to quadratic complexity at O(L2); 3) difficulty in capturing temporal dependencies; and 4) overfitting, especially on highly noisy data. 7684 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 In order to tackle the complexity problem and reduce the computational costs of the canonical Transformer architecture, Reformer leverages locality-sensitive hashing (LSH) for effi- cient attention computation and reversible residual layers [51], whereas Informer uses a probabilistic sparse self-attention mechanism and distilling operations [52]. Additionally, several time-series decomposition schemes have been integrated into the attention mechanism, including the MA decomposition of autoformer [53], the DFT decomposition of FEDformer [28], and the ES decomposition of ETSformer [54]. Other recent attention-based models include PatchTST [27], which divides the input time-series into discrete patches and processes them individually, achieving an overall reduction of 21.0% on",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 3,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3,
+          4
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Transformers: The recent groundbreaking work on Trans-",
+        "section_category": "custom_section",
+        "chunk_index": 29,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": -0.025586256757378578,
+        "bm25": 6.163179436140835,
+        "rrf": 0.007575757575757576
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: C. Stephanidis, “Aligning emerging technologies onto I4.0 principles:]\nTowards a novel architecture for zero-defect manufacturing,” in Proc. IEEE 27th Int. Conf. Emerg. Technol. Factory Autom. (ETFA), Sep. 2022, pp. 1–8. [6] P. Krishnamurthy, R. Karri, and F. Khorrami, “Anomaly detection in real-time multi-threaded processes using hardware performance counters,” IEEE Trans. Inf. Forensics Security, vol. 15, pp. 666–680, 2020. [7] P. Qiu, W. Li, and J. Li, “A new process control chart for monitoring short-range serially correlated data,” Technometrics, vol. 62, no. 1, pp. 71–83, Jan. 2020. [8] F. Psarommatis, G. May, and D. Kiritsis, “Predictive maintenance key control parameters for achieving efficient zero defect manufactur- ing,” Proc. CIRP, vol. 104, pp. 80–84, Jan. 2021. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S2212827121009124 [9] F. Psarommatis, G. May, P.-A. Dreyfus, and D. Kiritsis, “Zero defect manufacturing: State-of-the-art review, shortcomings and future direc- tions in research,” Int. J. Prod. Res., vol. 58, no. 1, pp. 1–17, Jan. 2020, doi: 10.1080/00207543.2019.1605228. [10] F. Psarommatis, G. May, and V. Azamfirei, “Zero defect manufacturing in 2024: A holistic literature review for bridging the gaps and for- ward outlook,” Int. J. Prod. Res., vol. 62, pp. 1–37, Aug. 2024, doi: 10.1080/00207543.2024.2388217. [11] F. Psarommatis and V. Azamfirei, “Zero defect manufacturing: A complete guide for advanced and sustainable quality management,”",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 15,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          15
+        ],
+        "page": 15,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "C. Stephanidis, “Aligning emerging technologies onto I4.0 principles:",
+        "section_category": "custom_section",
+        "chunk_index": 139,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.10612283647060394,
+        "bm25": 1.9726089494276813,
+        "rrf": 0.007462686567164179
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 5https://github.com/kwuking/TimeMixer]\n7690 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 10,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          10
+        ],
+        "page": 10,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "5https://github.com/kwuking/TimeMixer",
+        "section_category": "custom_section",
+        "chunk_index": 107,
+        "start_word": 0,
+        "end_word": 11
+      },
+      "scores": {
+        "dense": 0.11137580871582031,
+        "bm25": 5.69677335935195,
+        "rrf": 0.015045248868778281
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Body]\nIEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 7681",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Body",
+        "section_category": "body",
+        "chunk_index": 0,
+        "start_word": 0,
+        "end_word": 11
+      },
+      "scores": {
+        "dense": 0.11900874972343445,
+        "bm25": 5.824412672636269,
+        "rrf": 0.015399194503672116
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\nAt the core of predictive analytics lies time-series forecasting, a statistical tool that enables the forecasting of future states of manufacturing equipment based on historical data. Accurate forecasting facilitates informed © 2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/ 7682 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 and proactive decision-making, leading to reduced down- time, optimized maintenance schedules, and improved OEE. Furthermore, predictive maintenance enables sustainable man- ufacturing practices by improving system reliability, reducing waste, and minimizing resource consumption, aligning main- tenance strategies with both operational and environmental objectives [12]. In this study, we focus on a highly specialized manufac- turing process, an antenna assembly line, which serves as a test case for applying advanced DL forecasting methods. The antenna assembly line is a highly complex process with temporal and spatial interdependencies, which continuously generates a large amount of data. These data encompass a wide range of metrics, including production volumes, defect rates, manufacturing cycle times, and equipment downtimes. These metrics are integral to the calculation of OEE, a critical performance indicator that reflects the efficiency and effec- tiveness of manufacturing operations. The ability to forecast",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 12,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "scores": {
+        "dense": -0.008369874209165573,
+        "bm25": 6.564598325377008,
+        "rrf": 0.007692307692307693
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_9_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 9,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_9_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2902202904224396
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_5_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_5_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2848782539367676
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_3_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 3,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_3_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2764394283294678
+      }
+    }
+  ],
+  "status": "success"
+}

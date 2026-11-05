@@ -1,0 +1,328 @@
+{
+  "id": "Q003",
+  "category": "factual_text",
+  "question": "What does OEE stand for in the paper?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:32:14.596034+00:00",
+  "retrieved_pages": [
+    "1",
+    "8",
+    "14"
+  ],
+  "relevant_pages": [
+    1,
+    2
+  ],
+  "retrieval_metrics": {
+    "recall@5": 0.5,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 2,
+    "retrieved_page_count": 3,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\nlarge amount of data. These data encompass a wide range of metrics, including production volumes, defect rates, manufacturing cycle times, and equipment downtimes. These metrics are integral to the calculation of OEE, a critical performance indicator that reflects the efficiency and effec- tiveness of manufacturing operations. The ability to forecast OEE and its constituent factors with high accuracy is essential for ensuring seamless production, minimizing defects through timely equipment maintenance, and ultimately driving produc- tivity gains [13]. Traditional statistical forecasting methods, such as autore- gressive integrated moving average (ARIMA) [14] and exponential smoothing (ES) [15], have been widely used in time-series forecasting, in various applications including finance and healthcare, for their simplicity and interpretabil- ity. However, these methods often struggle with capturing nonlinear patterns, long-range dependencies, and the intricate dynamics of modern manufacturing environments. In response to these challenges, this study explores advanced deep learning (DL) techniques, which have shown promise in capturing complex, nonlinear relationships in time-series data, and applies them to OEE forecasting in an antenna assembly line use-case. Although the primary focus of our study is on mod- eling multistage processes with complex cross-dependencies, as exemplified by the antenna assembly line dataset, we also examine a single-stage",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 13,
+        "start_word": 300,
+        "end_word": 500
+      },
+      "dense_score": 0.09209058433771133,
+      "bm25_score": 7.191648993313404,
+      "rrf_score": 0.0078125,
+      "reranker_score": 0.8587679266929626
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: the overall equipment effectiveness (OEE) via soft sensors]\nplays a pivotal role in enhancing productivity and efficiently",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "the overall equipment effectiveness (OEE) via soft sensors",
+        "section_category": "custom_section",
+        "chunk_index": 2,
+        "start_word": 0,
+        "end_word": 9
+      },
+      "dense_score": 0.2079983651638031,
+      "bm25_score": 7.22576448119149,
+      "rrf_score": 0.015877016129032258,
+      "reranker_score": 0.8535817265510559
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: A. Datasets]\nTo assess the effectiveness of our proposed forecasting method, we utilized two time-series datasets from the man- ufacturing sector. The primary dataset focuses on forecasting overall equipment effectiveness (OEE) metrics within a multi- stage antenna assembly line, aligning with the central objective of our study. To evaluate the generalizability of the proposed method in different manufacturing contexts, we additionally used a complementary dataset that contains time series data from a single-stage sink manufacturing process. Detailed descriptions of both datasets are provided in the following.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "A. Datasets",
+        "section_category": "custom_section",
+        "chunk_index": 83,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "dense_score": 0.10326626151800156,
+      "bm25_score": 6.415453038098999,
+      "rrf_score": 0.007352941176470588,
+      "reranker_score": 0.6510776281356812
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: V. DISCUSSION]\nThe findings of this study highlight the efficacy of the proposed method in addressing the challenges of predic- tive maintenance and process optimization in manufacturing, which are pivotal procedures for ZDM. Concretely, we used historical data from OEE to forecast future production efficiency values, both short- and long-term, which provides valuable insights into the production, enabling more efficient equipment maintenance scheduling. Experiments on the antenna assembly line dataset demon- strated our proposed method’s robust performance across various forecast horizons, with specialized decomposition techniques (MA, DFT) and the EWA fusion mechanism being critical in enhancing forecasting accuracy. Our model achieved the highest performance for forecast horizons H ∈{8, 24, 48}, with RMSE values of {0.169, 0.173, 0.173}, respectively. Although MICN slightly outperformed our model for H = 72, with an RMSE reduction of 0.01, our method demonstrated top overall performance across the other forecast horizons, where MICN struggled, or completely failed in the cases of",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          14
+        ],
+        "page": 14,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "V. DISCUSSION",
+        "section_category": "discussion",
+        "chunk_index": 130,
+        "start_word": 0,
+        "end_word": 154
+      },
+      "dense_score": 0.109434112906456,
+      "bm25_score": 6.123411676837225,
+      "rrf_score": 0.007142857142857143,
+      "reranker_score": 0.12776628136634827
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 2.]\nIllustration of the antenna assembly line and its monitored stages. Stages with a camera icon are under visual inspection via computer vision algorithms, whereas OEE metrics are tracked across all stages. (good, defective, missing items). These raw variables are subsequently used to calculate the OEE factors: availability (A), performance (P), and quality (Q), as defined below1 A =",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 2.",
+        "section_category": "custom_section",
+        "chunk_index": 85,
+        "start_word": 0,
+        "end_word": 58
+      },
+      "dense_score": 0.37284260988235474,
+      "bm25_score": 6.888656096489879,
+      "rrf_score": 0.015889029003783105,
+      "reranker_score": 0.09393946081399918
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_9_render.png",
+      "filename": "page_9_render.png",
+      "page": 9,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.24940359592437744
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_5_render.png",
+      "filename": "page_5_render.png",
+      "page": 5,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.24886786937713623
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_10_render.png",
+      "filename": "page_10_render.png",
+      "page": 10,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.24815377593040466
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\nlarge amount of data. These data encompass a wide range of metrics, including production volumes, defect rates, manufacturing cycle times, and equipment downtimes. These metrics are integral to the calculation of OEE, a critical performance indicator that reflects the efficiency and effec- tiveness of manufacturing operations. The ability to forecast OEE and its constituent factors with high accuracy is essential for ensuring seamless production, minimizing defects through timely equipment maintenance, and ultimately driving produc- tivity gains [13]. Traditional statistical forecasting methods, such as autore- gressive integrated moving average (ARIMA) [14] and exponential smoothing (ES) [15], have been widely used in time-series forecasting, in various applications including finance and healthcare, for their simplicity and interpretabil- ity. However, these methods often struggle with capturing nonlinear patterns, long-range dependencies, and the intricate dynamics of modern manufacturing environments. In response to these challenges, this study explores advanced deep learning (DL) techniques, which have shown promise in capturing complex, nonlinear relationships in time-series data, and applies them to OEE forecasting in an antenna assembly line use-case. Although the primary focus of our study is on mod- eling multistage processes with complex cross-dependencies, as exemplified by the antenna assembly line dataset, we also examine a single-stage",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 13,
+        "start_word": 300,
+        "end_word": 500
+      },
+      "scores": {
+        "dense": 0.09209058433771133,
+        "bm25": 7.191648993313404,
+        "rrf": 0.0078125
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: the overall equipment effectiveness (OEE) via soft sensors]\nplays a pivotal role in enhancing productivity and efficiently",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "the overall equipment effectiveness (OEE) via soft sensors",
+        "section_category": "custom_section",
+        "chunk_index": 2,
+        "start_word": 0,
+        "end_word": 9
+      },
+      "scores": {
+        "dense": 0.2079983651638031,
+        "bm25": 7.22576448119149,
+        "rrf": 0.015877016129032258
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: A. Datasets]\nTo assess the effectiveness of our proposed forecasting method, we utilized two time-series datasets from the man- ufacturing sector. The primary dataset focuses on forecasting overall equipment effectiveness (OEE) metrics within a multi- stage antenna assembly line, aligning with the central objective of our study. To evaluate the generalizability of the proposed method in different manufacturing contexts, we additionally used a complementary dataset that contains time series data from a single-stage sink manufacturing process. Detailed descriptions of both datasets are provided in the following.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "A. Datasets",
+        "section_category": "custom_section",
+        "chunk_index": 83,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "scores": {
+        "dense": 0.10326626151800156,
+        "bm25": 6.415453038098999,
+        "rrf": 0.007352941176470588
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: V. DISCUSSION]\nThe findings of this study highlight the efficacy of the proposed method in addressing the challenges of predic- tive maintenance and process optimization in manufacturing, which are pivotal procedures for ZDM. Concretely, we used historical data from OEE to forecast future production efficiency values, both short- and long-term, which provides valuable insights into the production, enabling more efficient equipment maintenance scheduling. Experiments on the antenna assembly line dataset demon- strated our proposed method’s robust performance across various forecast horizons, with specialized decomposition techniques (MA, DFT) and the EWA fusion mechanism being critical in enhancing forecasting accuracy. Our model achieved the highest performance for forecast horizons H ∈{8, 24, 48}, with RMSE values of {0.169, 0.173, 0.173}, respectively. Although MICN slightly outperformed our model for H = 72, with an RMSE reduction of 0.01, our method demonstrated top overall performance across the other forecast horizons, where MICN struggled, or completely failed in the cases of",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 14,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          14
+        ],
+        "page": 14,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "V. DISCUSSION",
+        "section_category": "discussion",
+        "chunk_index": 130,
+        "start_word": 0,
+        "end_word": 154
+      },
+      "scores": {
+        "dense": 0.109434112906456,
+        "bm25": 6.123411676837225,
+        "rrf": 0.007142857142857143
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 2.]\nIllustration of the antenna assembly line and its monitored stages. Stages with a camera icon are under visual inspection via computer vision algorithms, whereas OEE metrics are tracked across all stages. (good, defective, missing items). These raw variables are subsequently used to calculate the OEE factors: availability (A), performance (P), and quality (Q), as defined below1 A =",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 2.",
+        "section_category": "custom_section",
+        "chunk_index": 85,
+        "start_word": 0,
+        "end_word": 58
+      },
+      "scores": {
+        "dense": 0.37284260988235474,
+        "bm25": 6.888656096489879,
+        "rrf": 0.015889029003783105
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_9_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 9,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_9_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.24940359592437744
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_5_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_5_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.24886786937713623
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_10_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 10,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_10_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.24815377593040466
+      }
+    }
+  ],
+  "status": "success"
+}

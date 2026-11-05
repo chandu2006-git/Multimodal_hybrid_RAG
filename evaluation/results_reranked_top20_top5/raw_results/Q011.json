@@ -1,0 +1,327 @@
+{
+  "id": "Q011",
+  "category": "factual_text",
+  "question": "How does the DFT-based block identify dominant frequencies?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:33:00.308113+00:00",
+  "retrieved_pages": [
+    "7",
+    "6",
+    "9",
+    "13"
+  ],
+  "relevant_pages": [
+    7,
+    8
+  ],
+  "retrieval_metrics": {
+    "recall@5": 0.5,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 2,
+    "retrieved_page_count": 4,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\nare the trend and seasonal predictions, respectively. It is noted that each linear module processes a single variable at a time, with weights being shared between variables. Similarly, the DFT decomposition block decomposes the input time-series instance into its trend and seasonal com- ponents by transforming it into the frequency domain and identifying the top k most dominant frequencies, i.e., the fre- quencies with the largest magnitudes. The original time series is reconstructed by removing the least dominant frequencies and applying the inverse DFT",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 67,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "dense_score": 0.36142945289611816,
+      "bm25_score": 17.745909648071756,
+      "rrf_score": 0.01639344262295082,
+      "reranker_score": 0.9877592921257019
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 1.]\nModel architecture of PDFLinearEWA consisting of three predictor blocks. The patching block partitions the input time series into non-overlapping patches and processes them individually. The MA series decomposition block analyzes the input time series into its trend and seasonal components using an MA kernel, whereas the DFT series decomposition block works similarly, leveraging a DFT decomposition scheme. The EWA module fuses the outputs of the three predictor blocks using an exponentially weighting mechanism. by focusing on individual patches. This approach allows the model to capture localized patterns efficiently, making it well-suited for applications where short-term dynamics play a crucial role. The initial layer of this block employs the instance normal- ization technique introduced by Kim et al. [83] to address temporal distribution shifts commonly observed in time- series data. This mechanism operates on a sliding-window basis, where for each input window Xt−n+1:t and each vari- able i, the mean ¯x(i) t and variance σ (i) t are computed as follows: ¯x(i) t = 1 n n−1",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 1.",
+        "section_category": "custom_section",
+        "chunk_index": 45,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "dense_score": 0.20322000980377197,
+      "bm25_score": 5.696604461854017,
+      "rrf_score": 0.015504807692307693,
+      "reranker_score": 0.10503070801496506
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: C. Experimental Setup]\nThe implementation of our model was done in Python v3.10, PyTorch v2.3.0, and CUDA v.12.4. The model training and evaluation were conducted on a dedicated server with an Intel i9-13900K at 3 GHz, 64 GB DDR4 RAM, and two NVIDIA GeForce RTX 3080 Ti. The ADAM optimizer was selected for training with a learning rate of 1 × 10−4. The batch size was 32, with a maximum of 30 epochs and early stopping patience of 3. The implementations of most of the evaluated models were provided by the repositories of TimesNet [85] and time-series library.2 The implementation of the patching block was based on PatchTST3 [27], the implementation of the MA seasonal decomposition block was based on Autoformer4 [53], and the implementation of the DFT seasonal decomposition block was based on TimeMixer5 [17]. When available, the default recommended parameter con- figurations were used for each model architecture. Otherwise, as in the case of RNNs, various configurations were tested and evaluated via grid search and the use of the validation set, with the most performant ones being reported in the final comparison.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          9
+        ],
+        "page": 9,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "C. Experimental Setup",
+        "section_category": "custom_section",
+        "chunk_index": 102,
+        "start_word": 0,
+        "end_word": 181
+      },
+      "dense_score": 0.060600973665714264,
+      "bm25_score": 5.337696061351885,
+      "rrf_score": 0.007142857142857143,
+      "reranker_score": 0.07651236653327942
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\n. (15) By integrating the results from the MA and DFT decompo- sitions, the model is able to capture both long-term trends and short-term seasonal patterns. This complementary approach enhances the model’s ability to address both time-domain variations and frequency-based seasonalities, resulting in a more comprehensive and accurate understanding of complex temporal dynamics.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 77,
+        "start_word": 0,
+        "end_word": 53
+      },
+      "dense_score": 0.1827954649925232,
+      "bm25_score": 2.0068958030829576,
+      "rrf_score": 0.007692307692307693,
+      "reranker_score": 0.06866002827882767
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: E. Ablation Study]\nTo evaluate the contribution of each component of our pro- posed forecasting model, we conducted an ablation study. This analysis systematically removes or alters key elements of the model to measure their impact on performance. Specifically, we examined the effect of removing the patching block, the MA decomposition block, or the DFT decomposition block, either individually or in pairs. We did not include the case where only the MA decomposition block is retained, as this configuration corresponds to the DLinear model [16], whose results are shown in Table II. Additionally, we examined the effect of replacing the EWA module [Fig. 5(c)] with various fusion techniques, ranging from simple addition to attention- based fusion, as well as a simple early fusion technique. In the following list, we present the evaluated fusion techniques, ordered from simplest to most complex. The constituent mod- els refer to: 1) the patching block and 2) the summed output of the MA and DFT blocks. 1) Addition (ADD): This is the simplest fusion technique, where the outputs of each constituent model are summed for each time step. This approach does not intro- duce additional parameters or complexity, treating each model’s output equally [Fig. 5(a)].",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          13
+        ],
+        "page": 13,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "E. Ablation Study",
+        "section_category": "custom_section",
+        "chunk_index": 121,
+        "start_word": 0,
+        "end_word": 197
+      },
+      "dense_score": 0.20473262667655945,
+      "bm25_score": 8.18757497663244,
+      "rrf_score": 0.016001024065540194,
+      "reranker_score": 0.02481059916317463
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "filename": "page_8_render.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.25582340359687805
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "filename": "page_6_image_1.png",
+      "page": 6,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.25009408593177795
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_render.png",
+      "filename": "page_6_render.png",
+      "page": 6,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.24906045198440552
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\nare the trend and seasonal predictions, respectively. It is noted that each linear module processes a single variable at a time, with weights being shared between variables. Similarly, the DFT decomposition block decomposes the input time-series instance into its trend and seasonal com- ponents by transforming it into the frequency domain and identifying the top k most dominant frequencies, i.e., the fre- quencies with the largest magnitudes. The original time series is reconstructed by removing the least dominant frequencies and applying the inverse DFT",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 67,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "scores": {
+        "dense": 0.36142945289611816,
+        "bm25": 17.745909648071756,
+        "rrf": 0.01639344262295082
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 1.]\nModel architecture of PDFLinearEWA consisting of three predictor blocks. The patching block partitions the input time series into non-overlapping patches and processes them individually. The MA series decomposition block analyzes the input time series into its trend and seasonal components using an MA kernel, whereas the DFT series decomposition block works similarly, leveraging a DFT decomposition scheme. The EWA module fuses the outputs of the three predictor blocks using an exponentially weighting mechanism. by focusing on individual patches. This approach allows the model to capture localized patterns efficiently, making it well-suited for applications where short-term dynamics play a crucial role. The initial layer of this block employs the instance normal- ization technique introduced by Kim et al. [83] to address temporal distribution shifts commonly observed in time- series data. This mechanism operates on a sliding-window basis, where for each input window Xt−n+1:t and each vari- able i, the mean ¯x(i) t and variance σ (i) t are computed as follows: ¯x(i) t = 1 n n−1",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 1.",
+        "section_category": "custom_section",
+        "chunk_index": 45,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "scores": {
+        "dense": 0.20322000980377197,
+        "bm25": 5.696604461854017,
+        "rrf": 0.015504807692307693
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: C. Experimental Setup]\nThe implementation of our model was done in Python v3.10, PyTorch v2.3.0, and CUDA v.12.4. The model training and evaluation were conducted on a dedicated server with an Intel i9-13900K at 3 GHz, 64 GB DDR4 RAM, and two NVIDIA GeForce RTX 3080 Ti. The ADAM optimizer was selected for training with a learning rate of 1 × 10−4. The batch size was 32, with a maximum of 30 epochs and early stopping patience of 3. The implementations of most of the evaluated models were provided by the repositories of TimesNet [85] and time-series library.2 The implementation of the patching block was based on PatchTST3 [27], the implementation of the MA seasonal decomposition block was based on Autoformer4 [53], and the implementation of the DFT seasonal decomposition block was based on TimeMixer5 [17]. When available, the default recommended parameter con- figurations were used for each model architecture. Otherwise, as in the case of RNNs, various configurations were tested and evaluated via grid search and the use of the validation set, with the most performant ones being reported in the final comparison.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 9,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          9
+        ],
+        "page": 9,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "C. Experimental Setup",
+        "section_category": "custom_section",
+        "chunk_index": 102,
+        "start_word": 0,
+        "end_word": 181
+      },
+      "scores": {
+        "dense": 0.060600973665714264,
+        "bm25": 5.337696061351885,
+        "rrf": 0.007142857142857143
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\n. (15) By integrating the results from the MA and DFT decompo- sitions, the model is able to capture both long-term trends and short-term seasonal patterns. This complementary approach enhances the model’s ability to address both time-domain variations and frequency-based seasonalities, resulting in a more comprehensive and accurate understanding of complex temporal dynamics.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 77,
+        "start_word": 0,
+        "end_word": 53
+      },
+      "scores": {
+        "dense": 0.1827954649925232,
+        "bm25": 2.0068958030829576,
+        "rrf": 0.007692307692307693
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: E. Ablation Study]\nTo evaluate the contribution of each component of our pro- posed forecasting model, we conducted an ablation study. This analysis systematically removes or alters key elements of the model to measure their impact on performance. Specifically, we examined the effect of removing the patching block, the MA decomposition block, or the DFT decomposition block, either individually or in pairs. We did not include the case where only the MA decomposition block is retained, as this configuration corresponds to the DLinear model [16], whose results are shown in Table II. Additionally, we examined the effect of replacing the EWA module [Fig. 5(c)] with various fusion techniques, ranging from simple addition to attention- based fusion, as well as a simple early fusion technique. In the following list, we present the evaluated fusion techniques, ordered from simplest to most complex. The constituent mod- els refer to: 1) the patching block and 2) the summed output of the MA and DFT blocks. 1) Addition (ADD): This is the simplest fusion technique, where the outputs of each constituent model are summed for each time step. This approach does not intro- duce additional parameters or complexity, treating each model’s output equally [Fig. 5(a)].",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 13,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          13
+        ],
+        "page": 13,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "E. Ablation Study",
+        "section_category": "custom_section",
+        "chunk_index": 121,
+        "start_word": 0,
+        "end_word": 197
+      },
+      "scores": {
+        "dense": 0.20473262667655945,
+        "bm25": 8.18757497663244,
+        "rrf": 0.016001024065540194
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_8_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.25582340359687805
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_6_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.25009408593177795
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_6_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.24906045198440552
+      }
+    }
+  ],
+  "status": "success"
+}

@@ -1,0 +1,325 @@
+{
+  "id": "Q030",
+  "category": "unanswerable",
+  "question": "What is the exact measured inference latency of PDFLinearEWA on an NVIDIA RTX 4090 GPU?",
+  "answerable": false,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:35:06.668762+00:00",
+  "retrieved_pages": [
+    "11",
+    "6",
+    "9"
+  ],
+  "relevant_pages": [],
+  "retrieval_metrics": {
+    "recall@5": null,
+    "precision@5": null,
+    "hit_rate@5": null,
+    "mrr@5": null,
+    "relevant_page_count": 0,
+    "retrieved_page_count": 3,
+    "relevant_pages_found": 0
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET]\nthese observa- tions reinforce the hypothesis that specialized time-series feature extraction and decomposition techniques are crucial for enhancing model robustness and accuracy, especially in complex, nonlinear time series. Overall, the results underscore the importance of aligning the choice of model architecture and feature extraction strategy with the specific characteristics of the forecasting task at hand, as this alignment signifi- cantly impacts the overall effectiveness and reliability of the predictions. In Table III, the performance of six forecasting models is evaluated for the sink manufacturing dataset across four forecast horizons (8 H, 24 H, 48 H, 72 H), using the same metrics (RMSE, SMAPE, R2, and DA). The results high- light the competitive performance of PDFLinearEWA, which consistently approaches or outperforms the other models, particularly at longer forecast horizons (72 H). FiLM demon- strates better results at shorter horizons, leveraging its FT block, but exhibits reduced effectiveness at longer horizons. TimeMixer and PatchTST deliver balanced performance, while TimesNet shows reliable, albeit average, results. These find- ings align with those observed in the antenna assembly line dataset, demonstrating the generalization capability of the proposed method across heterogeneous sectors and forecasting applications.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          11
+        ],
+        "page": 11,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET",
+        "section_category": "custom_section",
+        "chunk_index": 111,
+        "start_word": 150,
+        "end_word": 339
+      },
+      "dense_score": 0.22697532176971436,
+      "bm25_score": 5.632858055843355,
+      "rrf_score": 0.007352941176470588,
+      "reranker_score": 0.032792046666145325
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 1.]\nModel architecture of PDFLinearEWA consisting of three predictor blocks. The patching block partitions the input time series into non-overlapping patches and processes them individually. The MA series decomposition block analyzes the input time series into its trend and seasonal components using an MA kernel, whereas the DFT series decomposition block works similarly, leveraging a DFT decomposition scheme. The EWA module fuses the outputs of the three predictor blocks using an exponentially weighting mechanism. by focusing on individual patches. This approach allows the model to capture localized patterns efficiently, making it well-suited for applications where short-term dynamics play a crucial role. The initial layer of this block employs the instance normal- ization technique introduced by Kim et al. [83] to address temporal distribution shifts commonly observed in time- series data. This mechanism operates on a sliding-window basis, where for each input window Xt−n+1:t and each vari- able i, the mean ¯x(i) t and variance σ (i) t are computed as follows: ¯x(i) t = 1 n n−1",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 1.",
+        "section_category": "custom_section",
+        "chunk_index": 45,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "dense_score": 0.15034550428390503,
+      "bm25_score": 8.01747458359178,
+      "rrf_score": 0.007936507936507936,
+      "reranker_score": 0.02589973621070385
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET]\nconfiguration of TimesNet, with just a single TimesBlock, which achieved the highest performance. This again con- firms that higher model complexity results in overfitting and reduced forecasting performance. The most interesting results are displayed by MICN, which in short-term forecast horizons completely fails, whereas in long-term forecast hori- zons exhibits the best results of all forecasting models, with PDFLinearEWA a close second. This indicates that in the case of TCNs, careful manual parameter configuration and adjust- ment for input length, forecast horizon, and domain-specific characteristics are paramount in optimizing performance. Finally, PDFLinearEWA achieves the best results in short- and mid-term forecast horizons (8 H, 24 H, 48 H), while also achieving comparable results to the best models in long-term forecast horizons (72 H). These results confirm the effec- tiveness of our proposed model in its ability to adaptively adjust to different forecast scenarios, optimizing performance across varying time horizons. Additionally, these observa- tions reinforce the hypothesis that specialized time-series feature extraction and decomposition techniques are crucial for enhancing model robustness and accuracy, especially in complex, nonlinear time series. Overall, the results underscore the importance of aligning the choice of model architecture and feature extraction strategy with the specific characteristics of",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          11
+        ],
+        "page": 11,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET",
+        "section_category": "custom_section",
+        "chunk_index": 110,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.2381766140460968,
+      "bm25_score": 6.120514419177308,
+      "rrf_score": 0.015058876811594204,
+      "reranker_score": 0.018283003941178322
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: C. Experimental Setup]\nThe implementation of our model was done in Python v3.10, PyTorch v2.3.0, and CUDA v.12.4. The model training and evaluation were conducted on a dedicated server with an Intel i9-13900K at 3 GHz, 64 GB DDR4 RAM, and two NVIDIA GeForce RTX 3080 Ti. The ADAM optimizer was selected for training with a learning rate of 1 × 10−4. The batch size was 32, with a maximum of 30 epochs and early stopping patience of 3. The implementations of most of the evaluated models were provided by the repositories of TimesNet [85] and time-series library.2 The implementation of the patching block was based on PatchTST3 [27], the implementation of the MA seasonal decomposition block was based on Autoformer4 [53], and the implementation of the DFT seasonal decomposition block was based on TimeMixer5 [17]. When available, the default recommended parameter con- figurations were used for each model architecture. Otherwise, as in the case of RNNs, various configurations were tested and evaluated via grid search and the use of the validation set, with the most performant ones being reported in the final comparison.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          9
+        ],
+        "page": 9,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "C. Experimental Setup",
+        "section_category": "custom_section",
+        "chunk_index": 102,
+        "start_word": 0,
+        "end_word": 181
+      },
+      "dense_score": 0.3128839135169983,
+      "bm25_score": 11.697716185502006,
+      "rrf_score": 0.01639344262295082,
+      "reranker_score": 0.0011301537742838264
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Computational Requirements: In Table IV, we present]\nthe computational resource requirements for the top- performing models in each category. The metrics include the average inference time per sample, the parameter count 7692 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          11,
+          12
+        ],
+        "page": 11,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Computational Requirements: In Table IV, we present",
+        "section_category": "custom_section",
+        "chunk_index": 114,
+        "start_word": 0,
+        "end_word": 35
+      },
+      "dense_score": 0.2232007086277008,
+      "bm25_score": 7.242825967553754,
+      "rrf_score": 0.014938684503901897,
+      "reranker_score": 0.0008787362021394074
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "filename": "page_7_image_2.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2758917808532715
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_1.png",
+      "filename": "page_7_image_1.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.26743218302726746
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "filename": "page_8_image_1.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2647697925567627
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET]\nthese observa- tions reinforce the hypothesis that specialized time-series feature extraction and decomposition techniques are crucial for enhancing model robustness and accuracy, especially in complex, nonlinear time series. Overall, the results underscore the importance of aligning the choice of model architecture and feature extraction strategy with the specific characteristics of the forecasting task at hand, as this alignment signifi- cantly impacts the overall effectiveness and reliability of the predictions. In Table III, the performance of six forecasting models is evaluated for the sink manufacturing dataset across four forecast horizons (8 H, 24 H, 48 H, 72 H), using the same metrics (RMSE, SMAPE, R2, and DA). The results high- light the competitive performance of PDFLinearEWA, which consistently approaches or outperforms the other models, particularly at longer forecast horizons (72 H). FiLM demon- strates better results at shorter horizons, leveraging its FT block, but exhibits reduced effectiveness at longer horizons. TimeMixer and PatchTST deliver balanced performance, while TimesNet shows reliable, albeit average, results. These find- ings align with those observed in the antenna assembly line dataset, demonstrating the generalization capability of the proposed method across heterogeneous sectors and forecasting applications.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 11,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          11
+        ],
+        "page": 11,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET",
+        "section_category": "custom_section",
+        "chunk_index": 111,
+        "start_word": 150,
+        "end_word": 339
+      },
+      "scores": {
+        "dense": 0.22697532176971436,
+        "bm25": 5.632858055843355,
+        "rrf": 0.007352941176470588
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 1.]\nModel architecture of PDFLinearEWA consisting of three predictor blocks. The patching block partitions the input time series into non-overlapping patches and processes them individually. The MA series decomposition block analyzes the input time series into its trend and seasonal components using an MA kernel, whereas the DFT series decomposition block works similarly, leveraging a DFT decomposition scheme. The EWA module fuses the outputs of the three predictor blocks using an exponentially weighting mechanism. by focusing on individual patches. This approach allows the model to capture localized patterns efficiently, making it well-suited for applications where short-term dynamics play a crucial role. The initial layer of this block employs the instance normal- ization technique introduced by Kim et al. [83] to address temporal distribution shifts commonly observed in time- series data. This mechanism operates on a sliding-window basis, where for each input window Xt−n+1:t and each vari- able i, the mean ¯x(i) t and variance σ (i) t are computed as follows: ¯x(i) t = 1 n n−1",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 1.",
+        "section_category": "custom_section",
+        "chunk_index": 45,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "scores": {
+        "dense": 0.15034550428390503,
+        "bm25": 8.01747458359178,
+        "rrf": 0.007936507936507936
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET]\nconfiguration of TimesNet, with just a single TimesBlock, which achieved the highest performance. This again con- firms that higher model complexity results in overfitting and reduced forecasting performance. The most interesting results are displayed by MICN, which in short-term forecast horizons completely fails, whereas in long-term forecast hori- zons exhibits the best results of all forecasting models, with PDFLinearEWA a close second. This indicates that in the case of TCNs, careful manual parameter configuration and adjust- ment for input length, forecast horizon, and domain-specific characteristics are paramount in optimizing performance. Finally, PDFLinearEWA achieves the best results in short- and mid-term forecast horizons (8 H, 24 H, 48 H), while also achieving comparable results to the best models in long-term forecast horizons (72 H). These results confirm the effec- tiveness of our proposed model in its ability to adaptively adjust to different forecast scenarios, optimizing performance across varying time horizons. Additionally, these observa- tions reinforce the hypothesis that specialized time-series feature extraction and decomposition techniques are crucial for enhancing model robustness and accuracy, especially in complex, nonlinear time series. Overall, the results underscore the importance of aligning the choice of model architecture and feature extraction strategy with the specific characteristics of",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 11,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          11
+        ],
+        "page": 11,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "COMPARISON OF FORECASTING MODELS-SINK MANUFACTURING DATASET",
+        "section_category": "custom_section",
+        "chunk_index": 110,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.2381766140460968,
+        "bm25": 6.120514419177308,
+        "rrf": 0.015058876811594204
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: C. Experimental Setup]\nThe implementation of our model was done in Python v3.10, PyTorch v2.3.0, and CUDA v.12.4. The model training and evaluation were conducted on a dedicated server with an Intel i9-13900K at 3 GHz, 64 GB DDR4 RAM, and two NVIDIA GeForce RTX 3080 Ti. The ADAM optimizer was selected for training with a learning rate of 1 × 10−4. The batch size was 32, with a maximum of 30 epochs and early stopping patience of 3. The implementations of most of the evaluated models were provided by the repositories of TimesNet [85] and time-series library.2 The implementation of the patching block was based on PatchTST3 [27], the implementation of the MA seasonal decomposition block was based on Autoformer4 [53], and the implementation of the DFT seasonal decomposition block was based on TimeMixer5 [17]. When available, the default recommended parameter con- figurations were used for each model architecture. Otherwise, as in the case of RNNs, various configurations were tested and evaluated via grid search and the use of the validation set, with the most performant ones being reported in the final comparison.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 9,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          9
+        ],
+        "page": 9,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "C. Experimental Setup",
+        "section_category": "custom_section",
+        "chunk_index": 102,
+        "start_word": 0,
+        "end_word": 181
+      },
+      "scores": {
+        "dense": 0.3128839135169983,
+        "bm25": 11.697716185502006,
+        "rrf": 0.01639344262295082
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Computational Requirements: In Table IV, we present]\nthe computational resource requirements for the top- performing models in each category. The metrics include the average inference time per sample, the parameter count 7692 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 11,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          11,
+          12
+        ],
+        "page": 11,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Computational Requirements: In Table IV, we present",
+        "section_category": "custom_section",
+        "chunk_index": 114,
+        "start_word": 0,
+        "end_word": 35
+      },
+      "scores": {
+        "dense": 0.2232007086277008,
+        "bm25": 7.242825967553754,
+        "rrf": 0.014938684503901897
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_7_image_2.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2758917808532715
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_7_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.26743218302726746
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_8_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2647697925567627
+      }
+    }
+  ],
+  "status": "success"
+}

@@ -1,0 +1,324 @@
+{
+  "id": "Q012",
+  "category": "factual_text",
+  "question": "Why does the proposed model use instance normalization?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:33:05.518870+00:00",
+  "retrieved_pages": [
+    "6",
+    "7"
+  ],
+  "relevant_pages": [
+    6
+  ],
+  "retrieval_metrics": {
+    "recall@5": 1.0,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 1,
+    "retrieved_page_count": 2,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 1.]\nModel architecture of PDFLinearEWA consisting of three predictor blocks. The patching block partitions the input time series into non-overlapping patches and processes them individually. The MA series decomposition block analyzes the input time series into its trend and seasonal components using an MA kernel, whereas the DFT series decomposition block works similarly, leveraging a DFT decomposition scheme. The EWA module fuses the outputs of the three predictor blocks using an exponentially weighting mechanism. by focusing on individual patches. This approach allows the model to capture localized patterns efficiently, making it well-suited for applications where short-term dynamics play a crucial role. The initial layer of this block employs the instance normal- ization technique introduced by Kim et al. [83] to address temporal distribution shifts commonly observed in time- series data. This mechanism operates on a sliding-window basis, where for each input window Xt−n+1:t and each vari- able i, the mean ¯x(i) t and variance σ (i) t are computed as follows: ¯x(i) t = 1 n n−1",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 1.",
+        "section_category": "custom_section",
+        "chunk_index": 45,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "dense_score": 0.21528780460357666,
+      "bm25_score": 5.536323496663837,
+      "rrf_score": 0.007575757575757576,
+      "reranker_score": 0.5009538531303406
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Concat]\n\u0010 {L(i) q }n, m i=1, q=1 \u0011\u0011\u0011 (8) where ˆZ ∈Rm×H is the non-normalized forecast of the patching block. Unlike the MLP layer described in (7), which focuses on individual variables, the linear layer in (8) considers correlations between variables and their interdependencies. The final layer of the patching block applies instance denormalization (inverse of the instance normalization layer), producing the final forecast ˆx(i) j = ˆz(i) j + ¯x(i) t σ (i) t (9) ˆXt+1:t+H =   ˆx(1) t+1 ˆx(1) t+2 · · · ˆx(1) t+H ˆx(2) t+1 ˆx(2) t+2 · · · ˆx(2) t+H ... ... ... ... ˆx(m) t+1 ˆx(m) t+2 · · · ˆx(m) t+H   (10) where ˆx(i) j is the final prediction of the patching block for the ith variable at the jth future time step and ˆXt+1:t+H is the forecast matrix for all m variables and H future time steps.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Concat",
+        "section_category": "custom_section",
+        "chunk_index": 52,
+        "start_word": 0,
+        "end_word": 150
+      },
+      "dense_score": 0.339334100484848,
+      "bm25_score": 8.254842552960532,
+      "rrf_score": 0.01626123744050767,
+      "reranker_score": 0.05895527824759483
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Xn−1]\nfor variable i, and p(i) q represents its qth patch, with q ∈ {1, 2, . . . , (n/l)}. After applying normalization and patching transformations, an MLP layer is employed to extract features from each sub-sequence and map each patch into a d-dimensional latent space representation. The activation function used is tanh, which confines the extracted features within the [−1, 1] range, ensuring bounded and nonlinear outputs. To enhance the model’s robustness and prevent overfitting, a dropout layer is incorporated, which regularizes the MLP’s output by randomly deactivating a portion of the neurons during training L(i) q = Dropout \u0010",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Xn−1",
+        "section_category": "custom_section",
+        "chunk_index": 48,
+        "start_word": 150,
+        "end_word": 251
+      },
+      "dense_score": 0.1863195300102234,
+      "bm25_score": 6.068310226743874,
+      "rrf_score": 0.014492753623188406,
+      "reranker_score": 0.043575093150138855
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: w =]\nh β1, β2, . . . , β Hi (16) where the vector w ∈RH contains the exponential weights for H future time steps. To ensure that the elements of w are constrained within the range [0, 1], we apply a normalization step wnorm = w −min (w) max (w) −min (w). (17) Finally, the normalized weight vector wnorm is used to fuse the predictions of the patching block, denoted as ˆXPatch, and the seasonal decomposition blocks, denoted as ˆXDecomp. The final forecast ˆX is computed as ˆX = EWA \u0010 ˆXPatch, ˆXDecomp \u0011 = ˆXPatch ⊙wnorm + ˆXDecomp ⊙(wnorm −1) . (18) It is noted that for β < 1, the elements of the weight",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "w =",
+        "section_category": "custom_section",
+        "chunk_index": 79,
+        "start_word": 0,
+        "end_word": 116
+      },
+      "dense_score": 0.2414536476135254,
+      "bm25_score": 5.275433531284381,
+      "rrf_score": 0.007936507936507936,
+      "reranker_score": 0.03100971132516861
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Xn−1]\nj=0(x(i) t−j −¯x(i) t )2 (4) where x(i) j refers to the value of the ith variable at time step j. Afterward, the input sliding window is normalized by subtracting its mean and dividing by its variance zi t = φ(xi t ) = xi t −¯x(i) t σ (i) t . (5) To ensure that the model focuses on isolated sub-sequences of the input time series, the patching mechanism of PatchTST is applied to the normalized sequence, splitting it into sub-sequences of length l. Consequently, each variable i is divided into (n/l) non-overlapping sub-sequences p(i) t−n+1:t =   p(i) q = {z(i) t , z(i) t−1, . . . , z(i) t−l+1} p(i) q−1 = {z(i) t−l, z(i) t−l−1, . . . , z(i) t−2l+1} ... p(i) 1 = {z(i) t−(q−1)l, . . . , z(i) t−ql+1}   (6) where p(i) t−n+1:t represents the patched input window for variable i, and p(i) q represents its qth patch, with q ∈ {1, 2, . . . , (n/l)}. After applying normalization and patching transformations, an MLP layer is employed to extract features from each sub-sequence and map each patch into a d-dimensional latent space representation. The activation function",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Xn−1",
+        "section_category": "custom_section",
+        "chunk_index": 47,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.22522234916687012,
+      "bm25_score": 4.610517735208693,
+      "rrf_score": 0.0078125,
+      "reranker_score": 0.009061213582754135
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "filename": "page_8_image_1.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.28637784719467163
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "filename": "page_7_image_2.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.28113946318626404
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "filename": "page_6_image_1.png",
+      "page": 6,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2755949795246124
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 1.]\nModel architecture of PDFLinearEWA consisting of three predictor blocks. The patching block partitions the input time series into non-overlapping patches and processes them individually. The MA series decomposition block analyzes the input time series into its trend and seasonal components using an MA kernel, whereas the DFT series decomposition block works similarly, leveraging a DFT decomposition scheme. The EWA module fuses the outputs of the three predictor blocks using an exponentially weighting mechanism. by focusing on individual patches. This approach allows the model to capture localized patterns efficiently, making it well-suited for applications where short-term dynamics play a crucial role. The initial layer of this block employs the instance normal- ization technique introduced by Kim et al. [83] to address temporal distribution shifts commonly observed in time- series data. This mechanism operates on a sliding-window basis, where for each input window Xt−n+1:t and each vari- able i, the mean ¯x(i) t and variance σ (i) t are computed as follows: ¯x(i) t = 1 n n−1",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 1.",
+        "section_category": "custom_section",
+        "chunk_index": 45,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "scores": {
+        "dense": 0.21528780460357666,
+        "bm25": 5.536323496663837,
+        "rrf": 0.007575757575757576
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Concat]\n\u0010 {L(i) q }n, m i=1, q=1 \u0011\u0011\u0011 (8) where ˆZ ∈Rm×H is the non-normalized forecast of the patching block. Unlike the MLP layer described in (7), which focuses on individual variables, the linear layer in (8) considers correlations between variables and their interdependencies. The final layer of the patching block applies instance denormalization (inverse of the instance normalization layer), producing the final forecast ˆx(i) j = ˆz(i) j + ¯x(i) t σ (i) t (9) ˆXt+1:t+H =   ˆx(1) t+1 ˆx(1) t+2 · · · ˆx(1) t+H ˆx(2) t+1 ˆx(2) t+2 · · · ˆx(2) t+H ... ... ... ... ˆx(m) t+1 ˆx(m) t+2 · · · ˆx(m) t+H   (10) where ˆx(i) j is the final prediction of the patching block for the ith variable at the jth future time step and ˆXt+1:t+H is the forecast matrix for all m variables and H future time steps.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Concat",
+        "section_category": "custom_section",
+        "chunk_index": 52,
+        "start_word": 0,
+        "end_word": 150
+      },
+      "scores": {
+        "dense": 0.339334100484848,
+        "bm25": 8.254842552960532,
+        "rrf": 0.01626123744050767
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Xn−1]\nfor variable i, and p(i) q represents its qth patch, with q ∈ {1, 2, . . . , (n/l)}. After applying normalization and patching transformations, an MLP layer is employed to extract features from each sub-sequence and map each patch into a d-dimensional latent space representation. The activation function used is tanh, which confines the extracted features within the [−1, 1] range, ensuring bounded and nonlinear outputs. To enhance the model’s robustness and prevent overfitting, a dropout layer is incorporated, which regularizes the MLP’s output by randomly deactivating a portion of the neurons during training L(i) q = Dropout \u0010",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Xn−1",
+        "section_category": "custom_section",
+        "chunk_index": 48,
+        "start_word": 150,
+        "end_word": 251
+      },
+      "scores": {
+        "dense": 0.1863195300102234,
+        "bm25": 6.068310226743874,
+        "rrf": 0.014492753623188406
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: w =]\nh β1, β2, . . . , β Hi (16) where the vector w ∈RH contains the exponential weights for H future time steps. To ensure that the elements of w are constrained within the range [0, 1], we apply a normalization step wnorm = w −min (w) max (w) −min (w). (17) Finally, the normalized weight vector wnorm is used to fuse the predictions of the patching block, denoted as ˆXPatch, and the seasonal decomposition blocks, denoted as ˆXDecomp. The final forecast ˆX is computed as ˆX = EWA \u0010 ˆXPatch, ˆXDecomp \u0011 = ˆXPatch ⊙wnorm + ˆXDecomp ⊙(wnorm −1) . (18) It is noted that for β < 1, the elements of the weight",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "w =",
+        "section_category": "custom_section",
+        "chunk_index": 79,
+        "start_word": 0,
+        "end_word": 116
+      },
+      "scores": {
+        "dense": 0.2414536476135254,
+        "bm25": 5.275433531284381,
+        "rrf": 0.007936507936507936
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Xn−1]\nj=0(x(i) t−j −¯x(i) t )2 (4) where x(i) j refers to the value of the ith variable at time step j. Afterward, the input sliding window is normalized by subtracting its mean and dividing by its variance zi t = φ(xi t ) = xi t −¯x(i) t σ (i) t . (5) To ensure that the model focuses on isolated sub-sequences of the input time series, the patching mechanism of PatchTST is applied to the normalized sequence, splitting it into sub-sequences of length l. Consequently, each variable i is divided into (n/l) non-overlapping sub-sequences p(i) t−n+1:t =   p(i) q = {z(i) t , z(i) t−1, . . . , z(i) t−l+1} p(i) q−1 = {z(i) t−l, z(i) t−l−1, . . . , z(i) t−2l+1} ... p(i) 1 = {z(i) t−(q−1)l, . . . , z(i) t−ql+1}   (6) where p(i) t−n+1:t represents the patched input window for variable i, and p(i) q represents its qth patch, with q ∈ {1, 2, . . . , (n/l)}. After applying normalization and patching transformations, an MLP layer is employed to extract features from each sub-sequence and map each patch into a d-dimensional latent space representation. The activation function",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Xn−1",
+        "section_category": "custom_section",
+        "chunk_index": 47,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.22522234916687012,
+        "bm25": 4.610517735208693,
+        "rrf": 0.0078125
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_8_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.28637784719467163
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_7_image_2.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.28113946318626404
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_6_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2755949795246124
+      }
+    }
+  ],
+  "status": "success"
+}

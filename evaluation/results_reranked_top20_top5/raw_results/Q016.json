@@ -1,0 +1,332 @@
+{
+  "id": "Q016",
+  "category": "factual_text",
+  "question": "What are two limitations of TCNs discussed in the paper?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:33:32.655377+00:00",
+  "retrieved_pages": [
+    "4",
+    "9"
+  ],
+  "relevant_pages": [
+    4
+  ],
+  "retrieval_metrics": {
+    "recall@5": 1.0,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 1,
+    "retrieved_page_count": 2,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\nin high-dimensional, noisy data. Methods such as wavelet [75] and Fourier [76] transforms have been widely used for extracting frequency- domain features, while autoencoders [71] and attention OIKONOMOU et al.: TIME-SERIES FORECASTING IN INDUSTRIAL ENVIRONMENTS 7685 mechanisms [77] provide adaptive feature extraction in DL models. Specifically within the antenna manufacturing industry, var- ious process optimization frameworks have been introduced. An AI-based time-series anomaly detection framework was proposed to detect unusual fluctuations in sensor data reception rate [78]. Quality control approaches include a lightweight blockchain-enabled deep residual network method for defect detection [3], and a process optimization method combin- ing finite element modeling and hybrid genetic-ant colony algorithms to improve the dimensional precision of riveted assemblies [79]. Despite significant advancements, the current state-of-the- art in time-series forecasting for industrial applications still faces several key limitations. Through our study, three main challenges were identified. As data complexity increases, many methods struggle to account for correlations between variables and across production stages, leading to suboptimal perfor- mance [80]. Moreover, the process of selecting and tuning the most suitable deep neural network remains a challenging and expertise-intensive task [81]. Furthermore, these methods frequently lack robust domain generalization, making them prone to performance degradation when",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 36,
+        "start_word": 750,
+        "end_word": 950
+      },
+      "dense_score": 0.1451023519039154,
+      "bm25_score": 7.970093268566298,
+      "rrf_score": 0.008064516129032258,
+      "reranker_score": 0.8984565138816833
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\ncapture necessary long-range dependencies or by overfitting to noise in the data [26]. Examples of such model architectures include the multiscale isometric convolution network (MICN) [57] and TimesNet. MICN leverages downsampling convolutions and isometric convolution to capture temporal features at different resolu- tions, while maintaining geometric isometry. It achieves an average MSE reduction of 17.2% and 21.6%, in multivariate and univariate experiments, respectively, across six benchmark datasets. TimesNet [58] utilizes fast Fourier transform (FFT) to transform the input time-series into period-based 2-D repre- sentations and then processes them using 2-D CNN backbone models, including popular vision models such as ResNet [59], ResNeXt [60] and ConvNeXt [61]. It achieves state-of-the-art or better results in 80% of time-series forecasting tasks. State-of-the-art reviews in time-series forecasting generally fall into two distinct categories, each with its own limi- tations. The first category encompasses case studies where models are evaluated in real-world applications across various domains, such as in finance [62], weather [63], healthcare [64], or industry [65]. However, these studies often rely on estab- lished statistical models (e.g., ARIMA, Bayesian, SVM, etc.), or basic variants of DL models—such as simple MLPs, CNNs, or LSTMs. The second category includes studies that provide a comprehensive review",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 32,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "dense_score": 0.21042683720588684,
+      "bm25_score": 7.785497910381228,
+      "rrf_score": 0.015504807692307693,
+      "reranker_score": 0.8736146688461304
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\ndeep neural networks specifically designed for sequence mod- eling tasks, where they use causal convolutions and dilation to capture long-range dependencies without the risk of infor- mation leakage from future to past in the input sequence. TCNs combine the advantages of CNNs (such as parallelism and stable gradients) with the ability to handle temporal data efficiently, making them well-suited for tasks like time-series forecasting and sequential data analysis [56]. Nevertheless, training TCNs face several challenges, including achieving a long effective history size, which requires an extremely deep network or very large filters which increase the computational complexity of the model. Additionally, TCNs require careful parameter adjustment and fine-tuning, especially when adapt- ing to new datasets or application domains with differing temporal characteristics. This is particularly crucial in tasks where the length and nature of historical dependencies vary, as improper tuning can lead to suboptimal model performance, either by failing to capture necessary long-range dependencies or by overfitting to noise in the data [26]. Examples of such model architectures include the multiscale isometric convolution network (MICN) [57] and TimesNet. MICN leverages downsampling convolutions and isometric convolution to capture temporal features at different resolu- tions, while maintaining geometric isometry. It achieves an",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 31,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.3621545433998108,
+      "bm25_score": 7.855693511555363,
+      "rrf_score": 0.016009221311475412,
+      "reranker_score": 0.6204354763031006
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\ndomains, such as in finance [62], weather [63], healthcare [64], or industry [65]. However, these studies often rely on estab- lished statistical models (e.g., ARIMA, Bayesian, SVM, etc.), or basic variants of DL models—such as simple MLPs, CNNs, or LSTMs. The second category includes studies that provide a comprehensive review of recent model architectures. Even though these studies consider state-of-the-art advancements, the models are typically tested only on benchmark datasets, which may be either real-world [58], [66], [67] or syn- thetic [68]. In our work, we expand the research on time-series forecasting and bridge these gaps by evaluating a wide range of advanced models on a real-world dataset with practical applications. B. Process Optimization in Industrial Applications As discussed in Section I, process optimization has become a crucial component in modern manufacturing and indus- trial applications in the transition toward Industry 4.0. This section reviews recent advancements and approaches in pro- cess optimization leveraging virtual metrology, soft sensors, and time-series forecasting, integrating both traditional and AI-driven approaches across various industrial sectors. Virtual metrology and soft sensors represent pivotal technologies within the Industry 4.0 ecosystem and the ZDM framework. These tools enable real-time estimation of product quality and process parameters without",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 33,
+        "start_word": 300,
+        "end_word": 500
+      },
+      "dense_score": 0.14526282250881195,
+      "bm25_score": 9.17506355496463,
+      "rrf_score": 0.00819672131147541,
+      "reranker_score": 0.38570380210876465
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) TCNs: MICN [57] and TimesNet [58].]\nAdditionally, we include the Naive model, as typically fol- lowed in comparison studies [16], which outputs the last input value as a prediction for all future time steps, as the minimum baseline for a model to be considered useful.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          9
+        ],
+        "page": 9,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) TCNs: MICN [57] and TimesNet [58].",
+        "section_category": "custom_section",
+        "chunk_index": 105,
+        "start_word": 0,
+        "end_word": 39
+      },
+      "dense_score": 0.19763408601284027,
+      "bm25_score": 6.577102114809678,
+      "rrf_score": 0.007575757575757576,
+      "reranker_score": 0.10945272445678711
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_9_render.png",
+      "filename": "page_9_render.png",
+      "page": 9,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2775271236896515
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_3_render.png",
+      "filename": "page_3_render.png",
+      "page": 3,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2744826674461365
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_2_render.png",
+      "filename": "page_2_render.png",
+      "page": 2,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.27158719301223755
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\nin high-dimensional, noisy data. Methods such as wavelet [75] and Fourier [76] transforms have been widely used for extracting frequency- domain features, while autoencoders [71] and attention OIKONOMOU et al.: TIME-SERIES FORECASTING IN INDUSTRIAL ENVIRONMENTS 7685 mechanisms [77] provide adaptive feature extraction in DL models. Specifically within the antenna manufacturing industry, var- ious process optimization frameworks have been introduced. An AI-based time-series anomaly detection framework was proposed to detect unusual fluctuations in sensor data reception rate [78]. Quality control approaches include a lightweight blockchain-enabled deep residual network method for defect detection [3], and a process optimization method combin- ing finite element modeling and hybrid genetic-ant colony algorithms to improve the dimensional precision of riveted assemblies [79]. Despite significant advancements, the current state-of-the- art in time-series forecasting for industrial applications still faces several key limitations. Through our study, three main challenges were identified. As data complexity increases, many methods struggle to account for correlations between variables and across production stages, leading to suboptimal perfor- mance [80]. Moreover, the process of selecting and tuning the most suitable deep neural network remains a challenging and expertise-intensive task [81]. Furthermore, these methods frequently lack robust domain generalization, making them prone to performance degradation when",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 4,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 36,
+        "start_word": 750,
+        "end_word": 950
+      },
+      "scores": {
+        "dense": 0.1451023519039154,
+        "bm25": 7.970093268566298,
+        "rrf": 0.008064516129032258
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\ncapture necessary long-range dependencies or by overfitting to noise in the data [26]. Examples of such model architectures include the multiscale isometric convolution network (MICN) [57] and TimesNet. MICN leverages downsampling convolutions and isometric convolution to capture temporal features at different resolu- tions, while maintaining geometric isometry. It achieves an average MSE reduction of 17.2% and 21.6%, in multivariate and univariate experiments, respectively, across six benchmark datasets. TimesNet [58] utilizes fast Fourier transform (FFT) to transform the input time-series into period-based 2-D repre- sentations and then processes them using 2-D CNN backbone models, including popular vision models such as ResNet [59], ResNeXt [60] and ConvNeXt [61]. It achieves state-of-the-art or better results in 80% of time-series forecasting tasks. State-of-the-art reviews in time-series forecasting generally fall into two distinct categories, each with its own limi- tations. The first category encompasses case studies where models are evaluated in real-world applications across various domains, such as in finance [62], weather [63], healthcare [64], or industry [65]. However, these studies often rely on estab- lished statistical models (e.g., ARIMA, Bayesian, SVM, etc.), or basic variants of DL models—such as simple MLPs, CNNs, or LSTMs. The second category includes studies that provide a comprehensive review",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 4,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 32,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "scores": {
+        "dense": 0.21042683720588684,
+        "bm25": 7.785497910381228,
+        "rrf": 0.015504807692307693
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\ndeep neural networks specifically designed for sequence mod- eling tasks, where they use causal convolutions and dilation to capture long-range dependencies without the risk of infor- mation leakage from future to past in the input sequence. TCNs combine the advantages of CNNs (such as parallelism and stable gradients) with the ability to handle temporal data efficiently, making them well-suited for tasks like time-series forecasting and sequential data analysis [56]. Nevertheless, training TCNs face several challenges, including achieving a long effective history size, which requires an extremely deep network or very large filters which increase the computational complexity of the model. Additionally, TCNs require careful parameter adjustment and fine-tuning, especially when adapt- ing to new datasets or application domains with differing temporal characteristics. This is particularly crucial in tasks where the length and nature of historical dependencies vary, as improper tuning can lead to suboptimal model performance, either by failing to capture necessary long-range dependencies or by overfitting to noise in the data [26]. Examples of such model architectures include the multiscale isometric convolution network (MICN) [57] and TimesNet. MICN leverages downsampling convolutions and isometric convolution to capture temporal features at different resolu- tions, while maintaining geometric isometry. It achieves an",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 4,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 31,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.3621545433998108,
+        "bm25": 7.855693511555363,
+        "rrf": 0.016009221311475412
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\ndomains, such as in finance [62], weather [63], healthcare [64], or industry [65]. However, these studies often rely on estab- lished statistical models (e.g., ARIMA, Bayesian, SVM, etc.), or basic variants of DL models—such as simple MLPs, CNNs, or LSTMs. The second category includes studies that provide a comprehensive review of recent model architectures. Even though these studies consider state-of-the-art advancements, the models are typically tested only on benchmark datasets, which may be either real-world [58], [66], [67] or syn- thetic [68]. In our work, we expand the research on time-series forecasting and bridge these gaps by evaluating a wide range of advanced models on a real-world dataset with practical applications. B. Process Optimization in Industrial Applications As discussed in Section I, process optimization has become a crucial component in modern manufacturing and indus- trial applications in the transition toward Industry 4.0. This section reviews recent advancements and approaches in pro- cess optimization leveraging virtual metrology, soft sensors, and time-series forecasting, integrating both traditional and AI-driven approaches across various industrial sectors. Virtual metrology and soft sensors represent pivotal technologies within the Industry 4.0 ecosystem and the ZDM framework. These tools enable real-time estimation of product quality and process parameters without",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 4,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 33,
+        "start_word": 300,
+        "end_word": 500
+      },
+      "scores": {
+        "dense": 0.14526282250881195,
+        "bm25": 9.17506355496463,
+        "rrf": 0.00819672131147541
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) TCNs: MICN [57] and TimesNet [58].]\nAdditionally, we include the Naive model, as typically fol- lowed in comparison studies [16], which outputs the last input value as a prediction for all future time steps, as the minimum baseline for a model to be considered useful.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 9,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          9
+        ],
+        "page": 9,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) TCNs: MICN [57] and TimesNet [58].",
+        "section_category": "custom_section",
+        "chunk_index": 105,
+        "start_word": 0,
+        "end_word": 39
+      },
+      "scores": {
+        "dense": 0.19763408601284027,
+        "bm25": 6.577102114809678,
+        "rrf": 0.007575757575757576
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_9_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 9,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_9_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2775271236896515
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_3_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 3,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_3_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2744826674461365
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_2_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_2_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.27158719301223755
+      }
+    }
+  ],
+  "status": "success"
+}

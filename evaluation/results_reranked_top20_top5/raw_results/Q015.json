@@ -1,0 +1,327 @@
+{
+  "id": "Q015",
+  "category": "factual_text",
+  "question": "What problem does the paper identify with Transformer-based forecasting models in resource-constrained settings?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:33:24.700912+00:00",
+  "retrieved_pages": [
+    "2",
+    "3",
+    "1"
+  ],
+  "relevant_pages": [
+    2
+  ],
+  "retrieval_metrics": {
+    "recall@5": 1.0,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 1,
+    "retrieved_page_count": 3,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Transformer-based models, adapted from NLP, excel]\nat handling long-range dependencies and parallelizing computation for time-series forecasting [22], [23], [24], though their high computational demands can be a limitation in resource-constrained settings [25].",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Transformer-based models, adapted from NLP, excel",
+        "section_category": "custom_section",
+        "chunk_index": 17,
+        "start_word": 0,
+        "end_word": 26
+      },
+      "dense_score": 0.6448178291320801,
+      "bm25_score": 21.006997948105564,
+      "rrf_score": 0.01639344262295082,
+      "reranker_score": 0.7909677028656006
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Transformers: The recent groundbreaking work on Trans-]\nformers and attention-based models has revolutionized natural language processing by using a self-attention mechanism [49]. This enables parallelization and improves the model’s ability to capture long-range dependencies in sequences, outperforming previous models like RNNs and LSTMs in various time-series forecasting tasks [50]. Nevertheless, the canonical Transformer architecture faces various challenges regarding time-series forecasting, which include: 1) requiring large amounts of data for training; 2) high computational costs due to quadratic complexity at O(L2); 3) difficulty in capturing temporal dependencies; and 4) overfitting, especially on highly noisy data. 7684 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 In order to tackle the complexity problem and reduce the computational costs of the canonical Transformer architecture, Reformer leverages locality-sensitive hashing (LSH) for effi- cient attention computation and reversible residual layers [51], whereas Informer uses a probabilistic sparse self-attention mechanism and distilling operations [52]. Additionally, several time-series decomposition schemes have been integrated into the attention mechanism, including the MA decomposition of autoformer [53], the DFT decomposition of FEDformer [28], and the ES decomposition of ETSformer [54]. Other recent attention-based models include PatchTST [27], which divides the input time-series into discrete patches and processes them individually, achieving an overall reduction of 21.0% on",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3,
+          4
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Transformers: The recent groundbreaking work on Trans-",
+        "section_category": "custom_section",
+        "chunk_index": 29,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.4962139129638672,
+      "bm25_score": 8.504598391519718,
+      "rrf_score": 0.007142857142857143,
+      "reranker_score": 0.11176737397909164
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Recurrent Neural Networks: RNNs represent a class of]\nneural network architectures where the output of a model at every step is fed back into the model as input for the next step, allowing the network to process sequences of data, such as time-series, and capture temporal dependencies over time. The most common architecture of recurrent models is that of RNNs, a deep neural network architecture that computes recursively both a prediction and a hidden state representation. For each time step, the current time-step input along with previous time-step hidden state are used to forecast the next time-step value, allowing the model to retain memory of previous values and model temporal dependencies [34]. Although RNNs have exhibited strong performance in fore- casting tasks over the years, they face certain challenges, such as the “vanishing gradient” problem, which hinders their abil- ity to adequately model long-range dependencies in long-term forecasting [21]. Several RNN variants have been introduced in order to tackle this problem, including long short-term memory (LSTM) networks [35], which introduce a complex memory cell structure that can maintain important long-range information, and gated recurrent units (GRUS) [36], which simplify LSTMs, increasing their computational efficiency and reducing overfitting. Additionally, all three RNN variants can be configured in a bidirectional",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Recurrent Neural Networks: RNNs represent a class of",
+        "section_category": "custom_section",
+        "chunk_index": 25,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.3400645852088928,
+      "bm25_score": 9.211623292154274,
+      "rrf_score": 0.007462686567164179,
+      "reranker_score": 0.03512774407863617
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Transformer-based models, and temporal convolutional net-]\nworks (TCNs), and we perform a comparative study of the state-of-the-art approaches. Additionally, a lightweight late fusion linear architecture is proposed, incorporating patching, moving average (MA) decomposition, and Fourier Transform decomposition (PDFLinear), and an exponentially weighted averaging (EWA) module responsible for late fusion. Representative state-of-the-art models of each taxonomy class are benchmarked using a real-world antenna assembly line use case and compared against our proposed method. The experimental results show that our proposed model consistently matches or outperforms the state-of-the-art models in terms of forecasting efficacy for all forecast horizons, while requiring a fraction of the computational resources. Index Terms— Deep learning (DL), hybrid models, predictive maintenance, sensor data, time-series forecasting.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Transformer-based models, and temporal convolutional net-",
+        "section_category": "custom_section",
+        "chunk_index": 5,
+        "start_word": 0,
+        "end_word": 111
+      },
+      "dense_score": 0.4643421471118927,
+      "bm25_score": 9.587715204498858,
+      "rrf_score": 0.007575757575757576,
+      "reranker_score": 0.01624341867864132
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Recurrent Neural Networks: RNNs represent a class of]\ntackle this problem, including long short-term memory (LSTM) networks [35], which introduce a complex memory cell structure that can maintain important long-range information, and gated recurrent units (GRUS) [36], which simplify LSTMs, increasing their computational efficiency and reducing overfitting. Additionally, all three RNN variants can be configured in a bidirectional fashion (bi-LSTM, bi-GRU), where the computation of hidden states and predictions at each time step incorporates both past and future information, enhancing predictive accuracy of the models [37]. Echo state networks (ESNs) represent a type of RNN designed to address the challenges of training traditional RNNs, such as the vanishing gradient problem, by organizing randomly connected neurons into a “reservoir” that projects the input time-series into high-dimensional space representa- tions and simplifying the training process by only adjusting the output weights [38]. Quasi RNNs (QRNNs) represent a model architecture that leverages the base recursive structure of RNNs and combines it with the strengths of convolu- tional neural networks (CNNs) by alternating convolutional layers, which process the input sequences in parallel, and pooling layers, which are inspired by the gate mechanisms of LSTMs [39]. Extended long short-term memory (xLSTM) is a recent novel RNN architecture designed to tackle the limitations of",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Recurrent Neural Networks: RNNs represent a class of",
+        "section_category": "custom_section",
+        "chunk_index": 26,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "dense_score": 0.30496975779533386,
+      "bm25_score": 8.578449556390101,
+      "rrf_score": 0.007142857142857143,
+      "reranker_score": 0.005146449431777
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "filename": "page_7_image_2.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.28449538350105286
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "filename": "page_8_render.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2816079258918762
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_1_render.png",
+      "filename": "page_1_render.png",
+      "page": 1,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.27819758653640747
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Transformer-based models, adapted from NLP, excel]\nat handling long-range dependencies and parallelizing computation for time-series forecasting [22], [23], [24], though their high computational demands can be a limitation in resource-constrained settings [25].",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Transformer-based models, adapted from NLP, excel",
+        "section_category": "custom_section",
+        "chunk_index": 17,
+        "start_word": 0,
+        "end_word": 26
+      },
+      "scores": {
+        "dense": 0.6448178291320801,
+        "bm25": 21.006997948105564,
+        "rrf": 0.01639344262295082
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Transformers: The recent groundbreaking work on Trans-]\nformers and attention-based models has revolutionized natural language processing by using a self-attention mechanism [49]. This enables parallelization and improves the model’s ability to capture long-range dependencies in sequences, outperforming previous models like RNNs and LSTMs in various time-series forecasting tasks [50]. Nevertheless, the canonical Transformer architecture faces various challenges regarding time-series forecasting, which include: 1) requiring large amounts of data for training; 2) high computational costs due to quadratic complexity at O(L2); 3) difficulty in capturing temporal dependencies; and 4) overfitting, especially on highly noisy data. 7684 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 In order to tackle the complexity problem and reduce the computational costs of the canonical Transformer architecture, Reformer leverages locality-sensitive hashing (LSH) for effi- cient attention computation and reversible residual layers [51], whereas Informer uses a probabilistic sparse self-attention mechanism and distilling operations [52]. Additionally, several time-series decomposition schemes have been integrated into the attention mechanism, including the MA decomposition of autoformer [53], the DFT decomposition of FEDformer [28], and the ES decomposition of ETSformer [54]. Other recent attention-based models include PatchTST [27], which divides the input time-series into discrete patches and processes them individually, achieving an overall reduction of 21.0% on",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 3,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3,
+          4
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Transformers: The recent groundbreaking work on Trans-",
+        "section_category": "custom_section",
+        "chunk_index": 29,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.4962139129638672,
+        "bm25": 8.504598391519718,
+        "rrf": 0.007142857142857143
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Recurrent Neural Networks: RNNs represent a class of]\nneural network architectures where the output of a model at every step is fed back into the model as input for the next step, allowing the network to process sequences of data, such as time-series, and capture temporal dependencies over time. The most common architecture of recurrent models is that of RNNs, a deep neural network architecture that computes recursively both a prediction and a hidden state representation. For each time step, the current time-step input along with previous time-step hidden state are used to forecast the next time-step value, allowing the model to retain memory of previous values and model temporal dependencies [34]. Although RNNs have exhibited strong performance in fore- casting tasks over the years, they face certain challenges, such as the “vanishing gradient” problem, which hinders their abil- ity to adequately model long-range dependencies in long-term forecasting [21]. Several RNN variants have been introduced in order to tackle this problem, including long short-term memory (LSTM) networks [35], which introduce a complex memory cell structure that can maintain important long-range information, and gated recurrent units (GRUS) [36], which simplify LSTMs, increasing their computational efficiency and reducing overfitting. Additionally, all three RNN variants can be configured in a bidirectional",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 3,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Recurrent Neural Networks: RNNs represent a class of",
+        "section_category": "custom_section",
+        "chunk_index": 25,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.3400645852088928,
+        "bm25": 9.211623292154274,
+        "rrf": 0.007462686567164179
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Transformer-based models, and temporal convolutional net-]\nworks (TCNs), and we perform a comparative study of the state-of-the-art approaches. Additionally, a lightweight late fusion linear architecture is proposed, incorporating patching, moving average (MA) decomposition, and Fourier Transform decomposition (PDFLinear), and an exponentially weighted averaging (EWA) module responsible for late fusion. Representative state-of-the-art models of each taxonomy class are benchmarked using a real-world antenna assembly line use case and compared against our proposed method. The experimental results show that our proposed model consistently matches or outperforms the state-of-the-art models in terms of forecasting efficacy for all forecast horizons, while requiring a fraction of the computational resources. Index Terms— Deep learning (DL), hybrid models, predictive maintenance, sensor data, time-series forecasting.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Transformer-based models, and temporal convolutional net-",
+        "section_category": "custom_section",
+        "chunk_index": 5,
+        "start_word": 0,
+        "end_word": 111
+      },
+      "scores": {
+        "dense": 0.4643421471118927,
+        "bm25": 9.587715204498858,
+        "rrf": 0.007575757575757576
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Recurrent Neural Networks: RNNs represent a class of]\ntackle this problem, including long short-term memory (LSTM) networks [35], which introduce a complex memory cell structure that can maintain important long-range information, and gated recurrent units (GRUS) [36], which simplify LSTMs, increasing their computational efficiency and reducing overfitting. Additionally, all three RNN variants can be configured in a bidirectional fashion (bi-LSTM, bi-GRU), where the computation of hidden states and predictions at each time step incorporates both past and future information, enhancing predictive accuracy of the models [37]. Echo state networks (ESNs) represent a type of RNN designed to address the challenges of training traditional RNNs, such as the vanishing gradient problem, by organizing randomly connected neurons into a “reservoir” that projects the input time-series into high-dimensional space representa- tions and simplifying the training process by only adjusting the output weights [38]. Quasi RNNs (QRNNs) represent a model architecture that leverages the base recursive structure of RNNs and combines it with the strengths of convolu- tional neural networks (CNNs) by alternating convolutional layers, which process the input sequences in parallel, and pooling layers, which are inspired by the gate mechanisms of LSTMs [39]. Extended long short-term memory (xLSTM) is a recent novel RNN architecture designed to tackle the limitations of",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 3,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Recurrent Neural Networks: RNNs represent a class of",
+        "section_category": "custom_section",
+        "chunk_index": 26,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "scores": {
+        "dense": 0.30496975779533386,
+        "bm25": 8.578449556390101,
+        "rrf": 0.007142857142857143
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_7_image_2.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.28449538350105286
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_8_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2816079258918762
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_1_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_1_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.27819758653640747
+      }
+    }
+  ],
+  "status": "success"
+}

@@ -1,0 +1,332 @@
+{
+  "id": "Q019",
+  "category": "factual_text",
+  "question": "What are the three main challenges in industrial time-series forecasting identified by the authors?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:33:51.966466+00:00",
+  "retrieved_pages": [
+    "4",
+    "1",
+    "2",
+    "3"
+  ],
+  "relevant_pages": [
+    5
+  ],
+  "retrieval_metrics": {
+    "recall@5": 0.0,
+    "precision@5": 0.0,
+    "hit_rate@5": 0.0,
+    "mrr@5": 0.0,
+    "relevant_page_count": 1,
+    "retrieved_page_count": 4,
+    "relevant_pages_found": 0
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\nin high-dimensional, noisy data. Methods such as wavelet [75] and Fourier [76] transforms have been widely used for extracting frequency- domain features, while autoencoders [71] and attention OIKONOMOU et al.: TIME-SERIES FORECASTING IN INDUSTRIAL ENVIRONMENTS 7685 mechanisms [77] provide adaptive feature extraction in DL models. Specifically within the antenna manufacturing industry, var- ious process optimization frameworks have been introduced. An AI-based time-series anomaly detection framework was proposed to detect unusual fluctuations in sensor data reception rate [78]. Quality control approaches include a lightweight blockchain-enabled deep residual network method for defect detection [3], and a process optimization method combin- ing finite element modeling and hybrid genetic-ant colony algorithms to improve the dimensional precision of riveted assemblies [79]. Despite significant advancements, the current state-of-the- art in time-series forecasting for industrial applications still faces several key limitations. Through our study, three main challenges were identified. As data complexity increases, many methods struggle to account for correlations between variables and across production stages, leading to suboptimal perfor- mance [80]. Moreover, the process of selecting and tuning the most suitable deep neural network remains a challenging and expertise-intensive task [81]. Furthermore, these methods frequently lack robust domain generalization, making them prone to performance degradation when",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 36,
+        "start_word": 750,
+        "end_word": 950
+      },
+      "dense_score": 0.5112298130989075,
+      "bm25_score": 17.281338189101174,
+      "rrf_score": 0.00819672131147541,
+      "reranker_score": 0.9986779093742371
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\n(e-mail: doikonomou@iti.gr; lleontar@iti.gr; nikdim@iti.gr; dimitrios.tzovaras@iti.gr). Digital Object Identifier 10.1109/JSEN.2025.3526362 of upcoming failures. The main tasks of soft sensors include: 1) automated equipment calibration and reconfiguration [1], [2]; 2) defect detection and prediction models [3], [4], [5]; 3) real-time process monitoring and control systems [6], [7]; and 4) predictive maintenance frameworks [8], the core focus of this study. These objectives are integral to predictive maintenance strategies, aligning with the principles of the zero defect manu- facturing (ZDM) framework [9], [10], [11], which emphasizes the minimization or elimination of defects in manufacturing processes through advanced monitoring, data-driven decision- making, and automation. The ZDM framework represents a paradigm shift toward holistic quality management, offering pathways to achieve sustainability and resilience in production systems. AI-enabled sensors facilitate predictive maintenance by continuously assessing machine conditions, providing timely predictions for potential failures, and allowing for early inter- vention that minimizes equipment downtime and improves operational efficiency. At the core of predictive analytics lies time-series forecasting, a statistical tool that enables the forecasting of future states of manufacturing equipment based on historical data. Accurate forecasting facilitates informed © 2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 11,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.4441794455051422,
+      "bm25_score": 14.162271810566807,
+      "rrf_score": 0.0078125,
+      "reranker_score": 0.9853272438049316
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) TCNs efficiently model complex temporal patterns using]\nconvolutional layers, but their success is highly depen- dent on hyperparameter tuning and deep networks to handle long input lengths and forecast horizons [26]. This article introduces a lightweight MLP-based model that integrates multiple feature extraction techniques, including: 1) PatchTST’s [27] patching mechanism for efficient short-range feature extraction, a moving average (MA) [16], [17] seasonal decomposition scheme; and 2) a discrete Fourier transform (DFT) [28] decomposition scheme for mid-to-long- range forecast performance. Additionally, a simple late-fusion module is developed that adaptively combines the forecasts of the three predictor blocks using an exponentially weighted averaging (EWA) mechanism. This approach leverages the strengths of each individual predictor feature extraction tech- nique, resulting in a more robust and accurate forecast across varying forecast horizons. The objective of this study is to address the challenges in time-series forecasting in a real-world manufacturing setting, provide valuable insights into the applicability and effec- tiveness of different forecasting techniques in a real-world manufacturing setting. The main contributions of this study are as follows.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) TCNs efficiently model complex temporal patterns using",
+        "section_category": "custom_section",
+        "chunk_index": 18,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "dense_score": 0.5481226444244385,
+      "bm25_score": 14.655587301465062,
+      "rrf_score": 0.007936507936507936,
+      "reranker_score": 0.9827509522438049
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Recurrent Neural Networks: RNNs represent a class of]\ntackle this problem, including long short-term memory (LSTM) networks [35], which introduce a complex memory cell structure that can maintain important long-range information, and gated recurrent units (GRUS) [36], which simplify LSTMs, increasing their computational efficiency and reducing overfitting. Additionally, all three RNN variants can be configured in a bidirectional fashion (bi-LSTM, bi-GRU), where the computation of hidden states and predictions at each time step incorporates both past and future information, enhancing predictive accuracy of the models [37]. Echo state networks (ESNs) represent a type of RNN designed to address the challenges of training traditional RNNs, such as the vanishing gradient problem, by organizing randomly connected neurons into a “reservoir” that projects the input time-series into high-dimensional space representa- tions and simplifying the training process by only adjusting the output weights [38]. Quasi RNNs (QRNNs) represent a model architecture that leverages the base recursive structure of RNNs and combines it with the strengths of convolu- tional neural networks (CNNs) by alternating convolutional layers, which process the input sequences in parallel, and pooling layers, which are inspired by the gate mechanisms of LSTMs [39]. Extended long short-term memory (xLSTM) is a recent novel RNN architecture designed to tackle the limitations of",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Recurrent Neural Networks: RNNs represent a class of",
+        "section_category": "custom_section",
+        "chunk_index": 26,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "dense_score": 0.4283137321472168,
+      "bm25_score": 13.139957399808548,
+      "rrf_score": 0.007462686567164179,
+      "reranker_score": 0.9232738614082336
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\nAt the core of predictive analytics lies time-series forecasting, a statistical tool that enables the forecasting of future states of manufacturing equipment based on historical data. Accurate forecasting facilitates informed © 2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/ 7682 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 and proactive decision-making, leading to reduced down- time, optimized maintenance schedules, and improved OEE. Furthermore, predictive maintenance enables sustainable man- ufacturing practices by improving system reliability, reducing waste, and minimizing resource consumption, aligning main- tenance strategies with both operational and environmental objectives [12]. In this study, we focus on a highly specialized manufac- turing process, an antenna assembly line, which serves as a test case for applying advanced DL forecasting methods. The antenna assembly line is a highly complex process with temporal and spatial interdependencies, which continuously generates a large amount of data. These data encompass a wide range of metrics, including production volumes, defect rates, manufacturing cycle times, and equipment downtimes. These metrics are integral to the calculation of OEE, a critical performance indicator that reflects the efficiency and effec- tiveness of manufacturing operations. The ability to forecast",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 12,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "dense_score": 0.5758241415023804,
+      "bm25_score": 13.926099655042291,
+      "rrf_score": 0.007692307692307693,
+      "reranker_score": 0.9100574851036072
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "filename": "page_8_render.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.27135151624679565
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "filename": "page_6_image_1.png",
+      "page": 6,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.25627797842025757
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_2_render.png",
+      "filename": "page_2_render.png",
+      "page": 2,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2506820559501648
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\nin high-dimensional, noisy data. Methods such as wavelet [75] and Fourier [76] transforms have been widely used for extracting frequency- domain features, while autoencoders [71] and attention OIKONOMOU et al.: TIME-SERIES FORECASTING IN INDUSTRIAL ENVIRONMENTS 7685 mechanisms [77] provide adaptive feature extraction in DL models. Specifically within the antenna manufacturing industry, var- ious process optimization frameworks have been introduced. An AI-based time-series anomaly detection framework was proposed to detect unusual fluctuations in sensor data reception rate [78]. Quality control approaches include a lightweight blockchain-enabled deep residual network method for defect detection [3], and a process optimization method combin- ing finite element modeling and hybrid genetic-ant colony algorithms to improve the dimensional precision of riveted assemblies [79]. Despite significant advancements, the current state-of-the- art in time-series forecasting for industrial applications still faces several key limitations. Through our study, three main challenges were identified. As data complexity increases, many methods struggle to account for correlations between variables and across production stages, leading to suboptimal perfor- mance [80]. Moreover, the process of selecting and tuning the most suitable deep neural network remains a challenging and expertise-intensive task [81]. Furthermore, these methods frequently lack robust domain generalization, making them prone to performance degradation when",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 4,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 36,
+        "start_word": 750,
+        "end_word": 950
+      },
+      "scores": {
+        "dense": 0.5112298130989075,
+        "bm25": 17.281338189101174,
+        "rrf": 0.00819672131147541
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\n(e-mail: doikonomou@iti.gr; lleontar@iti.gr; nikdim@iti.gr; dimitrios.tzovaras@iti.gr). Digital Object Identifier 10.1109/JSEN.2025.3526362 of upcoming failures. The main tasks of soft sensors include: 1) automated equipment calibration and reconfiguration [1], [2]; 2) defect detection and prediction models [3], [4], [5]; 3) real-time process monitoring and control systems [6], [7]; and 4) predictive maintenance frameworks [8], the core focus of this study. These objectives are integral to predictive maintenance strategies, aligning with the principles of the zero defect manu- facturing (ZDM) framework [9], [10], [11], which emphasizes the minimization or elimination of defects in manufacturing processes through advanced monitoring, data-driven decision- making, and automation. The ZDM framework represents a paradigm shift toward holistic quality management, offering pathways to achieve sustainability and resilience in production systems. AI-enabled sensors facilitate predictive maintenance by continuously assessing machine conditions, providing timely predictions for potential failures, and allowing for early inter- vention that minimizes equipment downtime and improves operational efficiency. At the core of predictive analytics lies time-series forecasting, a statistical tool that enables the forecasting of future states of manufacturing equipment based on historical data. Accurate forecasting facilitates informed © 2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 11,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.4441794455051422,
+        "bm25": 14.162271810566807,
+        "rrf": 0.0078125
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) TCNs efficiently model complex temporal patterns using]\nconvolutional layers, but their success is highly depen- dent on hyperparameter tuning and deep networks to handle long input lengths and forecast horizons [26]. This article introduces a lightweight MLP-based model that integrates multiple feature extraction techniques, including: 1) PatchTST’s [27] patching mechanism for efficient short-range feature extraction, a moving average (MA) [16], [17] seasonal decomposition scheme; and 2) a discrete Fourier transform (DFT) [28] decomposition scheme for mid-to-long- range forecast performance. Additionally, a simple late-fusion module is developed that adaptively combines the forecasts of the three predictor blocks using an exponentially weighted averaging (EWA) mechanism. This approach leverages the strengths of each individual predictor feature extraction tech- nique, resulting in a more robust and accurate forecast across varying forecast horizons. The objective of this study is to address the challenges in time-series forecasting in a real-world manufacturing setting, provide valuable insights into the applicability and effec- tiveness of different forecasting techniques in a real-world manufacturing setting. The main contributions of this study are as follows.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) TCNs efficiently model complex temporal patterns using",
+        "section_category": "custom_section",
+        "chunk_index": 18,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "scores": {
+        "dense": 0.5481226444244385,
+        "bm25": 14.655587301465062,
+        "rrf": 0.007936507936507936
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 2) Recurrent Neural Networks: RNNs represent a class of]\ntackle this problem, including long short-term memory (LSTM) networks [35], which introduce a complex memory cell structure that can maintain important long-range information, and gated recurrent units (GRUS) [36], which simplify LSTMs, increasing their computational efficiency and reducing overfitting. Additionally, all three RNN variants can be configured in a bidirectional fashion (bi-LSTM, bi-GRU), where the computation of hidden states and predictions at each time step incorporates both past and future information, enhancing predictive accuracy of the models [37]. Echo state networks (ESNs) represent a type of RNN designed to address the challenges of training traditional RNNs, such as the vanishing gradient problem, by organizing randomly connected neurons into a “reservoir” that projects the input time-series into high-dimensional space representa- tions and simplifying the training process by only adjusting the output weights [38]. Quasi RNNs (QRNNs) represent a model architecture that leverages the base recursive structure of RNNs and combines it with the strengths of convolu- tional neural networks (CNNs) by alternating convolutional layers, which process the input sequences in parallel, and pooling layers, which are inspired by the gate mechanisms of LSTMs [39]. Extended long short-term memory (xLSTM) is a recent novel RNN architecture designed to tackle the limitations of",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 3,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          3
+        ],
+        "page": 3,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "2) Recurrent Neural Networks: RNNs represent a class of",
+        "section_category": "custom_section",
+        "chunk_index": 26,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "scores": {
+        "dense": 0.4283137321472168,
+        "bm25": 13.139957399808548,
+        "rrf": 0.007462686567164179
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\nAt the core of predictive analytics lies time-series forecasting, a statistical tool that enables the forecasting of future states of manufacturing equipment based on historical data. Accurate forecasting facilitates informed © 2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/ 7682 IEEE SENSORS JOURNAL, VOL. 25, NO. 4, 15 FEBRUARY 2025 and proactive decision-making, leading to reduced down- time, optimized maintenance schedules, and improved OEE. Furthermore, predictive maintenance enables sustainable man- ufacturing practices by improving system reliability, reducing waste, and minimizing resource consumption, aligning main- tenance strategies with both operational and environmental objectives [12]. In this study, we focus on a highly specialized manufac- turing process, an antenna assembly line, which serves as a test case for applying advanced DL forecasting methods. The antenna assembly line is a highly complex process with temporal and spatial interdependencies, which continuously generates a large amount of data. These data encompass a wide range of metrics, including production volumes, defect rates, manufacturing cycle times, and equipment downtimes. These metrics are integral to the calculation of OEE, a critical performance indicator that reflects the efficiency and effec- tiveness of manufacturing operations. The ability to forecast",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 12,
+        "start_word": 150,
+        "end_word": 350
+      },
+      "scores": {
+        "dense": 0.5758241415023804,
+        "bm25": 13.926099655042291,
+        "rrf": 0.007692307692307693
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_8_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.27135151624679565
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_6_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.25627797842025757
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_2_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_2_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2506820559501648
+      }
+    }
+  ],
+  "status": "success"
+}

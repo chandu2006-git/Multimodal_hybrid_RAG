@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-11-05T06:35:12.532881+00:00",
+  "mode": "quantitative",
+  "dataset_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\evaluation\\rag_evaluation_dataset.json",
+  "total_questions": 30,
+  "answerable_questions": 29,
+  "unanswerable_questions": 1,
+  "successful_questions": 30,
+  "failed_questions": 0,
+  "retrieval_metrics": {
+    "recall@5": 0.735632183908046,
+    "precision@5": 0.2413793103448277,
+    "hit_rate@5": 0.8620689655172413,
+    "mrr@5": 0.75,
+    "evaluated_questions": 29
+  }
+}

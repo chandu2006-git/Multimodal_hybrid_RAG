@@ -1,0 +1,332 @@
+{
+  "id": "Q018",
+  "category": "cross_page_reasoning",
+  "question": "Why does the study combine multiple forecasting blocks rather than use just one?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:33:45.673092+00:00",
+  "retrieved_pages": [
+    "5",
+    "7",
+    "2",
+    "4"
+  ],
+  "relevant_pages": [
+    5,
+    6,
+    7
+  ],
+  "retrieval_metrics": {
+    "recall@5": 0.6666666666666666,
+    "precision@5": 0.4,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 3,
+    "retrieved_page_count": 4,
+    "relevant_pages_found": 2
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: This]\narchitecture, as shown in Fig. 1, combines three specialized predictor blocks, each optimized for different temporal patterns. The first block employs the patching mechanism from PatchTST, which excels in capturing short-range dependencies by breaking down the time series into non-overlapping patches. The second and third blocks are dedicated to mid- and long-range feature extraction, utilizing MA and DFT seasonal decomposition techniques, respectively. In order to combine the outputs of these diverse components, an EWA module is integrated, which adaptively balances the contributions of each predictor block. This combination allows the model to deliver precise and robust forecasts across various time horizons, leveraging the strengths of each individual component to address the complexities of time-series data.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "This",
+        "section_category": "custom_section",
+        "chunk_index": 43,
+        "start_word": 0,
+        "end_word": 115
+      },
+      "dense_score": 0.46623000502586365,
+      "bm25_score": 10.125827400206866,
+      "rrf_score": 0.007936507936507936,
+      "reranker_score": 0.543881356716156
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Exponentially Weighted Averaging: As previously dis-]\ncussed, the patching block focuses on capturing short-range dependencies, whereas the seasonal decomposition blocks are designed to capture mid-range and long-range. To effectively combine the predictions from these three blocks, we introduce a simple yet flexible weighting mechanism called EWA. EWA utilizes a learnable positive base factor β to generate expo- nentially decaying or increasing weights for each future time step",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Exponentially Weighted Averaging: As previously dis-",
+        "section_category": "custom_section",
+        "chunk_index": 78,
+        "start_word": 0,
+        "end_word": 61
+      },
+      "dense_score": 0.46012213826179504,
+      "bm25_score": 11.531535649251275,
+      "rrf_score": 0.00819672131147541,
+      "reranker_score": 0.2810138165950775
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\n\u0001 . (14) Finally, the outputs from both decomposition blocks are combined to produce the final prediction ˆXDecomp ˆXDecomp = ˆXMA",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 76,
+        "start_word": 0,
+        "end_word": 21
+      },
+      "dense_score": 0.5321831703186035,
+      "bm25_score": 8.342830092574888,
+      "rrf_score": 0.015339578454332554,
+      "reranker_score": 0.14935694634914398
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 1) Multilayer Perceptrons: MLPs comprise the most funda-]\nmental and widely used neural network architecture, consisting of a single or multiple layers of neurons, where the output of each layer serves as the input for the subsequent layer. A characteristic example of such an architecture is N-BEATS [29], a neural architecture that does not rely on temporal fea- ture engineering and consists solely of MLP-based blocks that are organized hierarchically into stacks with doubly residual connections. OIKONOMOU et al.: TIME-SERIES FORECASTING IN INDUSTRIAL ENVIRONMENTS 7683 Whereas N-BEATS provides a generic sequence prediction solution with no reliance on specialized time-series mod- ules, in recent years, time-series-specific neural architectures have made great advances. By incorporating temporal fea- ture extraction mechanisms into their base architecture, they enhance the model’s ability to capture temporal patterns, while also reducing random noise present in the data that may lead to overfitting and reduction of performance. Such architectures include N-HiTS [30], which extends N-BEATS with the inclusion of downsampling and max pooling layers within the base block architecture to reduce model complexity and data noise, and DLinear [16], which leverages an MA decomposition scheme combined with a simple MLP model. Additionally, FreTS [31], which leverages Fourier transform (FT) decomposition to process the input time series",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "1) Multilayer Perceptrons: MLPs comprise the most funda-",
+        "section_category": "custom_section",
+        "chunk_index": 23,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.4084716737270355,
+      "bm25_score": 9.01316553046619,
+      "rrf_score": 0.0078125,
+      "reranker_score": 0.018707692623138428
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\naccount for correlations between variables and across production stages, leading to suboptimal perfor- mance [80]. Moreover, the process of selecting and tuning the most suitable deep neural network remains a challenging and expertise-intensive task [81]. Furthermore, these methods frequently lack robust domain generalization, making them prone to performance degradation when faced with unseen, noisy, or heterogeneous data distributions typical in real-world industrial environments [82]. To address these challenges, this study introduces a sim- ple, yet efficient, forecasting method. This method integrates information across multiple production stages and variables to enhance forecasting accuracy in complex industrial applica- tions with temporal and spatial correlations. Additionally, the simplicity of the method reduces the need for laborious man- ual parameter tuning, speeding up the development process. Finally, unlike methods tested only on benchmark datasets, our approach is validated using two heterogeneous real-world use cases, highlighting its ability to deliver consistent performance across industrial domains.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 37,
+        "start_word": 900,
+        "end_word": 1050
+      },
+      "dense_score": 0.35189980268478394,
+      "bm25_score": 8.352283770254012,
+      "rrf_score": 0.007352941176470588,
+      "reranker_score": 0.008309634402394295
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "filename": "page_7_image_2.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2871797978878021
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "filename": "page_8_render.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2701554000377655
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "filename": "page_8_image_1.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.26432332396507263
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: This]\narchitecture, as shown in Fig. 1, combines three specialized predictor blocks, each optimized for different temporal patterns. The first block employs the patching mechanism from PatchTST, which excels in capturing short-range dependencies by breaking down the time series into non-overlapping patches. The second and third blocks are dedicated to mid- and long-range feature extraction, utilizing MA and DFT seasonal decomposition techniques, respectively. In order to combine the outputs of these diverse components, an EWA module is integrated, which adaptively balances the contributions of each predictor block. This combination allows the model to deliver precise and robust forecasts across various time horizons, leveraging the strengths of each individual component to address the complexities of time-series data.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "This",
+        "section_category": "custom_section",
+        "chunk_index": 43,
+        "start_word": 0,
+        "end_word": 115
+      },
+      "scores": {
+        "dense": 0.46623000502586365,
+        "bm25": 10.125827400206866,
+        "rrf": 0.007936507936507936
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Exponentially Weighted Averaging: As previously dis-]\ncussed, the patching block focuses on capturing short-range dependencies, whereas the seasonal decomposition blocks are designed to capture mid-range and long-range. To effectively combine the predictions from these three blocks, we introduce a simple yet flexible weighting mechanism called EWA. EWA utilizes a learnable positive base factor β to generate expo- nentially decaying or increasing weights for each future time step",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Exponentially Weighted Averaging: As previously dis-",
+        "section_category": "custom_section",
+        "chunk_index": 78,
+        "start_word": 0,
+        "end_word": 61
+      },
+      "scores": {
+        "dense": 0.46012213826179504,
+        "bm25": 11.531535649251275,
+        "rrf": 0.00819672131147541
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\n\u0001 . (14) Finally, the outputs from both decomposition blocks are combined to produce the final prediction ˆXDecomp ˆXDecomp = ˆXMA",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 76,
+        "start_word": 0,
+        "end_word": 21
+      },
+      "scores": {
+        "dense": 0.5321831703186035,
+        "bm25": 8.342830092574888,
+        "rrf": 0.015339578454332554
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 1) Multilayer Perceptrons: MLPs comprise the most funda-]\nmental and widely used neural network architecture, consisting of a single or multiple layers of neurons, where the output of each layer serves as the input for the subsequent layer. A characteristic example of such an architecture is N-BEATS [29], a neural architecture that does not rely on temporal fea- ture engineering and consists solely of MLP-based blocks that are organized hierarchically into stacks with doubly residual connections. OIKONOMOU et al.: TIME-SERIES FORECASTING IN INDUSTRIAL ENVIRONMENTS 7683 Whereas N-BEATS provides a generic sequence prediction solution with no reliance on specialized time-series mod- ules, in recent years, time-series-specific neural architectures have made great advances. By incorporating temporal fea- ture extraction mechanisms into their base architecture, they enhance the model’s ability to capture temporal patterns, while also reducing random noise present in the data that may lead to overfitting and reduction of performance. Such architectures include N-HiTS [30], which extends N-BEATS with the inclusion of downsampling and max pooling layers within the base block architecture to reduce model complexity and data noise, and DLinear [16], which leverages an MA decomposition scheme combined with a simple MLP model. Additionally, FreTS [31], which leverages Fourier transform (FT) decomposition to process the input time series",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2,
+          3
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "1) Multilayer Perceptrons: MLPs comprise the most funda-",
+        "section_category": "custom_section",
+        "chunk_index": 23,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.4084716737270355,
+        "bm25": 9.01316553046619,
+        "rrf": 0.0078125
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\naccount for correlations between variables and across production stages, leading to suboptimal perfor- mance [80]. Moreover, the process of selecting and tuning the most suitable deep neural network remains a challenging and expertise-intensive task [81]. Furthermore, these methods frequently lack robust domain generalization, making them prone to performance degradation when faced with unseen, noisy, or heterogeneous data distributions typical in real-world industrial environments [82]. To address these challenges, this study introduces a sim- ple, yet efficient, forecasting method. This method integrates information across multiple production stages and variables to enhance forecasting accuracy in complex industrial applica- tions with temporal and spatial correlations. Additionally, the simplicity of the method reduces the need for laborious man- ual parameter tuning, speeding up the development process. Finally, unlike methods tested only on benchmark datasets, our approach is validated using two heterogeneous real-world use cases, highlighting its ability to deliver consistent performance across industrial domains.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 4,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 37,
+        "start_word": 900,
+        "end_word": 1050
+      },
+      "scores": {
+        "dense": 0.35189980268478394,
+        "bm25": 8.352283770254012,
+        "rrf": 0.007352941176470588
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_7_image_2.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2871797978878021
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_8_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2701554000377655
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_8_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.26432332396507263
+      }
+    }
+  ],
+  "status": "success"
+}

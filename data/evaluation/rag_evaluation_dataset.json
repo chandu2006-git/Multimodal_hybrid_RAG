@@ -1,59 +1,54 @@
 {
   "dataset_name": "Multimodal RAG Scientific Paper Evaluation Dataset",
-  "version": "0.1.0",
-  "source_document": "AMSL_IEEE_Research_paper.pdf",
-  "scope_note": "Initial single-document development benchmark. Verify all reference answers and page references against the exact local PDF before reporting results. Relevant chunk IDs and uncertain visual asset IDs are intentionally left empty until mapped to the local ingestion outputs.",
+  "version": "1.0.0",
+  "source_document": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+  "scope_note": "30-question evaluation set based on the supplied paper. relevant_pages are 1-indexed PDF page numbers, not printed IEEE page labels. Verify page-level labels against the exact ingested PDF before formal benchmarking. Chunk/table/image IDs are empty until mapped to local ingestion outputs. The current retrieval evaluator scores page-level retrieval using relevant_pages; reference_answer is for answer-quality evaluation.",
   "question_count": 30,
   "category_counts": {
-    "factual_text": 6,
-    "numerical_table": 6,
-    "figure_image": 6,
-    "cross_page_reasoning": 6,
-    "unanswerable": 6
+    "factual_text": 24,
+    "numerical_table": 1,
+    "cross_page_reasoning": 4,
+    "unanswerable": 1
   },
   "questions": [
     {
       "id": "Q001",
       "category": "factual_text",
-      "question": "What dataset did the study use for face morph attack detection?",
-      "reference_answer": "The study used the AMSL Face Morph Image Dataset.",
+      "question": "What is the full title of the paper?",
+      "reference_answer": "Time-Series Forecasting in Industrial Environments: A Performance Study and a Novel Late Fusion Framework",
       "relevant_pages": [
-        3
+        1
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_3_table_1"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "AMSL Face Morph Image Dataset"
+        "full paper title"
       ]
     },
     {
       "id": "Q002",
       "category": "factual_text",
-      "question": "What is the main objective of the paper?",
-      "reference_answer": "The paper compares a custom CNN, MobileNetV2, ResNet50, and InceptionV3 for face morph attack detection.",
+      "question": "What industrial process is the main real-world use case in this study?",
+      "reference_answer": "An antenna assembly line.",
       "relevant_pages": [
-        1,
-        2
+        2,
+        5
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "comparative study",
-        "four architectures",
-        "face morph attack detection"
+        "antenna assembly line"
       ]
     },
     {
       "id": "Q003",
       "category": "factual_text",
-      "question": "Why are face morphing attacks a concern for biometric authentication?",
-      "reference_answer": "A morphed face combines facial characteristics of multiple people and may be accepted as matching more than one identity, creating risks for systems such as electronic passports and border control.",
+      "question": "What does OEE stand for in the paper?",
+      "reference_answer": "Overall equipment effectiveness.",
       "relevant_pages": [
         1,
         2
@@ -63,273 +58,265 @@
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "combines facial characteristics",
-        "may match multiple identities",
-        "biometric security risk"
+        "overall equipment effectiveness"
       ]
     },
     {
       "id": "Q004",
       "category": "factual_text",
-      "question": "Which four model architectures were compared?",
-      "reference_answer": "The study compared a custom CNN, MobileNetV2, ResNet50, and InceptionV3.",
+      "question": "What are soft sensors used for in manufacturing?",
+      "reference_answer": "They are AI-driven virtual models that estimate unmeasured production variables.",
       "relevant_pages": [
-        1,
-        7
+        1
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "CNN",
-        "MobileNetV2",
-        "ResNet50",
-        "InceptionV3"
+        "AI-driven virtual models",
+        "estimate unmeasured production variables"
       ]
     },
     {
       "id": "Q005",
       "category": "factual_text",
-      "question": "What future research directions do the authors mention?",
-      "reference_answer": "The authors suggest cross-dataset validation, exploring transformer-based or CNN-transformer architectures, ensemble methods, lightweight real-time models, and explainable AI techniques.",
+      "question": "Which four broad deep-learning architecture classes does the paper compare?",
+      "reference_answer": "Multilayer perceptrons (MLPs), recurrent neural networks (RNNs), Transformer/attention-based models, and temporal convolutional networks (TCNs).",
       "relevant_pages": [
-        9,
-        10
+        2
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "cross-dataset validation",
-        "transformer or hybrid models",
-        "lightweight real-time models",
-        "explainable AI"
+        "MLPs",
+        "RNNs",
+        "Transformer-based models",
+        "TCNs"
       ]
     },
     {
       "id": "Q006",
       "category": "factual_text",
-      "question": "What broad conclusion do the authors draw about transfer-learning models compared with the custom CNN?",
-      "reference_answer": "In the reported experiments, the transfer-learning approaches performed better than the custom CNN.",
+      "question": "What is the proposed forecasting framework called?",
+      "reference_answer": "PDFLinearEWA.",
       "relevant_pages": [
-        8,
-        10
+        1,
+        6
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "transfer-learning approaches",
-        "outperformed custom CNN in reported experiments"
+        "PDFLinearEWA"
       ]
     },
     {
       "id": "Q007",
-      "category": "numerical_table",
-      "question": "Which model achieved the highest accuracy, and what was that accuracy?",
-      "reference_answer": "InceptionV3 achieved the highest reported accuracy, 97.44%.",
+      "category": "factual_text",
+      "question": "What are the three predictor blocks used in the proposed architecture?",
+      "reference_answer": "A patching block, a moving-average (MA) decomposition block, and a discrete Fourier transform (DFT) decomposition block.",
       "relevant_pages": [
-        7,
-        10
+        2,
+        5,
+        6
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "InceptionV3",
-        "97.44% accuracy"
+        "patching block",
+        "MA decomposition",
+        "DFT decomposition"
       ]
     },
     {
       "id": "Q008",
-      "category": "numerical_table",
-      "question": "What F1-score did InceptionV3 achieve?",
-      "reference_answer": "InceptionV3 achieved an F1-score of 0.8283 (82.83%).",
+      "category": "factual_text",
+      "question": "What is the role of the exponentially weighted averaging (EWA) module?",
+      "reference_answer": "It adaptively fuses the forecasts from the three predictor blocks by weighting their contributions.",
       "relevant_pages": [
-        7,
-        10
+        1,
+        5,
+        6
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "InceptionV3",
-        "F1-score 0.8283 or 82.83%"
+        "adaptively combines predictor forecasts",
+        "exponentially weighted averaging"
       ]
     },
     {
       "id": "Q009",
-      "category": "numerical_table",
-      "question": "What accuracy did MobileNetV2 achieve?",
-      "reference_answer": "MobileNetV2 achieved 96.93% accuracy.",
+      "category": "factual_text",
+      "question": "Which predictor block is designed to capture short-range temporal patterns?",
+      "reference_answer": "The patching block, which divides the input time series into non-overlapping patches.",
       "relevant_pages": [
-        7
+        5,
+        6
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "MobileNetV2",
-        "96.93% accuracy"
+        "patching block",
+        "short-range dependencies"
       ]
     },
     {
       "id": "Q010",
-      "category": "numerical_table",
-      "question": "What were the reported accuracy and F1-score for ResNet50?",
-      "reference_answer": "ResNet50 achieved 93.04% accuracy and an F1-score of 0.3200.",
+      "category": "factual_text",
+      "question": "How does the moving-average decomposition block separate a time series?",
+      "reference_answer": "It decomposes the input into trend and seasonal components using a moving-average kernel.",
       "relevant_pages": [
+        6,
         7
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "ResNet50",
-        "93.04% accuracy",
-        "F1-score 0.3200"
+        "moving-average kernel",
+        "trend component",
+        "seasonal component"
       ]
     },
     {
       "id": "Q011",
-      "category": "numerical_table",
-      "question": "What precision and recall did InceptionV3 report?",
-      "reference_answer": "InceptionV3 reported precision of 1.0000 and recall of 0.7069.",
+      "category": "factual_text",
+      "question": "How does the DFT-based block identify dominant frequencies?",
+      "reference_answer": "It applies a discrete Fourier transform and selects the k frequencies with the largest magnitudes, then reconstructs the signal using the inverse DFT.",
       "relevant_pages": [
-        7
+        7,
+        8
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "precision 1.0000",
-        "recall 0.7069"
+        "DFT",
+        "top k frequencies by magnitude",
+        "inverse DFT"
       ]
     },
     {
       "id": "Q012",
-      "category": "numerical_table",
-      "question": "What ROC-AUC score did InceptionV3 achieve?",
-      "reference_answer": "InceptionV3 achieved a ROC-AUC score of 0.9916 (99.16%).",
+      "category": "factual_text",
+      "question": "Why does the proposed model use instance normalization?",
+      "reference_answer": "To address temporal distribution shifts in the input time series.",
       "relevant_pages": [
-        7,
-        10
+        6
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "InceptionV3",
-        "ROC-AUC 0.9916 or 99.16%"
+        "instance normalization",
+        "temporal distribution shifts"
       ]
     },
     {
       "id": "Q013",
-      "category": "figure_image",
-      "question": "Which figure is described as comparing the performance of CNN, MobileNetV2, ResNet50, and InceptionV3?",
-      "reference_answer": "Figure 4 is described as comparing the models using accuracy, recall, F1-score, and ROC-AUC.",
+      "category": "numerical_table",
+      "question": "What default latent feature dimension is used for the patching block?",
+      "reference_answer": "d = 128.",
       "relevant_pages": [
-        7
+        6
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "Figure 4",
-        "four models",
-        "accuracy, recall, F1-score, ROC-AUC"
+        "d=128"
       ]
     },
     {
       "id": "Q014",
-      "category": "figure_image",
-      "question": "What does Figure 6 show according to the paper?",
-      "reference_answer": "Figure 6 shows the confusion matrix for InceptionV3.",
+      "category": "factual_text",
+      "question": "What activation function is used in the patching block's MLP feature extractor?",
+      "reference_answer": "The tanh activation function.",
       "relevant_pages": [
-        8
+        6
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
-      "relevant_image_ids": [
-        "page_8_image_1.png"
-      ],
+      "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "Figure 6",
-        "confusion matrix",
-        "InceptionV3"
+        "tanh"
       ]
     },
     {
       "id": "Q015",
-      "category": "figure_image",
-      "question": "Which evaluation measures are named in the caption for the comparative model-performance figure?",
-      "reference_answer": "The caption names accuracy, recall, F1-score, and ROC-AUC.",
+      "category": "factual_text",
+      "question": "What problem does the paper identify with Transformer-based forecasting models in resource-constrained settings?",
+      "reference_answer": "Their high computational demands can be a limitation.",
       "relevant_pages": [
-        7
+        2
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "accuracy",
-        "recall",
-        "F1-score",
-        "ROC-AUC"
+        "high computational demands"
       ]
     },
     {
       "id": "Q016",
-      "category": "figure_image",
-      "question": "On which page is the InceptionV3 confusion matrix shown?",
-      "reference_answer": "The InceptionV3 confusion matrix is shown on page 8.",
+      "category": "factual_text",
+      "question": "What are two limitations of TCNs discussed in the paper?",
+      "reference_answer": "They may need very deep networks or large filters to capture long histories, and they require careful hyperparameter tuning.",
       "relevant_pages": [
-        8
+        4
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
-      "relevant_image_ids": [
-        "page_8_image_1.png"
-      ],
+      "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "page 8",
-        "InceptionV3 confusion matrix"
+        "long effective history may require deep networks or large filters",
+        "careful parameter tuning"
       ]
     },
     {
       "id": "Q017",
-      "category": "figure_image",
-      "question": "Does the paper identify a figure that compares the four models' performance?",
-      "reference_answer": "Yes. The text identifies Figure 4 as comparing the four models using accuracy, recall, F1-score, and ROC-AUC.",
+      "category": "factual_text",
+      "question": "Which two heterogeneous real-world application settings are used to assess the proposed method?",
+      "reference_answer": "An antenna assembly line and a single-stage process from the sink manufacturing industry.",
       "relevant_pages": [
+        2,
+        5
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "antenna assembly line",
+        "sink manufacturing industry"
+      ]
+    },
+    {
+      "id": "Q018",
+      "category": "cross_page_reasoning",
+      "question": "Why does the study combine multiple forecasting blocks rather than use just one?",
+      "reference_answer": "The blocks target different temporal patterns—short-range patterns through patching and mid-/long-range patterns through MA and DFT decomposition—then EWA combines their forecasts.",
+      "relevant_pages": [
+        5,
+        6,
         7
       ],
       "relevant_chunk_ids": [],
@@ -337,238 +324,228 @@
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "Figure 4",
-        "four-model comparison",
-        "comparison metrics"
-      ]
-    },
-    {
-      "id": "Q018",
-      "category": "figure_image",
-      "question": "What visual evidence should be retrieved to answer a question asking to compare the models' accuracy, recall, F1-score, and ROC-AUC?",
-      "reference_answer": "The relevant evidence is the comparative-performance figure identified as Figure 4, together with the model-results table on page 7.",
-      "relevant_pages": [
-        7
-      ],
-      "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
-      "relevant_image_ids": [],
-      "answerable": true,
-      "required_facts": [
-        "Figure 4 comparative-performance figure",
-        "page 7 results table"
+        "different temporal ranges",
+        "patching",
+        "MA decomposition",
+        "DFT decomposition",
+        "EWA fusion"
       ]
     },
     {
       "id": "Q019",
-      "category": "cross_page_reasoning",
-      "question": "Which model is the strongest overall performer according to the paper's reported accuracy, F1-score, and ROC-AUC?",
-      "reference_answer": "InceptionV3 is strongest on these reported metrics among the tested models, with 97.44% accuracy, an F1-score of 0.8283, and ROC-AUC of 0.9916.",
+      "category": "factual_text",
+      "question": "What are the three main challenges in industrial time-series forecasting identified by the authors?",
+      "reference_answer": "Capturing correlations between variables and production stages, selecting and tuning suitable deep networks, and generalizing robustly to unseen, noisy, or heterogeneous data distributions.",
       "relevant_pages": [
-        7,
-        10
+        5
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "InceptionV3",
-        "97.44% accuracy",
-        "0.8283 F1-score",
-        "0.9916 ROC-AUC"
+        "cross-variable and cross-stage correlations",
+        "model selection and tuning",
+        "domain generalization"
       ]
     },
     {
       "id": "Q020",
-      "category": "cross_page_reasoning",
-      "question": "How does the conclusion summarize the benefit of transfer learning in these experiments?",
-      "reference_answer": "The conclusion says transfer-learning models performed better than the custom CNN and highlights InceptionV3's reported results.",
+      "category": "factual_text",
+      "question": "What is the main purpose of forecasting OEE in the manufacturing use case?",
+      "reference_answer": "To support production planning and predictive maintenance by forecasting equipment efficiency and its contributing factors.",
       "relevant_pages": [
-        7,
-        10
+        1,
+        2
       ],
       "relevant_chunk_ids": [],
-      "relevant_table_ids": [
-        "page_7_table_2"
-      ],
+      "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "transfer learning outperformed custom CNN",
-        "InceptionV3 highlighted"
+        "forecast OEE",
+        "support maintenance and operational planning"
       ]
     },
     {
       "id": "Q021",
       "category": "cross_page_reasoning",
-      "question": "What limitation do the authors acknowledge about the scope of their model comparison?",
-      "reference_answer": "The authors acknowledge comparing only four deep-learning architectures, so the findings should be interpreted within the scope of the models and experiments studied.",
+      "question": "How does the proposed method attempt to balance forecast accuracy and computational cost?",
+      "reference_answer": "It uses lightweight MLP-based predictor blocks with patching, MA and DFT feature extraction, then fuses their forecasts with EWA rather than relying on a single computationally demanding architecture.",
       "relevant_pages": [
-        9
+        1,
+        2,
+        5,
+        6
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "only four architectures",
-        "results limited to studied models and experiments"
+        "lightweight MLP-based framework",
+        "three feature extraction blocks",
+        "EWA fusion"
       ]
     },
     {
       "id": "Q022",
-      "category": "cross_page_reasoning",
-      "question": "What validation do the authors propose to test generalizability in future work?",
-      "reference_answer": "They propose testing on additional benchmark morph datasets and using cross-dataset validation across different acquisition conditions and morphing algorithms.",
+      "category": "factual_text",
+      "question": "What does the patching mechanism do to the input sequence?",
+      "reference_answer": "It splits each normalized input sequence into non-overlapping subsequences (patches) of length l.",
       "relevant_pages": [
-        9,
-        10
+        6
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "additional benchmark datasets",
-        "cross-dataset validation",
-        "generalizability"
+        "non-overlapping patches",
+        "patch length l"
       ]
     },
     {
       "id": "Q023",
-      "category": "cross_page_reasoning",
-      "question": "Why might a lightweight detection framework be useful for the applications discussed in the paper?",
-      "reference_answer": "An efficient lightweight framework could support real-time use in passport verification, border control, and mobile authentication.",
+      "category": "factual_text",
+      "question": "How are the patching-block MLP weights shared?",
+      "reference_answer": "The MLP weights are shared across all patches and variables to reduce model complexity.",
       "relevant_pages": [
-        9
+        6
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "lightweight or efficient",
-        "real-time use",
-        "passport/border/mobile authentication"
+        "weights shared across patches and variables",
+        "reduce model complexity"
       ]
     },
     {
       "id": "Q024",
-      "category": "cross_page_reasoning",
-      "question": "What interpretability direction do the authors suggest for future research?",
-      "reference_answer": "They suggest explainable AI techniques to identify which image features or facial regions influence model decisions.",
+      "category": "factual_text",
+      "question": "What is the purpose of dropout in the patching block?",
+      "reference_answer": "It regularizes the MLP output by randomly deactivating a portion of neurons during training, helping prevent overfitting.",
       "relevant_pages": [
-        9,
-        10
+        6
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "explainable AI",
-        "features or facial regions influencing decisions"
+        "dropout regularization",
+        "randomly deactivate neurons",
+        "prevent overfitting"
       ]
     },
     {
       "id": "Q025",
       "category": "cross_page_reasoning",
-      "question": "What deployment concern do the authors mention about some advanced approaches?",
-      "reference_answer": "The paper notes that some Vision Transformer and optimization-based approaches may be too complex for real biometric systems, and it suggests lightweight real-time models as a future direction.",
+      "question": "How does the paper distinguish single-variate from multivariate time-series forecasting?",
+      "reference_answer": "Single-variate forecasting predicts a future value from the history of one variable, while multivariate forecasting predicts future values across multiple related variables using their joint history.",
       "relevant_pages": [
-        2,
-        9
+        5
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": true,
       "required_facts": [
-        "advanced approaches may be too complex",
-        "lightweight real-time models"
+        "single variable future value",
+        "multiple related variables"
       ]
     },
     {
       "id": "Q026",
-      "category": "unanswerable",
-      "question": "What accuracy did the proposed system achieve on a cancer-detection dataset?",
-      "reference_answer": "The paper does not report cancer-detection experiments or accuracy on a cancer dataset.",
-      "relevant_pages": [],
-      "relevant_chunk_ids": [],
-      "relevant_table_ids": [],
-      "relevant_image_ids": [],
-      "answerable": false,
-      "required_facts": [
-        "state information is not reported",
-        "do not invent a score"
-      ]
-    },
-    {
-      "id": "Q027",
-      "category": "unanswerable",
-      "question": "What was the system's p95 inference latency in milliseconds in a production deployment?",
-      "reference_answer": "The paper does not report p95 production inference latency.",
-      "relevant_pages": [],
-      "relevant_chunk_ids": [],
-      "relevant_table_ids": [],
-      "relevant_image_ids": [],
-      "answerable": false,
-      "required_facts": [
-        "state p95 production latency is not reported",
-        "do not invent latency"
-      ]
-    },
-    {
-      "id": "Q028",
-      "category": "unanswerable",
-      "question": "What exact accuracy did InceptionV3 achieve on an external dataset in a cross-dataset evaluation?",
-      "reference_answer": "The paper proposes cross-dataset validation as future work but does not report an external-dataset accuracy result.",
+      "category": "factual_text",
+      "question": "What is the purpose of the paper's comparative study of forecasting architectures?",
+      "reference_answer": "To benchmark state-of-the-art deep-learning forecasting approaches across forecast horizons and evaluation metrics in real-world industrial settings.",
       "relevant_pages": [
-        9,
-        10
+        1,
+        2
       ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
-      "answerable": false,
+      "answerable": true,
       "required_facts": [
-        "cross-dataset validation is future work",
-        "no external-dataset accuracy is reported"
+        "compare state-of-the-art models",
+        "forecast horizons and evaluation metrics",
+        "real-world industrial setting"
+      ]
+    },
+    {
+      "id": "Q027",
+      "category": "factual_text",
+      "question": "What role does Fourier-transform decomposition play in the proposed model?",
+      "reference_answer": "It extracts frequency-domain information by selecting dominant frequencies to form a reconstructed trend component, with the residual treated as the seasonal component.",
+      "relevant_pages": [
+        7,
+        8
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "dominant frequencies",
+        "reconstructed trend",
+        "residual seasonal component"
+      ]
+    },
+    {
+      "id": "Q028",
+      "category": "cross_page_reasoning",
+      "question": "Why is evaluating on real-world industrial data important according to the paper?",
+      "reference_answer": "Industrial data are complex and heterogeneous, with dependencies across variables and production stages; real-world evaluation tests practical performance beyond benchmark-only studies.",
+      "relevant_pages": [
+        2,
+        4,
+        5
+      ],
+      "relevant_chunk_ids": [],
+      "relevant_table_ids": [],
+      "relevant_image_ids": [],
+      "answerable": true,
+      "required_facts": [
+        "complex industrial data",
+        "interdependencies across stages",
+        "beyond benchmark-only evaluation"
       ]
     },
     {
       "id": "Q029",
-      "category": "unanswerable",
-      "question": "What was the monetary cost per 1,000 predictions for a deployed system?",
-      "reference_answer": "The paper does not report deployment cost per 1,000 predictions.",
-      "relevant_pages": [],
+      "category": "factual_text",
+      "question": "Which journal and publication issue identify this paper?",
+      "reference_answer": "IEEE Sensors Journal, volume 25, number 4, dated 15 February 2025.",
+      "relevant_pages": [
+        1
+      ],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
-      "answerable": false,
+      "answerable": true,
       "required_facts": [
-        "state cost is not reported",
-        "do not invent monetary value"
+        "IEEE Sensors Journal",
+        "volume 25",
+        "number 4",
+        "15 February 2025"
       ]
     },
     {
       "id": "Q030",
       "category": "unanswerable",
-      "question": "What percentage reduction in false accepts was measured after deployment at an airport?",
-      "reference_answer": "The paper does not report an airport deployment or a measured percentage reduction in false accepts.",
+      "question": "What is the exact measured inference latency of PDFLinearEWA on an NVIDIA RTX 4090 GPU?",
+      "reference_answer": "The paper does not specify an exact inference latency for PDFLinearEWA on an NVIDIA RTX 4090 GPU.",
       "relevant_pages": [],
       "relevant_chunk_ids": [],
       "relevant_table_ids": [],
       "relevant_image_ids": [],
       "answerable": false,
       "required_facts": [
-        "no airport deployment result reported",
-        "no false-accept reduction percentage reported"
+        "not stated in the paper"
       ]
     }
   ]

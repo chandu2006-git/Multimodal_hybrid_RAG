@@ -1,0 +1,329 @@
+{
+  "id": "Q004",
+  "category": "factual_text",
+  "question": "What are soft sensors used for in manufacturing?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:32:19.122061+00:00",
+  "retrieved_pages": [
+    "1",
+    "2",
+    "4"
+  ],
+  "relevant_pages": [
+    1
+  ],
+  "retrieval_metrics": {
+    "recall@5": 1.0,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 1,
+    "retrieved_page_count": 3,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\n(e-mail: doikonomou@iti.gr; lleontar@iti.gr; nikdim@iti.gr; dimitrios.tzovaras@iti.gr). Digital Object Identifier 10.1109/JSEN.2025.3526362 of upcoming failures. The main tasks of soft sensors include: 1) automated equipment calibration and reconfiguration [1], [2]; 2) defect detection and prediction models [3], [4], [5]; 3) real-time process monitoring and control systems [6], [7]; and 4) predictive maintenance frameworks [8], the core focus of this study. These objectives are integral to predictive maintenance strategies, aligning with the principles of the zero defect manu- facturing (ZDM) framework [9], [10], [11], which emphasizes the minimization or elimination of defects in manufacturing processes through advanced monitoring, data-driven decision- making, and automation. The ZDM framework represents a paradigm shift toward holistic quality management, offering pathways to achieve sustainability and resilience in production systems. AI-enabled sensors facilitate predictive maintenance by continuously assessing machine conditions, providing timely predictions for potential failures, and allowing for early inter- vention that minimizes equipment downtime and improves operational efficiency. At the core of predictive analytics lies time-series forecasting, a statistical tool that enables the forecasting of future states of manufacturing equipment based on historical data. Accurate forecasting facilitates informed © 2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 11,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "dense_score": 0.46493983268737793,
+      "bm25_score": 7.92889712635407,
+      "rrf_score": 0.015640273704789834,
+      "reranker_score": 0.9992007613182068
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: I]\nN THE era of Industry 4.0, predictive analytics and monitoring in manufacturing settings have garnered signif- icant attention for their crucial role in process optimization. As manufacturing systems become increasingly complex, the integration of AI-driven soft sensors has become essential for extracting insights from data that would otherwise be difficult or impossible to directly measure. Soft sensors are AI-driven virtual models that estimate unmeasured production variables. By leveraging historical data, soft sensors enable the forecasting of future production trends and the early detection",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "I",
+        "section_category": "custom_section",
+        "chunk_index": 6,
+        "start_word": 0,
+        "end_word": 83
+      },
+      "dense_score": 0.4856041669845581,
+      "bm25_score": 14.291105485312263,
+      "rrf_score": 0.01639344262295082,
+      "reranker_score": 0.995164155960083
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Apply the proposed method to a real-world antenna]\nassembly line use-case, developing soft sensors for equipment efficiency forecasting and enabling predictive maintenance. In the following sections, we will present the model archi- tecture taxonomy and related work (Section II), outline the methodology proposed in this study (Section III), present the results of our model evaluations (Section IV), and discuss the implications of our findings for the field of time series forecasting in manufacturing (Section V).",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Apply the proposed method to a real-world antenna",
+        "section_category": "custom_section",
+        "chunk_index": 21,
+        "start_word": 0,
+        "end_word": 67
+      },
+      "dense_score": 0.3727644681930542,
+      "bm25_score": 9.294161713679053,
+      "rrf_score": 0.015877016129032258,
+      "reranker_score": 0.9154122471809387
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: the overall equipment effectiveness (OEE) via soft sensors]\nplays a pivotal role in enhancing productivity and efficiently",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "the overall equipment effectiveness (OEE) via soft sensors",
+        "section_category": "custom_section",
+        "chunk_index": 2,
+        "start_word": 0,
+        "end_word": 9
+      },
+      "dense_score": 0.4453085660934448,
+      "bm25_score": 9.292997755036472,
+      "rrf_score": 0.015873015873015872,
+      "reranker_score": 0.6685503125190735
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\ndomains, such as in finance [62], weather [63], healthcare [64], or industry [65]. However, these studies often rely on estab- lished statistical models (e.g., ARIMA, Bayesian, SVM, etc.), or basic variants of DL models—such as simple MLPs, CNNs, or LSTMs. The second category includes studies that provide a comprehensive review of recent model architectures. Even though these studies consider state-of-the-art advancements, the models are typically tested only on benchmark datasets, which may be either real-world [58], [66], [67] or syn- thetic [68]. In our work, we expand the research on time-series forecasting and bridge these gaps by evaluating a wide range of advanced models on a real-world dataset with practical applications. B. Process Optimization in Industrial Applications As discussed in Section I, process optimization has become a crucial component in modern manufacturing and indus- trial applications in the transition toward Industry 4.0. This section reviews recent advancements and approaches in pro- cess optimization leveraging virtual metrology, soft sensors, and time-series forecasting, integrating both traditional and AI-driven approaches across various industrial sectors. Virtual metrology and soft sensors represent pivotal technologies within the Industry 4.0 ecosystem and the ZDM framework. These tools enable real-time estimation of product quality and process parameters without",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 33,
+        "start_word": 300,
+        "end_word": 500
+      },
+      "dense_score": 0.20172372460365295,
+      "bm25_score": 9.081813059431461,
+      "rrf_score": 0.0078125,
+      "reranker_score": 0.5591155886650085
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "filename": "page_8_image_1.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2405415177345276
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "filename": "page_8_render.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.22938118875026703
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_1.png",
+      "filename": "page_7_image_1.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.22865687310695648
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Greece]\n(e-mail: doikonomou@iti.gr; lleontar@iti.gr; nikdim@iti.gr; dimitrios.tzovaras@iti.gr). Digital Object Identifier 10.1109/JSEN.2025.3526362 of upcoming failures. The main tasks of soft sensors include: 1) automated equipment calibration and reconfiguration [1], [2]; 2) defect detection and prediction models [3], [4], [5]; 3) real-time process monitoring and control systems [6], [7]; and 4) predictive maintenance frameworks [8], the core focus of this study. These objectives are integral to predictive maintenance strategies, aligning with the principles of the zero defect manu- facturing (ZDM) framework [9], [10], [11], which emphasizes the minimization or elimination of defects in manufacturing processes through advanced monitoring, data-driven decision- making, and automation. The ZDM framework represents a paradigm shift toward holistic quality management, offering pathways to achieve sustainability and resilience in production systems. AI-enabled sensors facilitate predictive maintenance by continuously assessing machine conditions, providing timely predictions for potential failures, and allowing for early inter- vention that minimizes equipment downtime and improves operational efficiency. At the core of predictive analytics lies time-series forecasting, a statistical tool that enables the forecasting of future states of manufacturing equipment based on historical data. Accurate forecasting facilitates informed © 2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License. For more information, see https://creativecommons.org/licenses/by/4.0/",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1,
+          2
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Greece",
+        "section_category": "custom_section",
+        "chunk_index": 11,
+        "start_word": 0,
+        "end_word": 200
+      },
+      "scores": {
+        "dense": 0.46493983268737793,
+        "bm25": 7.92889712635407,
+        "rrf": 0.015640273704789834
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: I]\nN THE era of Industry 4.0, predictive analytics and monitoring in manufacturing settings have garnered signif- icant attention for their crucial role in process optimization. As manufacturing systems become increasingly complex, the integration of AI-driven soft sensors has become essential for extracting insights from data that would otherwise be difficult or impossible to directly measure. Soft sensors are AI-driven virtual models that estimate unmeasured production variables. By leveraging historical data, soft sensors enable the forecasting of future production trends and the early detection",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "I",
+        "section_category": "custom_section",
+        "chunk_index": 6,
+        "start_word": 0,
+        "end_word": 83
+      },
+      "scores": {
+        "dense": 0.4856041669845581,
+        "bm25": 14.291105485312263,
+        "rrf": 0.01639344262295082
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Apply the proposed method to a real-world antenna]\nassembly line use-case, developing soft sensors for equipment efficiency forecasting and enabling predictive maintenance. In the following sections, we will present the model archi- tecture taxonomy and related work (Section II), outline the methodology proposed in this study (Section III), present the results of our model evaluations (Section IV), and discuss the implications of our findings for the field of time series forecasting in manufacturing (Section V).",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Apply the proposed method to a real-world antenna",
+        "section_category": "custom_section",
+        "chunk_index": 21,
+        "start_word": 0,
+        "end_word": 67
+      },
+      "scores": {
+        "dense": 0.3727644681930542,
+        "bm25": 9.294161713679053,
+        "rrf": 0.015877016129032258
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: the overall equipment effectiveness (OEE) via soft sensors]\nplays a pivotal role in enhancing productivity and efficiently",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "the overall equipment effectiveness (OEE) via soft sensors",
+        "section_category": "custom_section",
+        "chunk_index": 2,
+        "start_word": 0,
+        "end_word": 9
+      },
+      "scores": {
+        "dense": 0.4453085660934448,
+        "bm25": 9.292997755036472,
+        "rrf": 0.015873015873015872
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 4) Temporal Convolutional Networks: TCNs are a class of]\ndomains, such as in finance [62], weather [63], healthcare [64], or industry [65]. However, these studies often rely on estab- lished statistical models (e.g., ARIMA, Bayesian, SVM, etc.), or basic variants of DL models—such as simple MLPs, CNNs, or LSTMs. The second category includes studies that provide a comprehensive review of recent model architectures. Even though these studies consider state-of-the-art advancements, the models are typically tested only on benchmark datasets, which may be either real-world [58], [66], [67] or syn- thetic [68]. In our work, we expand the research on time-series forecasting and bridge these gaps by evaluating a wide range of advanced models on a real-world dataset with practical applications. B. Process Optimization in Industrial Applications As discussed in Section I, process optimization has become a crucial component in modern manufacturing and indus- trial applications in the transition toward Industry 4.0. This section reviews recent advancements and approaches in pro- cess optimization leveraging virtual metrology, soft sensors, and time-series forecasting, integrating both traditional and AI-driven approaches across various industrial sectors. Virtual metrology and soft sensors represent pivotal technologies within the Industry 4.0 ecosystem and the ZDM framework. These tools enable real-time estimation of product quality and process parameters without",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 4,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          4,
+          5
+        ],
+        "page": 4,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "4) Temporal Convolutional Networks: TCNs are a class of",
+        "section_category": "custom_section",
+        "chunk_index": 33,
+        "start_word": 300,
+        "end_word": 500
+      },
+      "scores": {
+        "dense": 0.20172372460365295,
+        "bm25": 9.081813059431461,
+        "rrf": 0.0078125
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_8_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2405415177345276
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_8_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.22938118875026703
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_7_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.22865687310695648
+      }
+    }
+  ],
+  "status": "success"
+}

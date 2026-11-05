@@ -1,0 +1,327 @@
+{
+  "id": "Q006",
+  "category": "factual_text",
+  "question": "What is the proposed forecasting framework called?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:32:31.559519+00:00",
+  "retrieved_pages": [
+    "5",
+    "8",
+    "1",
+    "2"
+  ],
+  "relevant_pages": [
+    1,
+    6
+  ],
+  "retrieval_metrics": {
+    "recall@5": 0.5,
+    "precision@5": 0.2,
+    "hit_rate@5": 1.0,
+    "mrr@5": 0.3333333333333333,
+    "relevant_page_count": 2,
+    "retrieved_page_count": 4,
+    "relevant_pages_found": 1
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Our]\nproposed model architecture is a lightweight MLP-based framework designed to address both short-term and long-term forecasting challenges in time-series data.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Our",
+        "section_category": "custom_section",
+        "chunk_index": 42,
+        "start_word": 0,
+        "end_word": 20
+      },
+      "dense_score": 0.6249803900718689,
+      "bm25_score": 8.071200997945832,
+      "rrf_score": 0.015877016129032258,
+      "reranker_score": 0.21401794254779816
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: A. Datasets]\nTo assess the effectiveness of our proposed forecasting method, we utilized two time-series datasets from the man- ufacturing sector. The primary dataset focuses on forecasting overall equipment effectiveness (OEE) metrics within a multi- stage antenna assembly line, aligning with the central objective of our study. To evaluate the generalizability of the proposed method in different manufacturing contexts, we additionally used a complementary dataset that contains time series data from a single-stage sink manufacturing process. Detailed descriptions of both datasets are provided in the following.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "A. Datasets",
+        "section_category": "custom_section",
+        "chunk_index": 83,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "dense_score": 0.507684051990509,
+      "bm25_score": 7.5464304902052755,
+      "rrf_score": 0.007462686567164179,
+      "reranker_score": 0.07525693625211716
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Transformer-based models, and temporal convolutional net-]\nworks (TCNs), and we perform a comparative study of the state-of-the-art approaches. Additionally, a lightweight late fusion linear architecture is proposed, incorporating patching, moving average (MA) decomposition, and Fourier Transform decomposition (PDFLinear), and an exponentially weighted averaging (EWA) module responsible for late fusion. Representative state-of-the-art models of each taxonomy class are benchmarked using a real-world antenna assembly line use case and compared against our proposed method. The experimental results show that our proposed model consistently matches or outperforms the state-of-the-art models in terms of forecasting efficacy for all forecast horizons, while requiring a fraction of the computational resources. Index Terms— Deep learning (DL), hybrid models, predictive maintenance, sensor data, time-series forecasting.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Transformer-based models, and temporal convolutional net-",
+        "section_category": "custom_section",
+        "chunk_index": 5,
+        "start_word": 0,
+        "end_word": 111
+      },
+      "dense_score": 0.5150909423828125,
+      "bm25_score": 8.109723524225965,
+      "rrf_score": 0.007936507936507936,
+      "reranker_score": 0.05555545538663864
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Apply the proposed method to a real-world antenna]\nassembly line use-case, developing soft sensors for equipment efficiency forecasting and enabling predictive maintenance. In the following sections, we will present the model archi- tecture taxonomy and related work (Section II), outline the methodology proposed in this study (Section III), present the results of our model evaluations (Section IV), and discuss the implications of our findings for the field of time series forecasting in manufacturing (Section V).",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Apply the proposed method to a real-world antenna",
+        "section_category": "custom_section",
+        "chunk_index": 21,
+        "start_word": 0,
+        "end_word": 67
+      },
+      "dense_score": 0.5596007108688354,
+      "bm25_score": 7.776663049531889,
+      "rrf_score": 0.007692307692307693,
+      "reranker_score": 0.038082320243120193
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 1) We identify and present a taxonomy of the state-]\nof-the-art of DL forecasting methods, and perform a comparative analysis across various forecast horizons and evaluation metrics.",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "1) We identify and present a taxonomy of the state-",
+        "section_category": "custom_section",
+        "chunk_index": 19,
+        "start_word": 0,
+        "end_word": 17
+      },
+      "dense_score": 0.6260277032852173,
+      "bm25_score": 4.531439171042597,
+      "rrf_score": 0.00819672131147541,
+      "reranker_score": 0.02195223793387413
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "filename": "page_6_image_1.png",
+      "page": 6,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.26104456186294556
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "filename": "page_8_render.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2546180486679077
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_2_render.png",
+      "filename": "page_2_render.png",
+      "page": 2,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.25418955087661743
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Our]\nproposed model architecture is a lightweight MLP-based framework designed to address both short-term and long-term forecasting challenges in time-series data.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 5,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          5
+        ],
+        "page": 5,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Our",
+        "section_category": "custom_section",
+        "chunk_index": 42,
+        "start_word": 0,
+        "end_word": 20
+      },
+      "scores": {
+        "dense": 0.6249803900718689,
+        "bm25": 8.071200997945832,
+        "rrf": 0.015877016129032258
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: A. Datasets]\nTo assess the effectiveness of our proposed forecasting method, we utilized two time-series datasets from the man- ufacturing sector. The primary dataset focuses on forecasting overall equipment effectiveness (OEE) metrics within a multi- stage antenna assembly line, aligning with the central objective of our study. To evaluate the generalizability of the proposed method in different manufacturing contexts, we additionally used a complementary dataset that contains time series data from a single-stage sink manufacturing process. Detailed descriptions of both datasets are provided in the following.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          8
+        ],
+        "page": 8,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "A. Datasets",
+        "section_category": "custom_section",
+        "chunk_index": 83,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "scores": {
+        "dense": 0.507684051990509,
+        "bm25": 7.5464304902052755,
+        "rrf": 0.007462686567164179
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Transformer-based models, and temporal convolutional net-]\nworks (TCNs), and we perform a comparative study of the state-of-the-art approaches. Additionally, a lightweight late fusion linear architecture is proposed, incorporating patching, moving average (MA) decomposition, and Fourier Transform decomposition (PDFLinear), and an exponentially weighted averaging (EWA) module responsible for late fusion. Representative state-of-the-art models of each taxonomy class are benchmarked using a real-world antenna assembly line use case and compared against our proposed method. The experimental results show that our proposed model consistently matches or outperforms the state-of-the-art models in terms of forecasting efficacy for all forecast horizons, while requiring a fraction of the computational resources. Index Terms— Deep learning (DL), hybrid models, predictive maintenance, sensor data, time-series forecasting.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 1,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          1
+        ],
+        "page": 1,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Transformer-based models, and temporal convolutional net-",
+        "section_category": "custom_section",
+        "chunk_index": 5,
+        "start_word": 0,
+        "end_word": 111
+      },
+      "scores": {
+        "dense": 0.5150909423828125,
+        "bm25": 8.109723524225965,
+        "rrf": 0.007936507936507936
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Apply the proposed method to a real-world antenna]\nassembly line use-case, developing soft sensors for equipment efficiency forecasting and enabling predictive maintenance. In the following sections, we will present the model archi- tecture taxonomy and related work (Section II), outline the methodology proposed in this study (Section III), present the results of our model evaluations (Section IV), and discuss the implications of our findings for the field of time series forecasting in manufacturing (Section V).",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Apply the proposed method to a real-world antenna",
+        "section_category": "custom_section",
+        "chunk_index": 21,
+        "start_word": 0,
+        "end_word": 67
+      },
+      "scores": {
+        "dense": 0.5596007108688354,
+        "bm25": 7.776663049531889,
+        "rrf": 0.007692307692307693
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 1) We identify and present a taxonomy of the state-]\nof-the-art of DL forecasting methods, and perform a comparative analysis across various forecast horizons and evaluation metrics.",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          2
+        ],
+        "page": 2,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "1) We identify and present a taxonomy of the state-",
+        "section_category": "custom_section",
+        "chunk_index": 19,
+        "start_word": 0,
+        "end_word": 17
+      },
+      "scores": {
+        "dense": 0.6260277032852173,
+        "bm25": 4.531439171042597,
+        "rrf": 0.00819672131147541
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_6_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_6_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.26104456186294556
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_8_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2546180486679077
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_2_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 2,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_2_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.25418955087661743
+      }
+    }
+  ],
+  "status": "success"
+}

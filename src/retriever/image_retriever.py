@@ -151,10 +151,14 @@ class ImageRetriever:
         }
 
         with torch.inference_mode():
-            features = self.model.get_text_features(**inputs)
+            text_outputs = self.model.text_model(
+                input_ids=inputs["input_ids"],
+                attention_mask=inputs.get("attention_mask"),
+            )
 
-            if not isinstance(features, torch.Tensor):
-                features = features.pooler_output
+            features = self.model.text_projection(
+                text_outputs.pooler_output
+            )
 
             query_embedding = F.normalize(
                 features.float(), dim=-1

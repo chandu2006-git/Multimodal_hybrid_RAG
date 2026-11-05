@@ -1,0 +1,325 @@
+{
+  "id": "Q010",
+  "category": "factual_text",
+  "question": "How does the moving-average decomposition block separate a time series?",
+  "answerable": true,
+  "mode": "quantitative",
+  "evaluated_at": "2026-11-05T06:32:54.245018+00:00",
+  "retrieved_pages": [
+    "7",
+    "6"
+  ],
+  "relevant_pages": [
+    6,
+    7
+  ],
+  "retrieval_metrics": {
+    "recall@5": 1.0,
+    "precision@5": 0.4,
+    "hit_rate@5": 1.0,
+    "mrr@5": 1.0,
+    "relevant_page_count": 2,
+    "retrieved_page_count": 2,
+    "relevant_pages_found": 2
+  },
+  "retrieved_text": [
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\nare the trend and seasonal predictions, respectively. It is noted that each linear module processes a single variable at a time, with weights being shared between variables. Similarly, the DFT decomposition block decomposes the input time-series instance into its trend and seasonal com- ponents by transforming it into the frequency domain and identifying the top k most dominant frequencies, i.e., the fre- quencies with the largest magnitudes. The original time series is reconstructed by removing the least dominant frequencies and applying the inverse DFT",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 67,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "dense_score": 0.46660909056663513,
+      "bm25_score": 11.230313444929902,
+      "rrf_score": 0.014718614718614718,
+      "reranker_score": 0.48430874943733215
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 1.]\nModel architecture of PDFLinearEWA consisting of three predictor blocks. The patching block partitions the input time series into non-overlapping patches and processes them individually. The MA series decomposition block analyzes the input time series into its trend and seasonal components using an MA kernel, whereas the DFT series decomposition block works similarly, leveraging a DFT decomposition scheme. The EWA module fuses the outputs of the three predictor blocks using an exponentially weighting mechanism. by focusing on individual patches. This approach allows the model to capture localized patterns efficiently, making it well-suited for applications where short-term dynamics play a crucial role. The initial layer of this block employs the instance normal- ization technique introduced by Kim et al. [83] to address temporal distribution shifts commonly observed in time- series data. This mechanism operates on a sliding-window basis, where for each input window Xt−n+1:t and each vari- able i, the mean ¯x(i) t and variance σ (i) t are computed as follows: ¯x(i) t = 1 n n−1",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 1.",
+        "section_category": "custom_section",
+        "chunk_index": 45,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "dense_score": 0.5604334473609924,
+      "bm25_score": 13.125673566437781,
+      "rrf_score": 0.016001024065540194,
+      "reranker_score": 0.338827908039093
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Exponentially Weighted Averaging: As previously dis-]\ncussed, the patching block focuses on capturing short-range dependencies, whereas the seasonal decomposition blocks are designed to capture mid-range and long-range. To effectively combine the predictions from these three blocks, we introduce a simple yet flexible weighting mechanism called EWA. EWA utilizes a learnable positive base factor β to generate expo- nentially decaying or increasing weights for each future time step",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Exponentially Weighted Averaging: As previously dis-",
+        "section_category": "custom_section",
+        "chunk_index": 78,
+        "start_word": 0,
+        "end_word": 61
+      },
+      "dense_score": 0.4966428279876709,
+      "bm25_score": 10.633159870089715,
+      "rrf_score": 0.014938684503901897,
+      "reranker_score": 0.3081970512866974
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\n\u0001 . (14) Finally, the outputs from both decomposition blocks are combined to produce the final prediction ˆXDecomp ˆXDecomp = ˆXMA",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 76,
+        "start_word": 0,
+        "end_word": 21
+      },
+      "dense_score": 0.4816797375679016,
+      "bm25_score": 9.147069965572774,
+      "rrf_score": 0.007462686567164179,
+      "reranker_score": 0.17400512099266052
+    },
+    {
+      "text": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\nrepresents the seasonal component calculated by subtracting the trend component from the orig- inal time series. As in the MA decomposition case, both components are passed through separate linear modules",
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 72,
+        "start_word": 0,
+        "end_word": 30
+      },
+      "dense_score": 0.5123153924942017,
+      "bm25_score": 15.25200256766742,
+      "rrf_score": 0.016009221311475412,
+      "reranker_score": 0.13956816494464874
+    }
+  ],
+  "retrieved_images": [
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "filename": "page_7_image_2.png",
+      "page": 7,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.2648274302482605
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "filename": "page_8_render.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.26418980956077576
+    },
+    {
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "filename": "page_8_image_1.png",
+      "page": 8,
+      "source": "AMSL_IEEE_Research_paper",
+      "similarity": 0.25469332933425903
+    }
+  ],
+  "retrieved_tables": [],
+  "evidence": [
+    {
+      "modality": "text",
+      "rank": 1,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\nare the trend and seasonal predictions, respectively. It is noted that each linear module processes a single variable at a time, with weights being shared between variables. Similarly, the DFT decomposition block decomposes the input time-series instance into its trend and seasonal com- ponents by transforming it into the frequency domain and identifying the top k most dominant frequencies, i.e., the fre- quencies with the largest magnitudes. The original time series is reconstructed by removing the least dominant frequencies and applying the inverse DFT",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 67,
+        "start_word": 0,
+        "end_word": 84
+      },
+      "scores": {
+        "dense": 0.46660909056663513,
+        "bm25": 11.230313444929902,
+        "rrf": 0.014718614718614718
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 2,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: Fig. 1.]\nModel architecture of PDFLinearEWA consisting of three predictor blocks. The patching block partitions the input time series into non-overlapping patches and processes them individually. The MA series decomposition block analyzes the input time series into its trend and seasonal components using an MA kernel, whereas the DFT series decomposition block works similarly, leveraging a DFT decomposition scheme. The EWA module fuses the outputs of the three predictor blocks using an exponentially weighting mechanism. by focusing on individual patches. This approach allows the model to capture localized patterns efficiently, making it well-suited for applications where short-term dynamics play a crucial role. The initial layer of this block employs the instance normal- ization technique introduced by Kim et al. [83] to address temporal distribution shifts commonly observed in time- series data. This mechanism operates on a sliding-window basis, where for each input window Xt−n+1:t and each vari- able i, the mean ¯x(i) t and variance σ (i) t are computed as follows: ¯x(i) t = 1 n n−1",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 6,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          6
+        ],
+        "page": 6,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "Fig. 1.",
+        "section_category": "custom_section",
+        "chunk_index": 45,
+        "start_word": 0,
+        "end_word": 166
+      },
+      "scores": {
+        "dense": 0.5604334473609924,
+        "bm25": 13.125673566437781,
+        "rrf": 0.016001024065540194
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 3,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: 3) Exponentially Weighted Averaging: As previously dis-]\ncussed, the patching block focuses on capturing short-range dependencies, whereas the seasonal decomposition blocks are designed to capture mid-range and long-range. To effectively combine the predictions from these three blocks, we introduce a simple yet flexible weighting mechanism called EWA. EWA utilizes a learnable positive base factor β to generate expo- nentially decaying or increasing weights for each future time step",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "3) Exponentially Weighted Averaging: As previously dis-",
+        "section_category": "custom_section",
+        "chunk_index": 78,
+        "start_word": 0,
+        "end_word": 61
+      },
+      "scores": {
+        "dense": 0.4966428279876709,
+        "bm25": 10.633159870089715,
+        "rrf": 0.014938684503901897
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 4,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\n\u0001 . (14) Finally, the outputs from both decomposition blocks are combined to produce the final prediction ˆXDecomp ˆXDecomp = ˆXMA",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 76,
+        "start_word": 0,
+        "end_word": 21
+      },
+      "scores": {
+        "dense": 0.4816797375679016,
+        "bm25": 9.147069965572774,
+        "rrf": 0.007462686567164179
+      }
+    },
+    {
+      "modality": "text",
+      "rank": 5,
+      "content": "[Document: Time Series Forecasting in Industrial Environments A Performance Study and a Novel Late Fusion Framework | Section: S]\nrepresents the seasonal component calculated by subtracting the trend component from the orig- inal time series. As in the MA decomposition case, both components are passed through separate linear modules",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "metadata": {
+        "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+        "pages": [
+          7
+        ],
+        "page": 7,
+        "structure_score": 100.0,
+        "chunking_mode": "structure_aware",
+        "section": "S",
+        "section_category": "custom_section",
+        "chunk_index": 72,
+        "start_word": 0,
+        "end_word": 30
+      },
+      "scores": {
+        "dense": 0.5123153924942017,
+        "bm25": 15.25200256766742,
+        "rrf": 0.016009221311475412
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 1,
+      "content": "page_7_image_2.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 7,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_7_image_2.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.2648274302482605
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 2,
+      "content": "page_8_render.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_render.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.26418980956077576
+      }
+    },
+    {
+      "modality": "image",
+      "rank": 3,
+      "content": "page_8_image_1.png",
+      "source": "Time-Series_Forecasting_in_Industrial_Environments_A_Performance_Study_and_a_Novel_Late_Fusion_Framework.pdf",
+      "page": 8,
+      "image_path": "C:\\Users\\akula\\OneDrive\\Desktop\\multimodal_RAG\\data\\images\\AMSL_IEEE_Research_paper\\page_8_image_1.png",
+      "metadata": {},
+      "scores": {
+        "similarity": 0.25469332933425903
+      }
+    }
+  ],
+  "status": "success"
+}
