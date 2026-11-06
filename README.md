@@ -1,7 +1,7 @@
 # Multimodal Hybrid Retrieval-Augmented Generation (RAG)
 
 <p align="center">
-  <a href="https://multimodalhybridrag-lsiju6loof6eseqrpuubsw.streamlit.app/">
+  <a href="http://multimodal-rag.indiasouthcentral.cloudapp.azure.com:8501">
     <strong>🚀 Try the Live Demo</strong>
   </a>
 </p>
