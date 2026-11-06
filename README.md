@@ -7,148 +7,224 @@
 </p>
 
 <p align="center">
-  A research-paper assistant that combines multimodal document processing, dense semantic search, keyword retrieval, reranking, and grounded answer generation.
+  A research-paper assistant combining multimodal document processing, hybrid retrieval, reranking, and evidence-grounded answer generation.
 </p>
+
+---
 
 ## Architecture
 
-![Multimodal Hybrid Retrieval RAG Architecture](RAG_architecture.png)
+![Multimodal Hybrid RAG Architecture](RAG_architecture.png)
 
 ## Overview
 
-**Multimodal Hybrid RAG** is a document-question-answering application designed to help users explore research papers and other PDF documents. It processes document content, retrieves evidence relevant to a question, and uses a large language model to generate an answer supported by retrieved context.
+**Multimodal Hybrid RAG** is a document-question-answering application that helps users explore scientific papers and other PDF documents.
 
-The pipeline brings together document ingestion, text/table/image extraction, chunking, embeddings, hybrid retrieval, reranking, and answer generation.
+The system processes document content, retrieves relevant evidence using multiple retrieval strategies, and generates answers grounded in the retrieved context.
+
+It combines document ingestion, text/table/image extraction, structure-aware chunking, embeddings, hybrid retrieval, reranking, and LLM-based answer generation.
 
 ## How It Works
 
 1. **Document Ingestion** — Upload a PDF, such as a scientific paper or résumé.
-2. **Multimodal Extraction** — Extract document text, tables, and image/figure assets where supported by the ingestion pipeline.
-3. **Preprocessing and Chunking** — Clean and divide extracted content into smaller units for retrieval. Table and image context can be represented alongside text.
-4. **Embeddings and Vector Storage** — Convert supported chunks into embeddings and store them with relevant metadata for similarity search.
-5. **Hybrid Retrieval** — Combine dense semantic retrieval with BM25 keyword retrieval to find evidence matching the user's question.
-6. **Reranking** — Reorder retrieved candidates by relevance before selecting context for generation.
-7. **Answer Generation** — Send the selected evidence to Gemini to generate a context-grounded response.
-8. **Source-Aware Output** — Present the answer with available source details, such as document/page references and retrieved evidence, to make verification easier.
+2. **Multimodal Extraction** — Extract document text, tables, and image/figure assets.
+3. **Preprocessing and Chunking** — Process extracted content into retrieval-ready chunks while retaining relevant document metadata.
+4. **Embeddings and Vector Storage** — Generate text embeddings and store them with metadata for semantic similarity retrieval.
+5. **Hybrid Retrieval** — Combine dense semantic retrieval with BM25 keyword retrieval.
+6. **Multimodal Retrieval** — Retrieve relevant visual content using CLIP-based image retrieval and support table retrieval.
+7. **Reranking** — Apply Cross-Encoder-based reranking to prioritize relevant candidates.
+8. **Evidence Construction** — Combine retrieved text, table, and image evidence into context for answer generation.
+9. **Answer Generation** — Use OpenRouter to generate answers grounded in the retrieved evidence.
+10. **Source-Aware Output** — Present answers with available source information, page references, and supporting evidence.
 
 ## Key Features
 
 - **PDF-Based Question Answering** for research papers and résumé-style documents.
-- **Multimodal Document Processing** for text, tables, and visual assets where supported by the ingestion pipeline.
-- **Hybrid Search** using semantic and keyword retrieval.
-- **Reranking** to prioritize more relevant retrieved candidates.
-- **Gemini-Powered Generation** using retrieved context.
-- **Evidence and Source References** to help users check generated answers.
-- **Out-of-Domain Handling:** Tested with an unrelated question, the system responded that the source paper did not cover that topic.
+- **Multimodal Document Processing** for text, tables, and visual assets.
+- **Hybrid Search** combining dense semantic retrieval and BM25 keyword retrieval.
+- **CLIP-Based Image Retrieval** for retrieving relevant visual content.
+- **Table Retrieval** to support questions involving tabular information.
+- **Cross-Encoder Reranking** to improve the ordering of retrieved candidates.
+- **Evidence Construction** to provide relevant context to the answer-generation model.
+- **OpenRouter Integration** for LLM-based answer generation.
+- **Source References** to help users verify generated answers.
+- **Abstention Handling** to avoid answering questions unsupported by the source document.
 
 ## Technology Stack
 
-- **Python** — Application and pipeline logic
-- **PyMuPDF** — PDF text extraction and document processing
-- **Sentence Transformers** — Text embeddings
-- **BM25** — Lexical/keyword retrieval
-- **Vector Database** — Embedding storage and similarity retrieval
-- **Gemini API** — Answer generation
-- **Streamlit** — Interactive web interface
-
-> Update this section to match the exact embedding model, vector-store configuration, chunking parameters, and reranking implementation in the final repository.
+| Component | Technology |
+|---|---|
+| Programming Language | Python |
+| PDF Processing | PyMuPDF |
+| Text Embeddings | Sentence Transformers |
+| Vector Storage | ChromaDB |
+| Keyword Retrieval | BM25 |
+| Image Retrieval | CLIP |
+| Reranking | Cross-Encoder |
+| LLM Integration | OpenRouter API |
+| Application Interface | Streamlit |
+| Testing | Pytest |
 
 ## Evaluation and Testing
 
-The first end-to-end version was tested on a scientific paper about face-morph detection.
+The system was evaluated using a test dataset of **30 questions**, consisting of 29 answerable questions and 1 unanswerable question.
 
-Example checks included:
+### Retrieval Evaluation
 
-- Asking which evaluated model had the highest accuracy and requesting its F1 score.
-- Asking where a comparison chart appears in the document.
-- Asking an unrelated question about cancer to check whether the system would avoid attributing unsupported information to the paper.
+| Metric | Result |
+|---|---:|
+| Recall@5 | **81.61%** |
+| Precision@5 | **26.90%** |
+| Hit Rate@5 | **86.21%** |
+| MRR@5 | **77.59%** |
 
-These checks helped validate document-grounded question answering and basic out-of-domain behavior. They are **functional checks, not a complete benchmark**.
+### Qualitative Evaluation
 
-A more rigorous evaluation should report retrieval metrics such as Recall@K and MRR, answer correctness and faithfulness, latency, and performance across a larger test set.
+| Metric | Result |
+|---|---:|
+| Faithfulness | **100%** |
+| Answer Relevancy | **100%** |
+| Citation Correctness | **94.05%** |
+| Correct Abstention | **100%** |
+
+**Evaluation summary:**
+- Total questions: 30
+- Answerable questions: 29
+- Unanswerable questions: 1
+- Successful evaluations: 30
+- Failed evaluations: 0
+
+The qualitative results are automated evaluator scores and should be interpreted alongside manual inspection of generated answers and citations.
+
+These results provide an initial evaluation of retrieval quality, answer grounding, citation behavior, and abstention. Further testing on larger and more diverse datasets is needed.
 
 ## Running Locally
 
-1. Clone this repository.
-2. Create and activate a Python virtual environment.
-3. Install the dependencies listed in `requirements.txt`.
-4. Configure your Gemini API key using an environment variable or Streamlit secrets.
-5. Start the Streamlit application using the entry-point file in the repository.
-
-Example commands — adjust the repository URL, folder name, and entry-point filename as needed:
+### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd <YOUR_REPOSITORY_FOLDER>
+git clone https://github.com/chandu2006-git/Multimodal_hybrid_RAG.git
+cd Multimodal_hybrid_RAG
+```
 
+### 2. Create a Virtual Environment
+
+```bash
 python -m venv .venv
+```
 
-# Windows
-.venv\Scripts\activate
+Activate it:
 
-# macOS/Linux
+**Windows PowerShell**
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+**macOS/Linux**
+```bash
 source .venv/bin/activate
-
-pip install -r requirements.txt
-streamlit run app.py
 ```
 
-### API Key Configuration
+### 3. Install Dependencies
 
-Keep API keys out of source control.
-
-- For local development, use a `.env` file if the application is configured to read it, and add `.env` to `.gitignore`.
-- For Streamlit Community Cloud, configure the secret in the application's **Secrets** settings.
-
-Example secret format:
-
-```toml
-GEMINI_API_KEY = "your_api_key_here"
+```bash
+python -m pip install -r requirements.txt
 ```
 
-Use the variable name expected by your application. Never commit a real API key.
+### 4. Configure the API Key
+
+Create a `.env` file in the project root:
+
+```env
+OPENROUTER_API_KEY=your_openrouter_api_key
+```
+
+Keep `.env` in `.gitignore`. Never commit API keys or other credentials.
+
+### 5. Run the Application
+
+```bash
+python -m streamlit run app.py
+```
+
+Open the local URL displayed in your terminal.
+
+## Running the Evaluation
+
+The repository includes an evaluation pipeline for measuring retrieval and answer-generation performance.
+
+Example command:
+
+```powershell
+$env:PYTHONPATH = "$PWD\src"
+
+python -m evaluation.run_evaluation `
+  --mode full `
+  --judge `
+  --force `
+  --pdf "path/to/your/research_paper.pdf"
+```
+
+The evaluation pipeline supports retrieval evaluation, full answer evaluation, and metrics-only aggregation.
+
+Results are saved under the evaluation results directory, including summary metrics and question-level evaluation outputs.
 
 ## Repository Structure
 
-The following structure is illustrative. Adjust the names to match the actual repository.
-
 ```text
-.
+Multimodal_hybrid_RAG/
+│
 ├── app.py
-├── Rag_architecture.png
 ├── requirements.txt
+├── .env.example
+├── RAG_architecture.png
+│
 ├── src/
 │   ├── ingestion/
-│   ├── retrieval/
-│   ├── reranking/
+│   ├── rag/
+│   ├── retriever/
 │   └── generation/
+│
+├── evaluation/
+│   ├── quantitative_metrics.py
+│   ├── qualitative_metrics.py
+│   ├── run_evaluation.py
+│   └── results/
+│
+├── data/
+│   ├── raw_pdfs/
+│   └── evaluation/
+│
 ├── tests/
+│
 └── README.md
 ```
 
 ## Current Scope and Limitations
 
-- Retrieval quality depends on extraction quality, chunking, embeddings, and the candidates returned by the retrievers.
+- Retrieval performance depends on document extraction quality, chunking, embeddings, and candidate selection.
 - Reranking can reorder retrieved candidates but cannot recover evidence that was never retrieved.
-- Tables and figures may require additional processing to preserve their meaning; extraction quality can vary by PDF layout.
-- Generated answers should be checked against the cited document evidence.
-- The live application and repository configuration should be tested after deployment or dependency changes.
+- Complex tables and figures may require additional processing to preserve their full meaning.
+- Generated answers should always be checked against the supporting document evidence.
+- Evaluation results are based on the current test dataset and may not represent performance across all document types.
+- Application availability depends on the hosting environment and deployment configuration.
 
 ## Roadmap
 
-- Systematically compare embedding models and chunking strategies.
-- Measure retrieval quality with a labeled evaluation set.
-- Improve table and figure understanding.
-- Add bounded query-rewriting and retrieval retries for weak evidence.
+- Compare embedding models and chunking strategies systematically.
+- Improve retrieval precision and citation reliability.
+- Strengthen table and figure understanding.
+- Introduce adaptive retrieval and bounded query-rewriting strategies.
 - Explore self-healing retrieval with measurable fallback and abstention behavior.
 - Add latency, error, and retrieval-quality monitoring.
 
 ## Security
 
-- Do not commit API keys, credentials, private documents, or personal information.
-- Review uploaded-document handling before using sensitive files.
-- Keep dependencies updated and validate configuration before deployment.
+- Never commit API keys, credentials, or private documents.
+- Store secrets in environment variables or the hosting provider's secret-management settings.
+- Review uploaded-document handling before processing sensitive files.
+- Keep dependencies updated and validate deployment configuration.
 
 ## Acknowledgements
 
-Built as an applied AI engineering project exploring multimodal document ingestion and hybrid retrieval for grounded question answering.
+Built as an applied AI engineering project exploring multimodal document processing, hybrid retrieval, and grounded question answering.
